@@ -25,33 +25,32 @@
 
         <div class="form-group">
           <label for="name">Nome</label>
-          <input type="text" class="form-control" name="name">
+          <input type="text" class="form-control" name="name" id="name" value="{{ old('name') }}">
         </div>
 
         <div class="form-group">
             <label for="descriptionn">Descrizione</label>
-            <textarea name="description" class="form-control" cols="30" rows="10"></textarea>
+            <textarea name="description" class="form-control" cols="30" rows="10" id="description">{{ old('description') }}</textarea>
         </div>
 
         <div class="form-group">
             <label for="price">Prezzo</label>
-            <input type="number" step="0.01" class="form-control" name="price">
+            <input type="number" step="0.01" class="form-control" name="price" id="price" value="{{ old('price') }}">
         </div>
 
         <div class="form-group">
             <label for="sku">sku</label>
-            <input type="text" class="form-control" name="sku">
+            <input type="text" class="form-control" name="sku" id="sku" value="{{ old('sku') }}">
         </div>
         
         <div class="form-group">
             <label for="visibility">Visibile</label>
-            <input type="checkbox" class="form-control" name="visibility" value="1">
-            <input type="hidden" name="visibility" value="0" />
+            <input type="checkbox" class="form-control" name="visibility[]" id="visibility" {{ old('visibility') ? 'checked=' : '' }}/>
         </div>
 
         <div class="form-group">
             <label for="cover">Foto</label>
-            <input type="file" name="cover">
+            <input type="file" name="cover" id="cover">
         </div>
 
         <input type="submit" class="btn btn-success" value="Aggiungi">

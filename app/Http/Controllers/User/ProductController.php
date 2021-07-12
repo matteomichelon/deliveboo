@@ -59,6 +59,18 @@ class ProductController extends Controller
         $form_data = $request->all();
         $form_data['user_id'] = Auth::user()->id; 
 
+        // --------------------|
+        // Checking visibility
+        // --------------------|
+
+        if (isset($form_data['visibility'])) {
+            $form_data['visibility'] = 1;
+        }else{
+            $form_data['visibility'] = 0;
+        }
+
+        dd($form_data);
+
         // ----------------------------------------------------|
         // This will shortened the length of the img_path link.|
         // ----------------------------------------------------|
@@ -141,7 +153,6 @@ class ProductController extends Controller
             'description' => ['nullable', 'min:10', 'max:500'],
             'price' => ['required', 'between:0,99999.99'],
             'sku' => ['required', 'unique:products', 'min:10', 'max:10'],
-            'visibility' => ['required', 'boolean'],
             'cover' => ['nullable', 'max:255']
         ];
 
