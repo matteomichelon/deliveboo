@@ -48,10 +48,11 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        $new_product = new Product();
         // ------------------------------------------------------|
         // Validating form data with private validation function.|
         // ------------------------------------------------------| 
-        $request->validate($this->getValidatorRules());
+        $request->validate($this->getValidatorRules($new_product));
 
         // --------------------------------------------|
         // Requesting form data in $form_data variable.|
@@ -83,7 +84,6 @@ class ProductController extends Controller
         // --------------------------------------------|
         // Saving $form_data in a new Product instance.|
         // --------------------------------------------|
-        $new_product = new Product();
         $new_product->fill($form_data);
         $new_product->save();
 
