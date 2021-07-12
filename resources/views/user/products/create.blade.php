@@ -45,7 +45,7 @@
         
         <div class="form-group">
             <label for="visibility">Visibile</label>
-            <input type="checkbox" class="form-control" name="visibility[]" id="visibility" {{ old('visibility') ? 'checked=' : '' }}/>
+            <input type="checkbox" class="form-control" name="visibility" id="visibility" {{ old('visibility') ? 'checked=' : '' }}/>
         </div>
 
         <div class="form-group">
