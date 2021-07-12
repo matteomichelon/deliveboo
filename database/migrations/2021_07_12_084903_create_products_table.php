@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->float('price', 7, 2);
             $table->string('SKU', 45);
             $table->tinyInteger('visibility');
-            $table->string('cover', 255);
+            $table->string('cover', 255)->nullable();
 
             // Foreign Key --> One(user) To Many(products)
             $table->unsignedBigInteger('user_id');

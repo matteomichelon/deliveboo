@@ -4,8 +4,9 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
+
 use App\User;
 use App\Product;
 
@@ -46,10 +47,32 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        // --------------------------------------------|
+        // Requesting form data in $form_data variable.|
+        // Getting user_id with Auth Helper.           |
+        // --------------------------------------------|
         $form_data = $request->all();
         $form_data['user_id'] = Auth::user()->id;
 
-        dd($form_data);
+        // ----------------------------------------------------|
+        // This will shortened the length of the img_path link.|
+        // ----------------------------------------------------|
+        if(isset($form_data['cover'])) {
+            $img_path = Storage::put('cover', $form_data['cover']);
+
+            if($img_path) {
+                $form_data['cover'] = $img_path;
+            }
+        }
+
+        // --------------------------------------------|
+        // Saving $form_data in a new Product instance.|
+        // --------------------------------------------|
+        $new_product = new Product();
+        $new_product->fill($form_data);
+        $new_product->save();
+
+        return redirect()->route('user.products.index');
     }
 
     /**
@@ -60,7 +83,13 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        $product = Product::findOrFail($id);
+
+        $data = [
+            'product' => $product
+        ];
+        
+        return view('user.products.show', $data );
     }
 
     /**
