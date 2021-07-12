@@ -19,5 +19,9 @@ class Order extends Model
         'telephone_number'
     ];
 
-    
+    // Tabella ponte con la aggiunta di una terza colonna pivot 
+    // che rappresenta la quantità di prodotti per ogni ordine.
+    public function products() {
+        return $this->belongsToMany('App\Product')->withPivot('quantity');
+    }
 }
