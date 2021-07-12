@@ -47,6 +47,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $form_data = $request->all();
+        $form_data['user_id'] = Auth::user()->id;
 
         dd($form_data);
     }
