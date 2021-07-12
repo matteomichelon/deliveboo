@@ -35,15 +35,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $new_product = new Product();
-        $user = Auth::user();
-
-        $data = [
-            'new_product' => $new_product,
-            'user_id' => $user->id
-        ];
-
-        return view('user.products.create', $data);
+        return view('user.products.create');
     }
 
     /**
