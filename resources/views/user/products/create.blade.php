@@ -5,6 +5,18 @@
 
     <h2>Aggiungi un nuovo prodotto</h2>
 
+    {{-- ERRORS DISPLAY --}}
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    {{-- END ERRORS DISPLAY --}}
+
     <form action="{{route('user.products.store')}}" method="POST" enctype="multipart/form-data">
 
         @csrf
