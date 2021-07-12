@@ -17,6 +17,7 @@
     @endif
     {{-- END ERRORS DISPLAY --}}
 
+    {{-- CREATE FORM DISPLAY --}}
     <form action="{{route('user.products.store')}}" method="POST" enctype="multipart/form-data">
 
         @csrf
@@ -48,7 +49,7 @@
             <input type="hidden" name="visibility" value="0" />
         </div>
 
-        <div class="form-group>
+        <div class="form-group">
             <label for="cover">Foto</label>
             <input type="file" name="cover">
         </div>
@@ -56,5 +57,7 @@
         <input type="submit" class="btn btn-success" value="Aggiungi">
 
       </form>
+      {{-- END CREATE FORM DISPLAY --}}
+
 </div>
 @endsection
