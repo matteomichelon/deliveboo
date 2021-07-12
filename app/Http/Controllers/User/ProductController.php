@@ -140,7 +140,7 @@ class ProductController extends Controller
             'name' => ['required', 'min:1', 'max:100', 'string'],
             'description' => ['nullable', 'min:10', 'max:500'],
             'price' => ['required', 'between:0,99999.99'],
-            'SKU' => ['required', 'unique:products', 'min:10', 'max:10'],
+            'sku' => ['required', 'unique:products', 'min:10', 'max:10'],
             'visibility' => ['required', 'boolean'],
             'cover' => ['nullable', 'max:255']
         ];

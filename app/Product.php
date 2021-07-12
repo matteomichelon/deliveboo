@@ -10,7 +10,7 @@ class Product extends Model
         'name',
         'description',
         'price',
-        'SKU',
+        'sku',
         'visibility',
         'cover',
         'user_id'

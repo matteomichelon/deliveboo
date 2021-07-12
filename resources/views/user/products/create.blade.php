@@ -39,8 +39,8 @@
         </div>
 
         <div class="form-group">
-            <label for="SKU">SKU</label>
-            <input type="text" class="form-control" name="SKU">
+            <label for="sku">sku</label>
+            <input type="text" class="form-control" name="sku">
         </div>
         
         <div class="form-group">
