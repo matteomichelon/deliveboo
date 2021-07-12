@@ -47,12 +47,17 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        // ------------------------------------------------------|
+        // Validating form data with private validation function.|
+        // ------------------------------------------------------| 
+        $request->validate($this->getValidatorRules());
+
         // --------------------------------------------|
         // Requesting form data in $form_data variable.|
         // Getting user_id with Auth Helper.           |
-        // --------------------------------------------|
+        // --------------------------------------------|        
         $form_data = $request->all();
-        $form_data['user_id'] = Auth::user()->id;
+        $form_data['user_id'] = Auth::user()->id; 
 
         // ----------------------------------------------------|
         // This will shortened the length of the img_path link.|
@@ -124,5 +129,22 @@ class ProductController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    // ----------------------------------------------------------------------|
+    // Saving $validation_rules as a private function to be used when called.|
+    // ----------------------------------------------------------------------|
+    private function getValidatorRules() {
+        
+        $validation_rules = [
+            'name' => ['required', 'min:1', 'max:100', 'string'],
+            'description' => ['nullable', 'min:10', 'max:500'],
+            'price' => ['required', 'between:0,99999.99'],
+            'SKU' => ['required', 'unique:products', 'min:10', 'max:10'],
+            'visibility' => ['required', 'boolean'],
+            'cover' => ['nullable', 'max:255']
+        ];
+
+        return $validation_rules;
     }
 }
