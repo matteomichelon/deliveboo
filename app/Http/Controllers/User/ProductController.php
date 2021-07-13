@@ -27,7 +27,7 @@ class ProductController extends Controller
             'products' => $products
         ];
 
-        return view('user.products.index', $data);
+        return view('admin.products.index', $data);
     }
 
     /**
@@ -37,7 +37,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('user.products.create');
+        return view('admin.products.create');
     }
 
     /**
@@ -87,7 +87,7 @@ class ProductController extends Controller
         $new_product->fill($form_data);
         $new_product->save();
 
-        return redirect()->route('user.products.index');
+        return redirect()->route('admin.products.index');
     }
 
     /**
@@ -104,7 +104,7 @@ class ProductController extends Controller
             'product' => $product
         ];
         
-        return view('user.products.show', $data );
+        return view('admin.products.show', $data );
     }
 
     /**
@@ -121,7 +121,7 @@ class ProductController extends Controller
             'product' => $product
         ];
 
-        return view('user.products.edit', $data);
+        return view('admin.products.edit', $data);
     }
 
     /**
@@ -174,7 +174,7 @@ class ProductController extends Controller
         // ----------------------------------------------|
         $updated_product->update($form_data);
 
-        return redirect()->route('user.products.index');
+        return redirect()->route('admin.products.index');
     }
 
     /**
@@ -188,7 +188,7 @@ class ProductController extends Controller
         $product = Product::findOrFail($id);
         $product->delete();
 
-        return redirect()->route('user.products.index');
+        return redirect()->route('admin.products.index');
     }
 
     // ----------------------------------------------------------------------|

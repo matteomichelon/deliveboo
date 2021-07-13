@@ -17,7 +17,7 @@
                     {{ __('You are logged in!') }}
                 </div>
 
-                <a href="{{route('user.products.create')}}">Crea nuovo prodotto</a>
+                <a href="{{route('admin.products.create')}}">Crea nuovo prodotto</a>
             </div>
         </div>
     </div>
