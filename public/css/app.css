@@ -2,6 +2,7 @@
 
 img {
   height: 100%;
+  width: auto;
 }
 
 .container_large {
@@ -30,27 +31,29 @@ header {
 }
 
 header .container_large {
-  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 75px;
 }
 
-header .container_large .nav-left {
-  height: 100%;
-}
-
-header .container_large .nav-left img {
+header .container_large img {
   height: 30px;
-}
-
-header .container_large .nav-right {
-  height: 100%;
 }
 
 header .container_large .nav-right .login_register ul {
   display: flex;
-  height: 100%;
+  margin-bottom: 0;
+  align-items: center;
+  /* Overwrite */
+}
+
+header .container_large .nav-right .login_register ul a {
+  color: #FFF8F0;
+}
+
+header .container_large .nav-right .login_register ul .dropdown-item {
+  color: #001632;
 }
 
 header .container_large .nav-right .btn-nav {
@@ -60,6 +63,10 @@ header .container_large .nav-right .btn-nav {
   border: 1px solid #FFF8F0;
   border-radius: 5px;
   text-decoration: none;
+}
+
+header .container_large .nav-right .btn-nav:hover {
+  background-color: #00db71;
 }
 
 main .jumbotron_main {

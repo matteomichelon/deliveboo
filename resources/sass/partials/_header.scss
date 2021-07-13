@@ -1,44 +1,51 @@
-header{
-    background-color: $primary_color;
-    color:$white_color;
+header {
 
-    .container_large{
-        height: 70px;
+    background-color: $primary_color;
+    color: $white_color;
+
+    .container_large {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
+        height: 75px;
 
-        .nav-left{
-            height: 100%;
-            img{
-                height: 30px;
-            }
-
+        img {
+            height: 30px;
         }
 
-        .nav-right{
-            height: 100%;
 
-            .login_register ul{
+        .nav-right {
+
+            .login_register ul {
                 display: flex;
-                height: 100%;
-            }
-            
+                margin-bottom: 0;
+                align-items: center;
 
-            .btn-nav{
-                color:$white_color;
+                a{
+                    color: $white_color;
+                }
+
+                /* Overwrite */
+                .dropdown-item{
+                    color: $primary_color;
+                }
+                
+            }
+
+            .btn-nav {
+                color: $white_color;
+                
                 padding: 7px 10px;
                 margin-left: 20px;
                 border: 1px solid $white_color;
                 border-radius: 5px;
                 text-decoration: none;
+
+                &:hover {
+                    background-color: $secondary_color;
+                }
             }
-    
+
         }
     }
-    
-  
-
-   
 }
