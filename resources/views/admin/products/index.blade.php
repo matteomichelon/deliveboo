@@ -11,9 +11,9 @@
                     <h6 class="card-subtitle mb-2 text-muted">€{{$product->price}}</h6>
                     <p class="card-text">{{$product->description}}</p>
                     {{-- USER TOOLS --}}
-                    <a href="{{route('user.products.show', ['product' => $product->id])}}" class="btn btn-success">Visualizza</a>
-                    <a href="{{route('user.products.edit', ['product' => $product->id])}}" class="btn btn-secondary">Modifica</a>
-                    <form action="{{ route('user.products.destroy', ['product' => $product->id]) }}" method="post">
+                    <a href="{{route('admin.products.show', ['product' => $product->id])}}" class="btn btn-success">Visualizza</a>
+                    <a href="{{route('admin.products.edit', ['product' => $product->id])}}" class="btn btn-secondary">Modifica</a>
+                    <form action="{{ route('admin.products.destroy', ['product' => $product->id]) }}" method="post">
                         @csrf
                         @method('DELETE')
                         <input type="submit" onclick="return confirm('Sicuro che vuoi eliminare il post?')" class="btn btn-danger" value="Cancella prodotto">

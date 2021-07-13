@@ -18,7 +18,7 @@
     {{-- END ERRORS DISPLAY --}}
 
     {{-- CREATE FORM DISPLAY --}}
-    <form action="{{route('user.products.update', ['product' => $product->id])}}" method="POST" enctype="multipart/form-data">
+    <form action="{{route('admin.products.update', ['product' => $product->id])}}" method="POST" enctype="multipart/form-data">
 
         @csrf
         @method('PUT')
