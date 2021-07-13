@@ -127,7 +127,7 @@
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input @error('categories') is-invalid @enderror" name="categories[]" value="{{ $category->id }}" id="categories" type="checkbox" {{ in_array($category->id, old('categories', [])) ? 'checked' : ''}}>                              
                                         <label class="form-check-label" for="categories[]">{{ $category->category }}</label>
-                                        @error('vat_number')
+                                        @error('categories')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>

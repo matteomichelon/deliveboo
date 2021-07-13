@@ -37,7 +37,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function restaurantTypes() {
+    public function categories() {
         return $this->belongsToMany('App\Category', 'user_category');
     }
 

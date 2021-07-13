@@ -52,7 +52,7 @@
             <input type="file" name="cover" id="cover">
         </div>
 
-        <input type="submit" class="btn btn-success" value="Aggiungi">
+        <input type="submit" class="btn btn-success" value="Modifica">
 
       </form>
       {{-- END CREATE FORM DISPLAY --}}
