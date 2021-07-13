@@ -1,16 +1,45 @@
 header{
-    nav{
-        background-color: $primary_color;
-        
-        .btn-nav{
-            color:$white_color;
-            padding: 7px 10px;
-            margin-left: 20px;
-            border: 1px solid $white_color;
-            border-radius: 5px;
-            text-decoration: none;
+    background-color: $primary_color;
+
+    .container_large{
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .nav-left{
+            background-color: yellow;
+            height: 100%;
         }
 
+        .nav-right{
+            background-color: green;
+            height: 100%;
+
+            .login_register ul{
+                display: flex;
+                height: 100%;
+                
+            }
+            
+
+            .btn-nav{
+                color:$white_color;
+                padding: 7px 10px;
+                margin-left: 20px;
+                border: 1px solid $white_color;
+                border-radius: 5px;
+                text-decoration: none;
+            }
+    
+        }
+    }
+    
+    nav{
+        
+        color:$white_color;
+        
+        
         img{
             height: 30px;
         }
