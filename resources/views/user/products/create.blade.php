@@ -37,11 +37,6 @@
             <label for="price">Prezzo</label>
             <input type="number" step="0.01" class="form-control" name="price" id="price" value="{{ old('price') }}">
         </div>
-
-        <div class="form-group">
-            <label for="sku">sku</label>
-            <input type="text" class="form-control" name="sku" id="sku" value="{{ old('sku') }}">
-        </div>
         
         <div class="form-group">
             <label for="visibility">Visibile</label>

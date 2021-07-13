@@ -18,7 +18,6 @@ class CreateProductsTable extends Migration
             $table->string('name',100);
             $table->text('description')->nullable();
             $table->float('price', 7, 2);
-            $table->string('sku', 45);
             $table->tinyInteger('visibility');
             $table->string('cover', 255)->nullable();
 

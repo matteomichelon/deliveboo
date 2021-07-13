@@ -52,7 +52,7 @@ class ProductController extends Controller
         // ------------------------------------------------------|
         // Validating form data with private validation function.|
         // ------------------------------------------------------| 
-        $request->validate($this->getValidatorRules($new_product));
+        $request->validate($this->getValidatorRules());
 
         // --------------------------------------------|
         // Requesting form data in $form_data variable.|
@@ -141,7 +141,7 @@ class ProductController extends Controller
         // ------------------------------------------------------|
         // Validating form data with private validation function.|
         // ------------------------------------------------------|
-        $request->validate($this->getValidatorRules($updated_product));
+        $request->validate($this->getValidatorRules());
 
 
         // --------------------------------------------|
@@ -194,13 +194,12 @@ class ProductController extends Controller
     // ----------------------------------------------------------------------|
     // Saving $validation_rules as a private function to be used when called.|
     // ----------------------------------------------------------------------|
-    private function getValidatorRules(Product $product) {
+    private function getValidatorRules() {
         
         $validation_rules = [
             'name' => ['required', 'min:1', 'max:100', 'string'],
             'description' => ['nullable', 'min:10', 'max:500'],
             'price' => ['required', 'between:0,99999.99'],
-            'sku' => ['required', 'min:10', 'max:10', Rule::unique('products')->ignore($product->id)],
             'cover' => ['nullable', 'max:255']
         ];
 
