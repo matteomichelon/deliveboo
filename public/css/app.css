@@ -1,7 +1,24 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+img {
+  height: 100%;
+}
+
 header nav {
   background-color: #001632;
+}
+
+header nav .btn-nav {
+  color: #FFF8F0;
+  padding: 7px 10px;
+  margin-left: 20px;
+  border: 1px solid #FFF8F0;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+header nav img {
+  height: 30px;
 }
 
 /*!

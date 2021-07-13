@@ -1,5 +1,20 @@
 header{
     nav{
         background-color: $primary_color;
+        
+        .btn-nav{
+            color:$white_color;
+            padding: 7px 10px;
+            margin-left: 20px;
+            border: 1px solid $white_color;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        img{
+            height: 30px;
+        }
     }
+
+   
 }
