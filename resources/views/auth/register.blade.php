@@ -118,6 +118,26 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label class="col-md-4 col-form-label text-md-right">Categorie del tuo ristorante</label>
+
+                            <div class="col-md-6">
+                                @foreach($categories as $category)
+
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input @error('categories') is-invalid @enderror" name="categories[]" value="{{ $category->id }}" id="categories" type="checkbox" {{ in_array($category->id, old('categories', [])) ? 'checked' : ''}}>                              
+                                        <label class="form-check-label" for="categories[]">{{ $category->category }}</label>
+                                        @error('vat_number')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+
+                                @endforeach
+                            </div>
+                        </div>
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-success">

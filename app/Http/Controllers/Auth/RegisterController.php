@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use App\Category;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -41,6 +42,18 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
+    // Overide della funzione showRegistrationForm passandogli i data delle categorie
+    
+    protected function showRegistrationForm() {
+        $categories = Category::all();
+
+        $data = [
+            'categories' => $categories
+        ];
+
+        return view('auth.register', $data);
+    }
+
     /**
      * Get a validator for an incoming registration request.
      *
@@ -56,7 +69,8 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'vat_number' => ['required', 'max:20', 'unique:users'],
             'restaurant_name' => ['required', 'max:100', 'string'],
-            'restaurant_address' => ['required', 'max:100', 'string']
+            'restaurant_address' => ['required', 'max:100', 'string'],
+            'categories' => ['nullable', 'exists:categories,id']
         ]);
     }
 
