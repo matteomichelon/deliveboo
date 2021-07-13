@@ -4,11 +4,12 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
-use App\User;
-use App\Category;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+
+use App\User;
+use App\Category;
 
 class RegisterController extends Controller
 {
@@ -42,7 +43,9 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
-    // Overide della funzione showRegistrationForm passandogli i data delle categorie
+    // ---------------------------------------------------------------------------|
+    // Override the showRegistrationForm function by passing it the category data.|
+    // ---------------------------------------------------------------------------|
     
     protected function showRegistrationForm() {
         $categories = Category::all();
@@ -82,7 +85,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'surname' => $data['surname'],
             'email' => $data['email'],
@@ -91,5 +94,11 @@ class RegisterController extends Controller
             'restaurant_name' => $data['restaurant_name'],
             'restaurant_address' => $data['restaurant_address']
         ]);
+
+        if(isset($data['categories']) && is_array($data['categories'])) {
+            $user->categories()->sync($data['categories']);
+        }
+
+        return $user;
     }
 }
