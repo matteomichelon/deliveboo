@@ -42,7 +42,9 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
-    // Overide della funzione showRegistrationForm passandogli i data delle categorie
+    // ---------------------------------------------------------------------------|
+    // Override the showRegistrationForm function by passing it the category data.|
+    // ---------------------------------------------------------------------------|
     
     protected function showRegistrationForm() {
         $categories = Category::all();
