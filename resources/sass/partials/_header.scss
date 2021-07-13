@@ -1,25 +1,28 @@
 header{
     background-color: $primary_color;
+    color:$white_color;
 
     .container_large{
         height: 70px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        
 
         .nav-left{
-            background-color: yellow;
             height: 100%;
+            img{
+                height: 30px;
+            }
+
         }
 
         .nav-right{
-            background-color: green;
             height: 100%;
 
             .login_register ul{
                 display: flex;
                 height: 100%;
-                
             }
             
 
@@ -35,15 +38,7 @@ header{
         }
     }
     
-    nav{
-        
-        color:$white_color;
-        
-        
-        img{
-            height: 30px;
-        }
-    }
+  
 
    
 }

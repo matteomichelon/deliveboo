@@ -26,6 +26,7 @@ ul {
 
 header {
   background-color: #001632;
+  color: #FFF8F0;
 }
 
 header .container_large {
@@ -36,12 +37,14 @@ header .container_large {
 }
 
 header .container_large .nav-left {
-  background-color: yellow;
   height: 100%;
 }
 
+header .container_large .nav-left img {
+  height: 30px;
+}
+
 header .container_large .nav-right {
-  background-color: green;
   height: 100%;
 }
 
@@ -59,12 +62,28 @@ header .container_large .nav-right .btn-nav {
   text-decoration: none;
 }
 
-header nav {
-  color: #FFF8F0;
+main .jumbotron_main {
+  background-color: #00db71;
+  background-image: linear-gradient(to bottom right, #00db71, #001632);
+  height: 350px;
 }
 
-header nav img {
-  height: 30px;
+main .jumbotron_main .container_large {
+  position: relative;
+}
+
+main .jumbotron_main .container_large .advertising {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  color: #FFF8F0;
+  font-weight: bolder;
+}
+
+main .jumbotron_main .container_large .duck-box {
+  position: absolute;
+  top: 30px;
+  right: 0;
 }
 
 /*!
