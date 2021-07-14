@@ -17,10 +17,10 @@ class RestaurantController extends Controller
 
         foreach($restaurants as $restaurant) {
             $result[] = [
-                'restaurant_id' => $restaurant->id,
-                'restaurant_name' => $restaurant->restaurant_name,
-                'restaurant_address' => $restaurant->restaurant_address,
-                'restaurant_email' => $restaurant->email
+                'id' => $restaurant->id,
+                'name' => $restaurant->restaurant_name,
+                'address' => $restaurant->restaurant_address,
+                'email' => $restaurant->email
             ]; 
         }
         

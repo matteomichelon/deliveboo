@@ -2107,15 +2107,25 @@ var _require = __webpack_require__(/*! axios */ "./node_modules/axios/index.js")
 var app = new Vue({
   el: '#root',
   data: {
-    categories: []
+    categories: [],
+    restaurants: []
   },
-  methods: {},
+  methods: {
+    getCategoryRestaurant: function getCategoryRestaurant(categoryId) {
+      var _this = this;
+
+      axios.get("api/categories/".concat(categoryId)).then(function (response) {
+        var result = response.data.restaurants;
+        _this.restaurants = result;
+      });
+    }
+  },
   mounted: function mounted() {
-    var _this = this;
+    var _this2 = this;
 
     axios.get('api/categories').then(function (response) {
       var result = response.data.categories;
-      _this.categories = result;
+      _this2.categories = result;
     });
   }
 });

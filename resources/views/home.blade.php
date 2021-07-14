@@ -51,7 +51,7 @@
                 <h2>Scegli tra la nostra selezione</h2>
 
                 <!-- Box category -->
-                <div class="container-box">
+                <div class="container-box" v-for="category in categories" @click="getCategoryRestaurant(category.id)">
 
                     <!-- Single box -->
                     <div class="image">

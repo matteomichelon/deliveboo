@@ -17,8 +17,8 @@ class CategoryController extends Controller
         $result = [];
         foreach($categories as $category) {
             $result[] = [
-                'category_id' => $category->id,
-                'category_name' => $category->category
+                'id' => $category->id,
+                'name' => $category->category
             ];
         }
 
@@ -39,10 +39,10 @@ class CategoryController extends Controller
         $result = [];
         foreach($restaurants as $restaurant) {
             $result[] = [
-                'restaurant_id' => $restaurant->id,
-                'restaurant_name' => $restaurant->restaurant_name,
-                'restaurant_address' => $restaurant->restaurant_address,
-                'restaurant_email' => $restaurant->email
+                'id' => $restaurant->id,
+                'name' => $restaurant->restaurant_name,
+                'address' => $restaurant->restaurant_address,
+                'email' => $restaurant->email
             ];            
         }
 
