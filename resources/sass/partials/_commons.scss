@@ -15,9 +15,8 @@ img {
 
 .container_medium {
     width: 70%;
-    margin: auto;
-    background-color: darkcyan;
     height: 100%;
+    margin: auto;    
 }
 
 ul {
@@ -26,4 +25,8 @@ ul {
     list-style-type: none;
     display: block;
 
+}
+
+.padding-section{
+    padding: 50px 0;
 }
