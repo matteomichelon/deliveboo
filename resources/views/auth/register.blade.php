@@ -125,16 +125,24 @@
                                 @foreach($categories as $category)
 
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input @error('categories') is-invalid @enderror" name="categories[]" value="{{ $category->id }}" id="categories" type="checkbox" {{ in_array($category->id, old('categories', [])) ? 'checked' : ''}}>                              
-                                        <label class="form-check-label" for="categories[]">{{ $category->category }}</label>
-                                        @error('categories')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
+                                        <input 
+                                            class="form-check-input {{ $errors->has('categories') && array_key_exists($category->id, old('categories', [])) && !in_array($category->id, old('categories', [])) ? 'is-invalid' : '' }}"
+                                             name="categories[{{$category->id}}]" value="{{ $category->id }}" 
+                                             id="categories" 
+                                             type="checkbox" 
+                                             {{ in_array($category->id, old('categories', [])) ? 'checked' : ''}}
+                                        >                              
+                                        <label class="form-check-label" for="categories[]">{{ $category->category }}</label>                                        
                                     </div>
-
+                                    
                                 @endforeach
+                                   
+                                @error('categories')
+                                    <span class="invalid-feedback" style="display:block" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                                
                             </div>
                         </div>
 
