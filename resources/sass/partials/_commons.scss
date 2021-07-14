@@ -1,22 +1,26 @@
-img{
+body {
+    font-family: 'Lato', sans-serif !important;
+}
+
+img {
     height: 100%;
     width: auto;
 }
 
-.container_large{
+.container_large {
     width: 80%;
     margin: auto;
     height: 100%;
 }
 
-.container_medium{
+.container_medium {
     width: 70%;
     margin: auto;
     background-color: darkcyan;
     height: 100%;
 }
 
-ul{
+ul {
     padding: 0;
     margin: 0;
     list-style-type: none;
