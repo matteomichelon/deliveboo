@@ -45,6 +45,23 @@ h2 {
   font-weight: bold !important;
 }
 
+.menu-footer {
+  text-decoration: none;
+}
+
+.menu-footer li {
+  text-align: left;
+}
+
+.menu-footer li:first-child {
+  text-transform: uppercase;
+}
+
+.menu-footer li a {
+  list-style-type: none;
+  color: #FFF8F0;
+}
+
 header {
   background-color: #001632;
   color: #FFF8F0;
@@ -200,6 +217,26 @@ section.app .box-app {
 
 section.app .box-app img {
   padding-right: 20px;
+}
+
+footer {
+  background-color: #001632;
+  color: #FFF8F0;
+  position: relative;
+}
+
+footer .container-box a {
+  text-decoration: none;
+}
+
+footer .container-box a:hover {
+  color: #00db71;
+}
+
+footer .copyright {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 
 /*!

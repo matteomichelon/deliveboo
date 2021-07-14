@@ -1,0 +1,21 @@
+footer{
+    background-color: $primary_color;
+    color: $white_color;
+    position: relative;
+
+    .container-box{
+        a{
+            text-decoration: none;
+            
+            &:hover{
+                color: $secondary_color;
+            }
+        }
+    }
+
+    .copyright{
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+}

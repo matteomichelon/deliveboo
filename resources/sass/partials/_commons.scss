@@ -43,3 +43,21 @@ h2{
     font-size: 53px !important;
     font-weight: bold !important;
 }
+
+.menu-footer{
+    text-decoration: none;
+
+    li{
+        
+        text-align: left;
+
+        &:first-child{
+            text-transform: uppercase;
+        }
+
+        a{
+            list-style-type: none;
+            color: $white_color;
+        }
+    }
+}
