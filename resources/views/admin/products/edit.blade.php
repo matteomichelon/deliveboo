@@ -52,6 +52,15 @@
             <input type="file" name="cover" id="cover">
         </div>
 
+        {{-- Anteprima immagine presente --}}
+        @if ($product->cover)
+            <div>
+                <h3>Anteprima immagine corrente</h3>
+
+                <img src="{{ asset('storage/' . $product->cover) }}" alt="{{ $product->name }}">
+            </div>
+        @endif
+
         <input type="submit" class="btn btn-success" value="Modifica">
 
       </form>

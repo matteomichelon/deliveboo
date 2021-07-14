@@ -74,7 +74,7 @@ class ProductController extends Controller
         // This will shortened the length of the img_path link.|
         // ----------------------------------------------------|        
         if(isset($form_data['cover'])) {
-            $img_path = Storage::put('cover_uploads', $form_data['cover']);
+            $img_path = Storage::put('cover', $form_data['cover']);
 
             if($img_path) {
                 $form_data['cover'] = $img_path;
