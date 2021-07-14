@@ -1,90 +1,65 @@
+<!-- HEADER -->
 <header>
-        <nav>
-            <div class="container_large">
 
-                <div class="nav-left">
+    <!-- NAV -->
+    <nav>
 
-                    <div class="logo">
+        <!-- Container Large -->
+        <div class="container_large">
 
-                        <a href="{{ url('/') }}">
-                            <img src="{{asset('img/logo-test-2.png')}}" alt="logo">
-                        </a>
-                    </div>
-                    
+            <!-- Nav Left -->
+            <div class="nav-left">
+
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="{{ url('/') }}">
+                        <img src="{{ asset('img/logo-test-2.png') }}" alt="logo">
+                    </a>
                 </div>
+                <!-- end Logo -->
 
-                <div class="nav-right">
+            </div>
+            <!-- end Nav Left -->
 
-                    <div class="login_register">
-                        <ul>
-                            @guest
-                                <li>
-                                    <a class="btn-nav" href="{{ route('login') }}">Login</a>
-                                </li>
-                                @if (Route::has('register'))
-                                    <li>
-                                        <a class="btn-nav" href="{{ route('register') }}">Registrati</a>
-                                    </li>
-                                @endif
-                                @else
+            <!-- Nav Right -->
+            <div class="nav-right">
 
+                <!-- Login -->
+                <div class="login_register">
 
-                                <a href="{{route('admin.products.create')}}">Aggiungi un nuovo prodotto</a>
-                                
-                                <li class="nav-item dropdown">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->name }}
-                                    </a>
+                    <ul>
 
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                            @csrf
-                                        </form>
-                                    </div>
-                                </li>
-                            @endguest
-                        </ul>
-                        
-                    </div>
-                </div>
-                
-            
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
-
-                    <!-- Right Side Of Navbar -->
-                    <!-- <ul>
-                        Authentication Links 
+                        <!-- Guest -->
                         @guest
                             <li>
-                                <a class="btn-nav" href="{{ route('login') }}">Login</a>
+                                <a class="btn-nav" href="{{ route('login') }}">Accedi</a>
                             </li>
                             @if (Route::has('register'))
                                 <li>
                                     <a class="btn-nav" href="{{ route('register') }}">Registrati</a>
                                 </li>
                             @endif
-                            @else
+                        @else
+                        <!-- end Guest -->
 
+                        <!-- Admin -->
+                            <li>
+                                <a href="{{ route('admin.products.create') }}" data-toggle="tooltip"
+                                    title="Aggiungi un nuovo prodotto">
+                                    <i class="fas fa-plus"></i>
+                                </a>
+                            </li>
 
-                            <a href="{{route('admin.products.create')}}">Aggiungi un nuovo prodotto</a>
-                            
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        Esci
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -93,8 +68,18 @@
                                 </div>
                             </li>
                         @endguest
-                    </ul> 
-                </div>  -->
+                        <!-- end Admin -->
+
+                    </ul>
+
+                </div>
+                <!-- end Login -->
+
             </div>
-        </nav>
+            <!-- end Nav Right -->
+
+    </nav>
+    <!-- end NAV -->
+
 </header>
+<!-- end HEADER -->

@@ -1,7 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+body {
+  font-family: "Lato", sans-serif !important;
+}
+
 img {
   height: 100%;
+  width: auto;
 }
 
 .container_large {
@@ -26,28 +31,33 @@ ul {
 
 header {
   background-color: #001632;
+  color: #FFF8F0;
 }
 
 header .container_large {
-  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 75px;
 }
 
-header .container_large .nav-left {
-  background-color: yellow;
-  height: 100%;
-}
-
-header .container_large .nav-right {
-  background-color: green;
-  height: 100%;
+header .container_large img {
+  height: 30px;
 }
 
 header .container_large .nav-right .login_register ul {
   display: flex;
-  height: 100%;
+  margin-bottom: 0;
+  align-items: center;
+  /* Overwrite */
+}
+
+header .container_large .nav-right .login_register ul a {
+  color: #FFF8F0;
+}
+
+header .container_large .nav-right .login_register ul .dropdown-item {
+  color: #001632;
 }
 
 header .container_large .nav-right .btn-nav {
@@ -59,12 +69,32 @@ header .container_large .nav-right .btn-nav {
   text-decoration: none;
 }
 
-header nav {
-  color: #FFF8F0;
+header .container_large .nav-right .btn-nav:hover {
+  background-color: #00db71;
 }
 
-header nav img {
-  height: 30px;
+main .jumbotron_main {
+  background-color: #00db71;
+  background-image: linear-gradient(to bottom right, #00db71, #001632);
+  height: 350px;
+}
+
+main .jumbotron_main .container_large {
+  position: relative;
+}
+
+main .jumbotron_main .container_large .advertising {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  color: #FFF8F0;
+  font-weight: bolder;
+}
+
+main .jumbotron_main .container_large .duck-box {
+  position: absolute;
+  top: 30px;
+  right: 0;
 }
 
 /*!
@@ -101,7 +131,7 @@ header nav img {
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Nunito", sans-serif;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -133,7 +163,7 @@ section {
 
 body {
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.6;
@@ -6474,7 +6504,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -6599,7 +6629,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Nunito", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
