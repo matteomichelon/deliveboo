@@ -30,6 +30,9 @@ ul {
 .container-box {
   display: flex;
   flex-wrap: wrap;
+  overflow: hidden;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 .padding-section {
