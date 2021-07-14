@@ -13,6 +13,9 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
+    {{-- Header Scripts --}}
+    @yield('header_scripts')    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,6 +42,9 @@
 
         @include('partials/footer')
     </div>
+
+
+    @yield('footer_scripts')
 </body>
 
 </html>
