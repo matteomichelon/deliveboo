@@ -11,7 +11,7 @@
                     it will display a standard image.    
                 --}}
                 @if (isset($product->cover) )
-                    <img src="{{$product->cover}}" class="card-img-top" alt="{{$product->name}}">
+                    <img src="{{asset('storage/' . $product->cover)}}" class="card-img-top" alt="{{$product->name}}">
                 @else
                     <img src="https://picsum.photos/300" class="card-img-top" alt="{{$product->name}}">
                 @endif
