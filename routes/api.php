@@ -32,6 +32,19 @@ Route::prefix('categories')
     }
 );
 
+Route::prefix('restaurants')
+    ->namespace('Api')
+    ->name('api.restaurants.')
+    ->group(function () {
+
+        // Route per accedere a tutti i ristoranti.
+        Route::get('/', 'RestaurantController@index')->name('index');
+
+        // Route per accedere ai piatti per ogni ristorante.
+        Route::get('/{restaurant}', 'RestaurantController@show')->name('show');
+    }
+);
+
 
 
 
