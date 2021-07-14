@@ -243,6 +243,10 @@ footer {
   position: relative;
 }
 
+footer .container-box {
+  justify-content: space-between;
+}
+
 footer .container-box a {
   text-decoration: none;
 }
