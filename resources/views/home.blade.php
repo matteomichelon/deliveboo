@@ -2,30 +2,72 @@
 
 @section('content')
 
-<!--Jumbotron section-->
+    <!--Jumbotron section-->
+    <section class="jumbotron_main">
 
-<section class="jumbotron_main">
+        <div class="container_large">
 
-    <div class="container_large">
+            <!-- Advertising box -->
+            <div class="advertising">
 
-        <!--advertising box -->
-        <div class="advertising">
+                <h1>Affamato? <br>
+                    Ci pensiamo noi a portarti a casa <br>
+                    i cibi che più ami.
+                </h1>
 
-            <h2>Affamato? <br>
-                Ci pensiamo noi a portarti a casa <br>
-                i cibi che più ami.
-            </h2>
+            </div>
+            <!-- end Advertising box -->
+
+            <!-- Duck box -->
+            <div class="duck-box">
+
+                <img src="{{ asset('img/duck-test.jpg') }}" alt="duck">
+
+            </div>
+            <!-- end Duck box -->
 
         </div>
 
-        <!--duck box -->
-        <div class="duck-box">
+    </section>
+    <!--end Jumbotron section-->
 
-            <img src="{{asset('img/duck-test.jpg')}}" alt="duck">
+    <!-- Category section -->
+    <section class="category">
+
+        <div class="container_medium padding-section">
+
+            <h2>Scegli tra la nostra selezione</h2>
+
+            <!-- Box category -->
+            <div class="container-box">
+
+                <!-- Single box -->
+                <div class="image">
+
+                    <!-- Overlay -->
+                    <div class="overlay" >
+                        <div class="inner-overlay"></div>
+                        {{-- TODO: capire come gestire con vue il click --}}
+                        <a href="#">test</a>                        
+                    </div>
+                    <!-- end Overlay -->
+
+                    <img src="{{ asset('img/pizza.jpg') }}" alt="test">                   
+
+                </div> 
+                <!-- end Single box -->              
+
+            </div>
+            <!-- end Box category -->
+            
 
         </div>
 
-    </div>
+    </section>
+    <!-- end Category section -->
 
-</section>
+
+
+
+
 @endsection
