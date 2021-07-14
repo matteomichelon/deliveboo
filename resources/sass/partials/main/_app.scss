@@ -1,0 +1,20 @@
+section.app {
+
+    background-color: $secondary_color;
+    background-image: linear-gradient(to bottom right, $secondary_color, $primary_color);
+    height: 250px;
+
+    h2{
+        text-align: left;
+    }
+
+    .box-app{
+        padding-top: 20px;
+        height: 60px;
+
+        img{
+            padding-right: 20px;
+        }
+    }
+
+}
