@@ -9,16 +9,6 @@ section.category {
         padding: 20px;
         position: relative;
 
-        a {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 60px;
-            text-decoration: none;
-            color: $white_color;
-        }
-
         img {
             width: 100%;
             height: auto;
@@ -34,6 +24,16 @@ section.category {
             left: 50%;
             transform: translate(-50%, -50%);
             display: none;
+
+            p {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 40px;
+                text-decoration: none;
+                color: $white_color;
+            }
 
             .inner-overlay {
                 width: 100%;

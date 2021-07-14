@@ -56,11 +56,13 @@
                     <!-- Single box -->
                     <div class="image" v-for="category in categories" @click="getCategoryRestaurant(category.id)">
 
+                        @{{ console.log(category) }}
+
                         <!-- Overlay -->
                         <div class="overlay">
-                            <div class="inner-overlay"></div>
-                            {{-- TODO: capire come gestire con vue il click --}}
-                            <a href="#">test</a>
+                            <div class="inner-overlay"></div>  
+                            <p> @{{ category.name }}</p>
+
                         </div>
                         <!-- end Overlay -->
 
