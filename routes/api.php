@@ -19,7 +19,21 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-// Route per accedere a tutte le categorie.
-Route::get('/categories', 'Api\CategoryController@index')->name('api.categories.index');
+Route::prefix('categories')
+    ->namespace('Api')
+    ->name('api.categories.')
+    ->group(function () {
+
+        // Route per accedere a tutte le categorie.
+        Route::get('/', 'CategoryController@index')->name('index');
+
+        // Route per accedere ai ristoranti per ogni categoria.
+        Route::get('/{category}', 'CategoryController@show')->name('show');
+    }
+);
+
+
+
+
 
 
