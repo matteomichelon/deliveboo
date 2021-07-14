@@ -14,6 +14,7 @@ class RestaurantController extends Controller
         $restaurants = User::all();
         
         $result = [];
+
         foreach($restaurants as $restaurant) {
             $result[] = [
                 'restaurant_id' => $restaurant->id,
@@ -25,6 +26,31 @@ class RestaurantController extends Controller
         
         $response = [
             'restaurants' => $result,
+            'success' => true
+        ];
+
+        return response()->json($response);
+    }
+
+    // Metodo per accedere ai piatti di un singolo ristorante
+    public function show($id) {
+        $restaurant = User::findOrFail($id);
+
+        $products = $restaurant->products;
+
+        $result = [];
+        
+        foreach($products as $product) {
+            $result[] = [
+                'name' => $product->name,
+                'price' => $product->price,
+                'description' => $product->description,
+                'cover' => $product->cover
+            ];
+        }
+
+        $response = [
+            'products' => $result,
             'success' => true
         ];
 
