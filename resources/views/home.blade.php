@@ -51,10 +51,10 @@
                 <h2>Scegli tra la nostra selezione</h2>
 
                 <!-- Box category -->
-                <div class="container-box" v-for="category in categories" @click="getCategoryRestaurant(category.id)">
+                <div class="container-box" >
 
                     <!-- Single box -->
-                    <div class="image">
+                    <div class="image" v-for="category in categories" @click="getCategoryRestaurant(category.id)">
 
                         <!-- Overlay -->
                         <div class="overlay">
@@ -123,18 +123,18 @@
 
             <div class="container_medium padding-section">
 
+                <!--box-app-left-->
                 <div class="box-app-left">
-
                     <h2>Scarica la nostra app</h2>
-
                 </div>
-
+                <!--end box-app-left-->
                 
-
+                <!--box-app-right-->
                 <div class="box-app-right">
                     <img src="{{ asset('img/app-store-badge.png') }}" alt="App Store Badge">
                     <img src="{{ asset('img/play-store-badge.png') }}" alt="Play Store Badge">
                 </div>
+                <!--box-app-right-->
 
             </div>
 
