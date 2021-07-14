@@ -27,6 +27,19 @@ ul {
 
 }
 
+.container-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .padding-section{
     padding: 50px 0;
+}
+
+h2{
+    text-align: center;
+    color: $primary_color;
+    font-size: 53px !important;
+    font-weight: bold !important;
 }

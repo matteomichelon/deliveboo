@@ -45,26 +45,66 @@
                 <div class="image">
 
                     <!-- Overlay -->
-                    <div class="overlay" >
+                    <div class="overlay">
                         <div class="inner-overlay"></div>
                         {{-- TODO: capire come gestire con vue il click --}}
-                        <a href="#">test</a>                        
+                        <a href="#">test</a>
                     </div>
                     <!-- end Overlay -->
 
-                    <img src="{{ asset('img/pizza.jpg') }}" alt="test">                   
+                    <img src="{{ asset('img/pizza.jpg') }}" alt="test">
 
-                </div> 
-                <!-- end Single box -->              
+                </div>
+                <!-- end Single box -->
 
             </div>
             <!-- end Box category -->
-            
+
 
         </div>
 
     </section>
     <!-- end Category section -->
+
+    <!-- Research section -->
+    <section class="research padding-section">
+
+        <div class="container_large">
+
+            <h2>Risultati della tua ricerca per: "nome_categoria" </h2>
+
+            <!-- Container box -->
+            <div class="container-box">
+
+                <!-- Single card Restaurant -->
+                <div class="card-restaurant">
+
+                    <div class="background-hover">
+
+                        <div class="research-image">
+                            <img src="{{ asset('img/pizzeria.png') }}" alt="">
+                        </div>
+
+                        <div class="research-details">
+
+                            <h3>Restaurant_name</h3>
+
+                            <p>Restaurant_address</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- end Single card Restaurant -->
+
+            </div>
+            <!-- end Container box -->
+
+        </div>
+
+    </section>
+    <!-- end Research section -->
 
 
 

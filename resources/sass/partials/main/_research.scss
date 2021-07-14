@@ -1,0 +1,30 @@
+section.research {
+
+    .card-restaurant {
+        width: calc(100% / 3);
+        padding: 20px;
+        position: relative;
+        margin-top: 20px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .research-details {
+        padding: 20px;
+    }
+
+    .background-hover {
+
+        &:hover {
+            //border-radius: 5px;
+            background-color: #ffff;
+            cursor: pointer;
+            @include box-shadow;
+        }
+    }
+
+
+}
