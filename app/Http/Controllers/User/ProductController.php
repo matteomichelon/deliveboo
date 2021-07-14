@@ -200,7 +200,7 @@ class ProductController extends Controller
             'name' => ['required', 'min:1', 'max:100', 'string'],
             'description' => ['nullable', 'min:10', 'max:500'],
             'price' => ['required', 'between:0,99999.99', 'numeric'],
-            'cover' => ['nullable', 'max:255']
+            'cover' => ['nullable', 'max:2000']
         ];
 
         return $validation_rules;
