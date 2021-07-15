@@ -2130,6 +2130,18 @@ var app = new Vue({
     },
     getActiveCategory: function getActiveCategory(categoryName) {
       this.activeCategory = categoryName;
+    },
+    scrollRight: function scrollRight() {
+      document.querySelector('.container-box').scrollBy({
+        left: 1000,
+        behavior: 'smooth'
+      });
+    },
+    scrollLeft: function scrollLeft() {
+      document.querySelector('.container-box').scrollBy({
+        left: -1000,
+        behavior: 'smooth'
+      });
     }
   },
   mounted: function mounted() {
@@ -2155,7 +2167,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/catalinzahariea/Desktop/Boolean/Deliveboo/deliveboo/resources/js/public_home.js */"./resources/js/public_home.js");
+module.exports = __webpack_require__(/*! C:\GitHub\deliveboo\resources\js\public_home.js */"./resources/js/public_home.js");
 
 
 /***/ })

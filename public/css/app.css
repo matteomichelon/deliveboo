@@ -1,4 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", sans-serif !important;
 }
@@ -103,6 +107,19 @@ main .jumbotron_main .container_large .advertising {
 }
 section.category .container_medium {
   padding: 50px 0;
+  position: relative;
+}
+section.category .container_medium .chevron-left i {
+  position: absolute;
+  left: -2%;
+  top: 56%;
+  cursor: pointer;
+}
+section.category .container_medium .chevron-right i {
+  position: absolute;
+  right: -2%;
+  cursor: pointer;
+  top: 56%;
 }
 section.category .container_medium .container-box {
   overflow: auto;

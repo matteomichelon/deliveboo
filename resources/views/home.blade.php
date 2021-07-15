@@ -50,8 +50,16 @@
 
                 <h2>Scegli tra la nostra selezione</h2>
 
+                <div class="chevron-right">
+                    <i class="fas fa-chevron-right" @click="scrollRight()"></i>
+                </div>
+
+                <div class="chevron-left">
+                    <i class="fas fa-chevron-left" @click="scrollLeft()"></i>
+                </div>
+
                 <!-- Box category -->
-                <div class="container-box d-flex flex-nowrap" >
+                <div class="container-box d-flex flex-nowrap" >                    
 
                     <!-- Single box -->
                     <div class="category-card pe-auto" v-for="category in categories" @click="getCategoryRestaurant(category.id); getActiveCategory(category.name);">

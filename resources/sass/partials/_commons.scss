@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto', sans-serif !important;
 }
@@ -16,7 +20,7 @@ img {
 .container_medium {
     width: 70%;
     height: 100%;
-    margin: auto;    
+    margin: auto;
 }
 
 ul {
@@ -27,34 +31,34 @@ ul {
 
 }
 
-.padding-section{
+.padding-section {
     padding: 50px 0;
 }
 
-h1{
+h1 {
     font-size: 50px !important;
     font-weight: bold !important;
 }
 
-h2{
+h2 {
     text-align: center;
     color: $primary_color;
     font-size: 40px !important;
     font-weight: bold !important;
 }
 
-.menu-footer{
+.menu-footer {
     text-decoration: none;
 
-    li{
-        
+    li {
+
         text-align: left;
 
-        &:first-child{
+        &:first-child {
             text-transform: uppercase;
         }
 
-        a{
+        a {
             list-style-type: none;
             color: $white_color;
         }

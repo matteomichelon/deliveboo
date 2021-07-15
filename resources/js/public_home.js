@@ -29,6 +29,20 @@ var app = new Vue(
 
             getActiveCategory(categoryName) {
                 this.activeCategory = categoryName;
+            },
+
+            scrollRight () {
+                document.querySelector('.container-box').scrollBy({                    
+                    left: 1000,
+                    behavior: 'smooth'
+                  });
+            },
+
+            scrollLeft () {
+                document.querySelector('.container-box').scrollBy({                    
+                    left: -1000,
+                    behavior: 'smooth'
+                  });
             }
 
         },
