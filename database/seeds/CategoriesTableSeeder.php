@@ -75,6 +75,7 @@ class CategoriesTableSeeder extends Seeder
         foreach($categories as $category) {
             $new_category = new Category;
             $new_category->category = $category['category'];
+            $new_category->cover = $category['cover'];
             $new_category->save();
         }
 
