@@ -14,46 +14,60 @@ class CategoriesTableSeeder extends Seeder
     {
         $categories = [
             [
-                'category' => 'Italiano'
+                'category' => 'Italiano',
+                'cover' => ''
             ],
             [
-                'category' => 'Cinese'
+                'category' => 'Cinese',
+                'cover' => ''
             ],
             [
-                'category' => 'Giapponese'
+                'category' => 'Giapponese',
+                'cover' => ''
             ],
             [
-                'category' => 'Americano'
+                'category' => 'Americano',
+                'cover' => ''
             ],
             [
-                'category' => 'Messicano'
+                'category' => 'Messicano',
+                'cover' => ''
             ],
             [
-                'category' => 'Indiano'
+                'category' => 'Indiano',
+                'cover' => ''
             ],
             [
-                'category' => 'Internazionale'
+                'category' => 'Internazionale',
+                'cover' => ''
             ],
             [
-                'category' => 'Pesce'
+                'category' => 'Pesce',
+                'cover' => ''
             ],
             [
-                'category' => 'Carne'
+                'category' => 'Carne',
+                'cover' => ''
             ],
             [
-                'category' => 'Pizza'
+                'category' => 'Pizza',
+                'cover' => ''
             ],
             [
-                'category' => 'Halal'
+                'category' => 'Halal',
+                'cover' => ''
             ],
             [
-                'category' => 'Fast Food'
+                'category' => 'Fast Food',
+                'cover' => ''
             ],
             [
-                'category' => 'Pasticceria'
+                'category' => 'Pasticceria',
+                'cover' => ''
             ],
             [
-                'category' => 'Gelateria'
+                'category' => 'Gelateria',
+                'cover' => ''
             ]
         ];
 
