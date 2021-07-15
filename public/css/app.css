@@ -108,6 +108,7 @@ section.category .container_medium .container-box {
   display: flex;
   flex-wrap: nowrap;
   overflow: auto;
+  padding: 3em;
 }
 section.category .container_medium .container-box::-webkit-scrollbar {
   display: none;
@@ -118,18 +119,30 @@ section.category .container_medium .container-box .category-card {
   height: 7em;
   border-radius: 1em;
   margin-right: 2em;
-  background-color: #003049;
-  overflow: hidden;
   position: relative;
+  transition: all 0.2s;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+}
+section.category .container_medium .container-box .category-card img {
+  border-radius: 1em;
 }
 section.category .container_medium .container-box .category-card:hover {
   cursor: pointer;
+  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2);
+}
+section.category .container_medium .container-box .category-card:active {
+  transform: scale(0.95);
 }
 section.category .container_medium .container-box .category-card .category-name {
   position: absolute;
   bottom: 10%;
   left: 10%;
-  color: #eae2b7;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #fff;
 }
 
 section.research .card-restaurant {

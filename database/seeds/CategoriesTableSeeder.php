@@ -15,59 +15,59 @@ class CategoriesTableSeeder extends Seeder
         $categories = [
             [
                 'category' => 'Italiano',
-                'cover' => 'img/categories/italiano.png'
+                'cover' => 'img/categories/italiano.jpg'
             ],
             [
                 'category' => 'Cinese',
-                'cover' => 'img/categories/cinese.png'
+                'cover' => 'img/categories/cinese.jpg'
             ],
             [
                 'category' => 'Giapponese',
-                'cover' => 'img/categories/giapponese.png'
+                'cover' => 'img/categories/giapponese.jpg'
             ],
             [
                 'category' => 'Americano',
-                'cover' => 'img/categories/americano.png'
+                'cover' => 'img/categories/americano.jpg'
             ],
             [
                 'category' => 'Messicano',
-                'cover' => 'img/categories/messicano.png'
+                'cover' => 'img/categories/messicano.jpg'
             ],
             [
                 'category' => 'Indiano',
-                'cover' => 'img/categories/indiano.png'
+                'cover' => 'img/categories/indiano.jpg'
             ],
             [
                 'category' => 'Internazionale',
-                'cover' => 'img/categories/internazionale.png'
+                'cover' => 'img/categories/internazionale.jpg'
             ],
             [
                 'category' => 'Pesce',
-                'cover' => 'img/categories/pesce.png'
+                'cover' => 'img/categories/pesce.jpg'
             ],
             [
                 'category' => 'Carne',
-                'cover' => 'img/categories/carne.png'
+                'cover' => 'img/categories/carne.jpg'
             ],
             [
                 'category' => 'Pizza',
-                'cover' => 'img/categories/pizza.png'
+                'cover' => 'img/categories/pizza.jpg'
             ],
             [
                 'category' => 'Halal',
-                'cover' => 'img/categories/halal.png'
+                'cover' => 'img/categories/halal.jpg'
             ],
             [
                 'category' => 'Fast Food',
-                'cover' => 'img/categories/fast-food.png'
+                'cover' => 'img/categories/fast-food.jpg'
             ],
             [
                 'category' => 'Pasticceria',
-                'cover' => 'img/categories/pasticceria.png'
+                'cover' => 'img/categories/pasticceria.jpg'
             ],
             [
                 'category' => 'Gelateria',
-                'cover' => 'img/categories/gelateria.png'
+                'cover' => 'img/categories/gelateria.jpg'
             ]
         ];
 
