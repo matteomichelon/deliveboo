@@ -66,7 +66,7 @@
                         </div>
                         <!-- end Overlay -->
 
-                        <img src="{{ asset('img/pizza.jpg') }}" alt="test">
+                        <img :src="category.cover" alt="test">
 
                     </div>
                     <!-- end Single box -->
