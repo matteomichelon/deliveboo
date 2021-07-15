@@ -8,12 +8,12 @@ var app = new Vue(
             restaurants: []
         },
         methods: {
-            getCategoryRestaurant(categoryId) {
+            getCategoryRestaurant(categoryId) {                
                 axios
                     .get(`api/categories/${categoryId}`)
                     .then((response) => {
                         const result = response.data.restaurants;
-                        this.restaurants = result;
+                        this.restaurants = result;                        
                     })
             }
         },

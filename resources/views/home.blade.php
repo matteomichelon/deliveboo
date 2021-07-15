@@ -56,7 +56,7 @@
                     <!-- Single box -->
                     <div class="image" v-for="category in categories" @click="getCategoryRestaurant(category.id)">
 
-                        @{{ console.log(category) }}
+                        {{-- @{{ console.log(category) }} --}}
 
                         <!-- Overlay -->
                         <div class="overlay">

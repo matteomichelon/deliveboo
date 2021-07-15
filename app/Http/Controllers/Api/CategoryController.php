@@ -35,15 +35,26 @@ class CategoryController extends Controller
     public function show($id) {
         $category = Category::findOrFail($id);
 
-        $restaurants = $category->users;
+        $restaurants = $category->users;                
 
         $result = [];
         foreach($restaurants as $restaurant) {
+
+            // Per ricavare le categorie per ogni ristorante
+            $categories = [];
+            foreach($restaurant->categories as $category) {
+                $categories[] = [
+                    'id' => $category->id,
+                    'name' => $category->category
+                ];
+            }
+
             $result[] = [
                 'id' => $restaurant->id,
                 'name' => $restaurant->restaurant_name,
                 'address' => $restaurant->restaurant_address,
-                'email' => $restaurant->email
+                'email' => $restaurant->email,
+                'categories' => $categories
             ];            
         }
 
