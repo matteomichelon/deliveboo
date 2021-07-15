@@ -23,7 +23,14 @@ var app = new Vue(
                 .then((response) => {
                     const result = response.data.categories;
                     this.categories = result;                 
-                });                
+                });
+            
+            axios
+            .get('api/restaurants')
+            .then((response) => {
+                const result = response.data.restaurants;
+                this.restaurants = result;                 
+            }); 
         }
     }
 )

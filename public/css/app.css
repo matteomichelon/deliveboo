@@ -105,8 +105,6 @@ section.category .container_medium {
   padding: 50px 0;
 }
 section.category .container_medium .container-box {
-  display: flex;
-  flex-wrap: nowrap;
   overflow: auto;
   padding: 3em;
 }
@@ -146,22 +144,24 @@ section.category .container_medium .container-box .category-card .category-name 
 }
 
 section.research .card-restaurant {
-  width: calc(100% / 3);
+  width: 30em;
   padding: 20px;
-  position: relative;
-  margin-top: 20px;
+  margin-top: 3em;
+  transition: all 0.2s;
+}
+section.research .card-restaurant:hover {
+  cursor: pointer;
+}
+section.research .card-restaurant:active {
+  transform: scale(0.99);
 }
 section.research img {
   width: 100%;
   height: auto;
+  border-radius: 0.5em;
 }
 section.research .research-details {
   padding: 20px;
-}
-section.research .background-hover:hover {
-  background-color: #ffff;
-  cursor: pointer;
-  box-shadow: 0px 0px 54px -11px #001632;
 }
 
 section.app {
