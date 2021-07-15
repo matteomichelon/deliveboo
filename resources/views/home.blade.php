@@ -17,7 +17,7 @@
         <!--Jumbotron section-->
         <section class="jumbotron_main">
 
-            <div class="container_large d-flex justify-content-between align-items-center">
+            <div class="container_medium d-flex justify-content-between align-items-center">
 
                 <!-- Advertising box -->
                 <div class="advertising">
@@ -46,7 +46,7 @@
         <!-- Category section -->
         <section class="category">
 
-            <div class="container_medium padding-section">
+            <div class="container_medium">
 
                 <h2>Scegli tra la nostra selezione</h2>
 
