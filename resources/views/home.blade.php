@@ -60,13 +60,14 @@
 
                         <!-- Overlay -->
                         <div class="overlay">
+
                             <div class="inner-overlay"></div>  
                             <p> @{{ category.name }}</p>
 
                         </div>
                         <!-- end Overlay -->
 
-                        <img :src="category.cover" alt="test">
+                        <img :src="category.cover" :alt="'Immagine piatto: ' + category.name">
 
                     </div>
                     <!-- end Single box -->
