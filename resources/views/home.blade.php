@@ -51,13 +51,13 @@
                 <h2>Scegli tra la nostra selezione</h2>
 
                 <!-- Box category -->
-                <div class="container-box d-flex flex-nowrap" >
+                <div class="container-box" >
 
                     <!-- Single box -->
                     <div class="category-card" v-for="category in categories" @click="getCategoryRestaurant(category.id)">
 
-                        @{{ console.log(category) }}
-
+                        <h5 class="category-name"> @{{ category.name }} </h5>
+                        <img class="img-fluid" :src="category.cover" :alt="'Immagine piatto: ' + category.name">
 
                     </div>
                     <!-- end Single box -->
