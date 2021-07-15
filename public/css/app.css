@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 body {
-  font-family: "Lato", sans-serif !important;
+  font-family: "Roboto", sans-serif !important;
 }
 
 img {
@@ -27,11 +27,6 @@ ul {
   display: block;
 }
 
-.container-box {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .padding-section {
   padding: 50px 0;
 }
@@ -43,7 +38,7 @@ h1 {
 
 h2 {
   text-align: center;
-  color: #001632;
+  color: #003049;
   font-size: 40px !important;
   font-weight: bold !important;
 }
@@ -59,12 +54,12 @@ h2 {
 }
 .menu-footer li a {
   list-style-type: none;
-  color: #FFF8F0;
+  color: #fcbf49;
 }
 
 header {
-  background-color: #001632;
-  color: #FFF8F0;
+  background-color: #003049;
+  color: #fcbf49;
 }
 header .container_large {
   display: flex;
@@ -82,86 +77,43 @@ header .container_large .nav-right .login_register ul {
   /* Overwrite */
 }
 header .container_large .nav-right .login_register ul a {
-  color: #FFF8F0;
+  color: #fcbf49;
 }
 header .container_large .nav-right .login_register ul .dropdown-item {
-  color: #001632;
+  color: #003049;
 }
 header .container_large .nav-right .btn-nav {
-  color: #FFF8F0;
+  color: #fcbf49;
   padding: 7px 10px;
   margin-left: 20px;
-  border: 1px solid #FFF8F0;
+  border: 1px solid #fcbf49;
   border-radius: 5px;
   text-decoration: none;
 }
 header .container_large .nav-right .btn-nav:hover {
-  background-color: #00db71;
+  background-color: #eae2b7;
 }
 
 main .jumbotron_main {
-  background-color: #00db71;
-  background-image: linear-gradient(to bottom right, #00db71, #001632);
+  background-color: #eae2b7;
   height: 350px;
 }
-main .jumbotron_main .container_large {
-  position: relative;
-}
 main .jumbotron_main .container_large .advertising {
-  position: absolute;
-  top: 70px;
-  left: 0;
-  color: #FFF8F0;
-  font-weight: bolder;
+  color: #003049;
 }
-main .jumbotron_main .container_large .duck-box {
-  position: absolute;
-  top: 30px;
-  right: 0;
-}
-
 section.category .container_medium {
   padding: 50px 0;
 }
-section.category .image {
-  width: calc(100% / 4);
-  padding: 20px;
-  position: relative;
+section.category .container_medium .container-box {
+  overflow-x: auto;
 }
-section.category .image img {
-  width: 100%;
-  height: auto;
+section.category .container_medium .container-box .category-card {
+  width: 25em;
+  height: 7em;
+  border-radius: 1em;
+  margin-right: 3em;
+  background-color: #003049;
 }
-section.category .image .overlay {
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: none;
-}
-section.category .image .overlay p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 40px;
-  text-decoration: none;
-  color: #FFF8F0;
-}
-section.category .image .overlay .inner-overlay {
-  width: 100%;
-  height: 100%;
-  background-color: #001632;
-  opacity: 0.3;
-}
-section.category .image:hover .overlay {
-  display: block;
-  cursor: pointer;
-}
-
 section.research .card-restaurant {
   width: calc(100% / 3);
   padding: 20px;
@@ -182,8 +134,8 @@ section.research .background-hover:hover {
 }
 
 section.app {
-  background-color: #00db71;
-  background-image: linear-gradient(to bottom right, #00db71, #001632);
+  background-color: #eae2b7;
+  background-image: linear-gradient(to bottom right, #eae2b7, #003049);
   height: 200px;
 }
 section.app h2 {
@@ -210,8 +162,8 @@ section.app .container_medium .box-app-right img {
 }
 
 footer {
-  background-color: #001632;
-  color: #FFF8F0;
+  background-color: #003049;
+  color: #fcbf49;
   position: relative;
 }
 footer .container-box {
@@ -221,7 +173,7 @@ footer .container-box a {
   text-decoration: none;
 }
 footer .container-box a:hover {
-  color: #00db71;
+  color: #eae2b7;
 }
 footer .copyright {
   position: absolute;

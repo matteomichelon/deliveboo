@@ -13,7 +13,7 @@
                 <!-- Logo -->
                 <div class="logo">
                     <a href="{{ url('/') }}">
-                        <img src="{{ asset('img/logo-test-2.png') }}" alt="logo">
+                        <img src="{{ asset('img/logo/DeliveBoo_Logo_Full_Chiaro.svg') }}" alt="logo">
                     </a>
                 </div>
                 <!-- end Logo -->

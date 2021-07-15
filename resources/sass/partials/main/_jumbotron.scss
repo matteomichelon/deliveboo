@@ -2,24 +2,15 @@ main{
     
     .jumbotron_main{
         background-color: $secondary_color;
-        background-image: linear-gradient(to bottom right, $secondary_color, $primary_color);
         height: 350px;
 
         .container_large{
-            position: relative;
 
             .advertising{
-                position: absolute;
-                top: 70px;
-                left: 0;
-                color: $white_color;
-                font-weight: bolder;   
+                color: $primary_color;
             }
 
             .duck-box{
-                position: absolute;
-                top: 30px;
-                right: 0;
             
             }
         }
