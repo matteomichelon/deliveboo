@@ -106,7 +106,7 @@ section.category .container_medium {
 }
 section.category .container_medium .container-box {
   overflow: auto;
-  padding: 3em;
+  padding: 3em 0;
 }
 section.category .container_medium .container-box::-webkit-scrollbar {
   display: none;
@@ -143,6 +143,27 @@ section.category .container_medium .container-box .category-card .category-name 
   color: #fff;
 }
 
+section.research .research-text-back {
+  text-align: center;
+  color: #003049;
+  font-weight: 500;
+  font-size: 1em;
+  transition: all 0.2s;
+  width: 10em;
+  margin: auto;
+  padding: 0.5em 1em;
+  border: 1px solid transparent;
+  border-radius: 1em;
+}
+section.research .research-text-back:hover {
+  cursor: pointer;
+  border-radius: 1em;
+  border: 1px solid #003049;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+}
+section.research .research-text-back:active {
+  transform: scale(0.95);
+}
 section.research .card-restaurant {
   width: 30em;
   padding: 20px;

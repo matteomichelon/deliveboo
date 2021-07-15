@@ -2108,7 +2108,8 @@ var app = new Vue({
   el: '#root',
   data: {
     categories: [],
-    restaurants: []
+    restaurants: [],
+    activeCategory: ""
   },
   methods: {
     getCategoryRestaurant: function getCategoryRestaurant(categoryId) {
@@ -2118,18 +2119,29 @@ var app = new Vue({
         var result = response.data.restaurants;
         _this.restaurants = result;
       });
+    },
+    getAllRestaurants: function getAllRestaurants() {
+      var _this2 = this;
+
+      axios.get('api/restaurants').then(function (response) {
+        var result = response.data.restaurants;
+        _this2.restaurants = result;
+      });
+    },
+    getActiveCategory: function getActiveCategory(categoryName) {
+      this.activeCategory = categoryName;
     }
   },
   mounted: function mounted() {
-    var _this2 = this;
+    var _this3 = this;
 
     axios.get('api/categories').then(function (response) {
       var result = response.data.categories;
-      _this2.categories = result;
+      _this3.categories = result;
     });
     axios.get('api/restaurants').then(function (response) {
       var result = response.data.restaurants;
-      _this2.restaurants = result;
+      _this3.restaurants = result;
     });
   }
 });
@@ -2143,11 +2155,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 module.exports = __webpack_require__(/*! /Users/catalinzahariea/Desktop/Boolean/Deliveboo/deliveboo/resources/js/public_home.js */"./resources/js/public_home.js");
-=======
-module.exports = __webpack_require__(/*! C:\Laravel-Projects\deliveboo\resources\js\public_home.js */"./resources/js/public_home.js");
->>>>>>> 06beff875fd64146cfe977cc2791f7dabe3a0126
 
 
 /***/ })

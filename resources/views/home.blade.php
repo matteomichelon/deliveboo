@@ -54,7 +54,7 @@
                 <div class="container-box d-flex flex-nowrap" >
 
                     <!-- Single box -->
-                    <div class="category-card pe-auto" v-for="category in categories" @click="getCategoryRestaurant(category.id)">
+                    <div class="category-card pe-auto" v-for="category in categories" @click="getCategoryRestaurant(category.id); getActiveCategory(category.name);">
 
                         <h5 class="category-name"> @{{ category.name }} </h5>
                         <img class="img-fluid" :src="category.cover" :alt="'Immagine piatto: ' + category.name">
@@ -76,7 +76,11 @@
 
             <div class="container_large">
 
-                <h2>Risultati della tua ricerca per: "nome_categoria" </h2>
+                <div class="research-text" v-if="activeCategory">
+                    <h2 >Risultati della tua ricerca per: @{{ activeCategory }} </h2>
+                    <div class="research-text-back" @click="getActiveCategory(''); getAllRestaurants();"><i class="fas fa-arrow-right"></i> Torna indietro</div>
+                </div>
+                
 
                 <!-- Container box -->
                 <div class="container-box d-flex flex-wrap">
