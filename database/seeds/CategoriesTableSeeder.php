@@ -15,59 +15,59 @@ class CategoriesTableSeeder extends Seeder
         $categories = [
             [
                 'category' => 'Italiano',
-                'cover' => ''
+                'cover' => 'img/categories/italiano.png'
             ],
             [
                 'category' => 'Cinese',
-                'cover' => ''
+                'cover' => 'img/categories/cinese.png'
             ],
             [
                 'category' => 'Giapponese',
-                'cover' => ''
+                'cover' => 'img/categories/giapponese.png'
             ],
             [
                 'category' => 'Americano',
-                'cover' => ''
+                'cover' => 'img/categories/americano.png'
             ],
             [
                 'category' => 'Messicano',
-                'cover' => ''
+                'cover' => 'img/categories/messicano.png'
             ],
             [
                 'category' => 'Indiano',
-                'cover' => ''
+                'cover' => 'img/categories/indiano.png'
             ],
             [
                 'category' => 'Internazionale',
-                'cover' => ''
+                'cover' => 'img/categories/internazionale.png'
             ],
             [
                 'category' => 'Pesce',
-                'cover' => ''
+                'cover' => 'img/categories/pesce.png'
             ],
             [
                 'category' => 'Carne',
-                'cover' => ''
+                'cover' => 'img/categories/carne.png'
             ],
             [
                 'category' => 'Pizza',
-                'cover' => ''
+                'cover' => 'img/categories/pizza.png'
             ],
             [
                 'category' => 'Halal',
-                'cover' => ''
+                'cover' => 'img/categories/halal.png'
             ],
             [
                 'category' => 'Fast Food',
-                'cover' => ''
+                'cover' => 'img/categories/fast-food.png'
             ],
             [
                 'category' => 'Pasticceria',
-                'cover' => ''
+                'cover' => 'img/categories/pasticceria.png'
             ],
             [
                 'category' => 'Gelateria',
-                'cover' => ''
+                'cover' => 'img/categories/gelateria.png'
             ]
         ];
 
