@@ -14,46 +14,60 @@ class CategoriesTableSeeder extends Seeder
     {
         $categories = [
             [
-                'category' => 'Italiano'
+                'category' => 'Italiano',
+                'cover' => 'img/categories/italiano.png'
             ],
             [
-                'category' => 'Cinese'
+                'category' => 'Cinese',
+                'cover' => 'img/categories/cinese.png'
             ],
             [
-                'category' => 'Giapponese'
+                'category' => 'Giapponese',
+                'cover' => 'img/categories/giapponese.png'
             ],
             [
-                'category' => 'Americano'
+                'category' => 'Americano',
+                'cover' => 'img/categories/americano.png'
             ],
             [
-                'category' => 'Messicano'
+                'category' => 'Messicano',
+                'cover' => 'img/categories/messicano.png'
             ],
             [
-                'category' => 'Indiano'
+                'category' => 'Indiano',
+                'cover' => 'img/categories/indiano.png'
             ],
             [
-                'category' => 'Internazionale'
+                'category' => 'Internazionale',
+                'cover' => 'img/categories/internazionale.png'
             ],
             [
-                'category' => 'Pesce'
+                'category' => 'Pesce',
+                'cover' => 'img/categories/pesce.png'
             ],
             [
-                'category' => 'Carne'
+                'category' => 'Carne',
+                'cover' => 'img/categories/carne.png'
             ],
             [
-                'category' => 'Pizza'
+                'category' => 'Pizza',
+                'cover' => 'img/categories/pizza.png'
             ],
             [
-                'category' => 'Halal'
+                'category' => 'Halal',
+                'cover' => 'img/categories/halal.png'
             ],
             [
-                'category' => 'Fast Food'
+                'category' => 'Fast Food',
+                'cover' => 'img/categories/fast-food.png'
             ],
             [
-                'category' => 'Pasticceria'
+                'category' => 'Pasticceria',
+                'cover' => 'img/categories/pasticceria.png'
             ],
             [
-                'category' => 'Gelateria'
+                'category' => 'Gelateria',
+                'cover' => 'img/categories/gelateria.png'
             ]
         ];
 
@@ -61,6 +75,7 @@ class CategoriesTableSeeder extends Seeder
         foreach($categories as $category) {
             $new_category = new Category;
             $new_category->category = $category['category'];
+            $new_category->cover = $category['cover'];
             $new_category->save();
         }
 

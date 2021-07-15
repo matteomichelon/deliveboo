@@ -18,7 +18,8 @@ class CategoryController extends Controller
         foreach($categories as $category) {
             $result[] = [
                 'id' => $category->id,
-                'name' => $category->category
+                'name' => $category->category,
+                'cover' => $category->cover
             ];
         }
 
