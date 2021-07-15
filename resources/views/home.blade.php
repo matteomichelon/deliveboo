@@ -58,6 +58,7 @@
 
                         @{{ console.log(category) }}
 
+                        <img :src="category.cover" :alt="'Immagine piatto: ' + category.name">
 
                     </div>
                     <!-- end Single box -->
