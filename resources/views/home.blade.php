@@ -17,7 +17,7 @@
         <!--Jumbotron section-->
         <section class="jumbotron_main">
 
-            <div class="container_large">
+            <div class="container_large d-flex justify-content-between align-items-center">
 
                 <!-- Advertising box -->
                 <div class="advertising">
@@ -28,20 +28,20 @@
                     </h1>
 
                 </div>
-                <!-- end Advertising box -->
+                <!-- END Advertising box -->
 
                 <!-- Duck box -->
                 <div class="duck-box">
 
-                    <img src="{{ asset('img/duck-test.jpg') }}" alt="duck">
+                    <img src="{{ asset('img/logo/DeliveBoo_Pittogramma.svg') }}" alt="Duck">
 
                 </div>
-                <!-- end Duck box -->
+                <!-- END Duck box -->
 
             </div>
 
         </section>
-        <!--end Jumbotron section-->
+        <!-- END Jumbotron section -->
 
         <!-- Category section -->
         <section class="category">
@@ -51,22 +51,13 @@
                 <h2>Scegli tra la nostra selezione</h2>
 
                 <!-- Box category -->
-                <div class="container-box" >
+                <div class="container-box d-flex flex-nowrap" >
 
                     <!-- Single box -->
-                    <div class="image" v-for="category in categories" @click="getCategoryRestaurant(category.id)">
+                    <div class="category-card" v-for="category in categories" @click="getCategoryRestaurant(category.id)">
 
                         @{{ console.log(category) }}
 
-                        <!-- Overlay -->
-                        <div class="overlay">
-                            <div class="inner-overlay"></div>  
-                            <p> @{{ category.name }}</p>
-
-                        </div>
-                        <!-- end Overlay -->
-
-                        <img src="{{ asset('img/pizza.jpg') }}" alt="test">
 
                     </div>
                     <!-- end Single box -->
