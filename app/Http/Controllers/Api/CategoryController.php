@@ -52,6 +52,7 @@ class CategoryController extends Controller
             $result[] = [
                 'id' => $restaurant->id,
                 'name' => $restaurant->restaurant_name,
+                'slug' => $restaurant->slug,
                 'address' => $restaurant->restaurant_address,
                 'email' => $restaurant->email,
                 'categories' => $categories

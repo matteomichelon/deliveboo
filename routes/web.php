@@ -30,4 +30,4 @@ Route::prefix('admin')
         Route::resource('products', 'ProductController');
 });
 
-Route::get('/restaurant/{slug}', 'HomeController@show')->name('restaurant.show');
+Route::get('/restaurant/{slug}', 'Guest\UserController@show')->name('restaurant.show');
