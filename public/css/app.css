@@ -202,6 +202,28 @@ section.research .research-details {
   padding: 20px;
 }
 
+.card-product {
+  width: calc( 100% / 3 );
+  padding: 20px;
+  margin-top: 3em;
+  transition: all 0.2s;
+}
+.card-product:hover {
+  cursor: pointer;
+}
+.card-product:active {
+  transform: scale(0.99);
+}
+.card-product .container-image {
+  height: 180px;
+}
+.card-product .container-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 section.app {
   background-color: #eae2b7;
   background-image: linear-gradient(to bottom right, #eae2b7, #003049);
