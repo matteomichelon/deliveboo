@@ -3,9 +3,14 @@
 use Illuminate\Database\Seeder;
 use App\User;
 use Illuminate\Support\Facades\Hash;
+use App\Traits\CalculateRestaurantSlug;
 
 class UsersTableSeeder extends Seeder
 {
+
+    //Traits
+    use CalculateRestaurantSlug;
+
     /**
      * Run the database seeds.
      *
@@ -570,6 +575,7 @@ class UsersTableSeeder extends Seeder
             $new_user->email = $user['email'];
             $new_user->password = $user['password'];
             $new_user->restaurant_name = $user['restaurant_name'];
+            $new_user->slug = $this->calculateRestaurantSlug($user['restaurant_name']);
             $new_user->restaurant_address = $user['restaurant_address'];
             $new_user->vat_number = $user['vat_number'];
             $new_user->name = $user['name'];

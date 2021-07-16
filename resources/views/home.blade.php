@@ -94,24 +94,29 @@
                 <div class="container-box d-flex flex-wrap">
 
                     <!-- Single card Restaurant -->
+                    
                     <div class="card-restaurant" v-for="restaurant in restaurants">
 
-                        <div class="background-hover">
+                        <a :href="`restaurant/${restaurant.slug}`">
+                            
+                            <div class="background-hover">
 
-                            <div class="research-image">
-                                <img src="{{ asset('img/pizzeria.png') }}" alt="">
+                                <div class="research-image">
+                                    <img src="{{ asset('img/pizzeria.png') }}" alt="">
+                                </div>
+
+                                <div class="research-details">
+
+                                    <h3> @{{ restaurant.name }} </h3>
+
+                                    <p> @{{ restaurant.address }} </p>
+
+                                </div>
+
                             </div>
 
-                            <div class="research-details">
-
-                                <h3> @{{ restaurant.name }} </h3>
-
-                                <p> @{{ restaurant.address }} </p>
-
-                            </div>
-
-                        </div>
-
+                        </a>
+                        
                     </div>
                     <!-- end Single card Restaurant -->
 

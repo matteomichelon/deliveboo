@@ -29,3 +29,5 @@ Route::prefix('admin')
         Route::get('/', 'HomeController@index')->name('home');
         Route::resource('products', 'ProductController');
 });
+
+Route::get('/restaurant/{slug}', 'Guest\UserController@show')->name('restaurant.show');

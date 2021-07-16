@@ -10,9 +10,14 @@ use Illuminate\Support\Facades\Validator;
 
 use App\User;
 use App\Category;
+use App\Traits\CalculateRestaurantSlug;
 
 class RegisterController extends Controller
 {
+    //Traits
+    use CalculateRestaurantSlug;
+
+
     /*
     |--------------------------------------------------------------------------
     | Register Controller
@@ -92,6 +97,7 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'vat_number' => $data['vat_number'],
             'restaurant_name' => $data['restaurant_name'],
+            'slug' => $this->calculateRestaurantSlug($data['restaurant_name']),
             'restaurant_address' => $data['restaurant_address']
         ]);
 
