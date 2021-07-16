@@ -133,14 +133,12 @@
 
             <div class="container_medium padding-section">
 
-                <!--box-app-left-->
-                <div class="box-app-left">
+                <div>
                     <h2>Scarica la nostra app</h2>
                 </div>
-                <!--end box-app-left-->
                 
-                <!--box-app-right-->
-                <div class="box-app-right">
+                <!--box-app-->
+                <div class="box-app">
                     <img src="{{ asset('img/app-store-badge.png') }}" alt="App Store Badge">
                     <img src="{{ asset('img/play-store-badge.png') }}" alt="Play Store Badge">
                 </div>

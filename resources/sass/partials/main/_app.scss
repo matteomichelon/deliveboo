@@ -2,35 +2,24 @@ section.app {
 
     background-color: $secondary_color;
     background-image: linear-gradient(to bottom right, $secondary_color, $primary_color);
-    height: 200px;
 
     h2{
         text-align: left;
     }
 
     .container_medium{
-        position: relative;
+        
+        display: flex;
+        justify-content: space-between;
 
-        .box-app-left{
-            position: absolute;
-            top: 70px;
-            left: 0;
+        
+        img{
+            width: 150px;
+            height: auto;
+            padding-right: 20px;
+            cursor: pointer;
         }
-
-        .box-app-right{
-            padding-top: 10px;
-            height: 60px;
-            position: absolute;
-            top: 70px;
-            right: 0;
-    
-            img{
-                width: 150px;
-                height: auto;
-                padding-right: 20px;
-                cursor: pointer;
-            }
-        }
+        
     }
 
 }

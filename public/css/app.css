@@ -32,7 +32,7 @@ ul {
 }
 
 .padding-section {
-  padding: 50px 0;
+  padding: 20px 0;
 }
 
 h1 {
@@ -59,6 +59,10 @@ h2 {
 .menu-footer li a {
   list-style-type: none;
   color: #fcbf49;
+}
+
+.login-padding {
+  padding: 20px;
 }
 
 header {
@@ -205,27 +209,15 @@ section.research .research-details {
 section.app {
   background-color: #eae2b7;
   background-image: linear-gradient(to bottom right, #eae2b7, #003049);
-  height: 200px;
 }
 section.app h2 {
   text-align: left;
 }
 section.app .container_medium {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
 }
-section.app .container_medium .box-app-left {
-  position: absolute;
-  top: 70px;
-  left: 0;
-}
-section.app .container_medium .box-app-right {
-  padding-top: 10px;
-  height: 60px;
-  position: absolute;
-  top: 70px;
-  right: 0;
-}
-section.app .container_medium .box-app-right img {
+section.app .container_medium img {
   width: 150px;
   height: auto;
   padding-right: 20px;
@@ -235,7 +227,6 @@ section.app .container_medium .box-app-right img {
 footer {
   background-color: #003049;
   color: #fcbf49;
-  position: relative;
 }
 footer .container-box {
   display: flex;
@@ -248,9 +239,8 @@ footer .container-box a:hover {
   color: #eae2b7;
 }
 footer .copyright {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+  text-align: right;
+  padding: 20px;
 }
 
 /*!
