@@ -42,7 +42,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Pomodoro, mozzarella di bufala, basilico, olio evo.',
                 'price' => 8.50,
                 'visibility' => 1,
-                'cover' => 'https://www.alice.tv/img/cache/610x380/media/ricette/tjnh0rl/img_2846410445500804.jpg',
+                'cover' => 'img/products/bufala.jpg',
                 'user_id' => 33
             ],
             [
@@ -50,7 +50,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Pomodoro, mozzarella fior di latte, prosciutto, basilico, olio evo.',
                 'price' => 6.50,
                 'visibility' => 1,
-                'cover' => 'https://www.alice.tv/img/cache/610x380/media/ricette/i96fvvb/calzone-classico.jpg',
+                'cover' => 'img/products/calzone.jpg',
                 'user_id' => 1
             ],
             [
@@ -58,7 +58,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Pomodoro, mozzarella fior di latte, prosciutto, funghi champignon, carciofi, olive, basilico, olio evo.',
                 'price' => 7.00,
                 'visibility' => 1,
-                'cover' => 'https://i2.wp.com/www.piccolericette.net/piccolericette/wp-content/uploads/2017/12/3240_Pizza.jpg?resize=895%2C616&ssl=1',
+                'cover' => 'img/products/capriciosa.jpg',
                 'user_id' => 10
             ],
             [
@@ -66,7 +66,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Pomodoro, mozzarella fior di latte, cozze, seppie*, polipo*, basilico, olio evo.',
                 'price' => 10.00,
                 'visibility' => 1,
-                'cover' => 'https://i1.wp.com/www.piccolericette.net/piccolericette/wp-content/uploads/2017/08/3238_Pizza-1.jpg?resize=895%2C616&ssl=1',
+                'cover' => 'img/products/frutti-di-mare.jpg',
                 'user_id' => 33
             ],
             [
@@ -74,7 +74,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Pomodoro, aglio, origano, basilico, olio evo.',
                 'price' => 4.00,
                 'visibility' => 1,
-                'cover' => 'https://wips.plug.it/cips/buonissimo.org/cms/2012/05/pizza-marinara-5.jpg',
+                'cover' => 'img/products/marinara.jpg',
                 'user_id' => 10
             ],
             [
@@ -82,7 +82,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Pomodoro, mozzarella fior di latte, prosciutto cotto, funghi champignon, carciofi*, basilico, olio evo.',
                 'price' => 7.00,
                 'visibility' => 1,
-                'cover' => 'https://i1.wp.com/www.piccolericette.net/piccolericette/wp-content/uploads/2016/07/3017_Pizza.jpg?resize=895%2C616&ssl=1',
+                'cover' => 'img/products/quattro-stagioni.jpg',
                 'user_id' => 1
             ],
             [
@@ -90,7 +90,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Pomodoro, mozzarella, wurstel e olio evo.',
                 'price' => 6.00,
                 'visibility' => 1,
-                'cover' => 'https://ivoatrastevere.it/wp-content/uploads/2021/03/PIZZA-ROSSA-CON-WURSTEL.jpg',
+                'cover' => 'img/products/wurstel.jpg',
                 'user_id' => 1
             ],
             [
@@ -98,7 +98,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Pomodoro, mozzarella fior di latte, salame piccante, olio evo.',
                 'price' => 6.00,
                 'visibility' => 1,
-                'cover' => 'https://wips.plug.it/cips/buonissimo.org/cms/2012/05/69630013_m.jpg',
+                'cover' => 'img/products/diavola.jpg',
                 'user_id' => 1
             ],
             [
@@ -106,7 +106,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Carote, cipolla, cavolo cappuccio, farina.',
                 'price' => 2.00,
                 'visibility' => 1,
-                'cover' => 'https://blog.giallozafferano.it/martolinaincucina/wp-content/uploads/2020/02/Involtini-primavera-B1200x1200.jpg',
+                'cover' => 'img/products/involtini-primavera.jpg',
                 'user_id' => 2
             ],
             [
@@ -114,7 +114,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Farina, spinaci, carote, cipolla.',
                 'price' => 3.30,
                 'visibility' => 1,
-                'cover' => 'https://primochef.it/wp-content/uploads/2018/12/SH_Ravioli_verdure_al_vapore.jpg',
+                'cover' => 'img/products/ravioli-di-verdure.jpg',
                 'user_id' => 2
             ],
             [
@@ -122,7 +122,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Riso, curry, piselli e uova.',
                 'price' => 3.30,
                 'visibility' => 1,
-                'cover' => 'https://primochef.it/wp-content/uploads/2019/01/SH_riso_con_curry-640x350.jpg.webp',
+                'cover' => 'img/products/riso-al-curry.jpg',
                 'user_id' => 2
             ],
             [
@@ -130,7 +130,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Piselli, funghi, mazzancolla, salsa di soia, prosciutto.',
                 'price' => 3.00,
                 'visibility' => 1,
-                'cover' => 'https://www.ricettegourmet.com/wp-content/uploads/2016/12/Zuppa-orientale.jpg',
+                'cover' => 'img/products/zuppa-orientale.jpg',
                 'user_id' => 2
             ],
             [
@@ -138,7 +138,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Cous cous, verdure di stagione.',
                 'price' => 6.60,
                 'visibility' => 1,
-                'cover' => 'https://d2sj0xby2hzqoy.cloudfront.net/kenwood_italy/attachments/data/000/007/984/medium/cous-cous.jpg',
+                'cover' => 'img/products/cous-cous-di-verdure.jpg',
                 'user_id' => 3
             ],
             [
@@ -146,7 +146,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Spaghetti, pesce del giorno.',
                 'price' => 8.00,
                 'visibility' => 1,
-                'cover' => 'https://images.lacucinaitaliana.it/gallery/81502/Big/824e4bb7-2416-40b6-9b5a-5beaf2452911.jpg',
+                'cover' => 'img/products/spaghetti-di-mare.jpg',
                 'user_id' => 3
             ],
             [
@@ -154,7 +154,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Penne, pomodori pelati, peperoncino secco, prezzemolo.',
                 'price' => 6.50,
                 'visibility' => 1,
-                'cover' => 'https://primochef.it/wp-content/uploads/2019/03/SH_Pasta_arrabbiata-1200x800.jpg',
+                'cover' => 'img/products/penne-alla-arrabbiata.jpg',
                 'user_id' => 3
             ],
             [
@@ -162,7 +162,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Tagliatelle, tartufo nero, burro, prezzemolo.',
                 'price' => 12.50,
                 'visibility' => 1,
-                'cover' => 'https://static.cookist.it/wp-content/uploads/sites/21/2018/01/tagliatelle-al-tartufo.jpg',
+                'cover' => 'img/products/tagliatelle-al-tartufo-nero.jpg',
                 'user_id' => 3
             ],
             [
@@ -170,7 +170,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Coniglio, carote, basilico, vino bianco.',
                 'price' => 10.50,
                 'visibility' => 1,
-                'cover' => 'https://www.melarossa.it/wp-content/uploads/2021/03/coniglio-in-umido-1.jpg',
+                'cover' => 'img/products/coniglio-in-umido.jpg',
                 'user_id' => 3
             ],
             [
@@ -178,7 +178,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Carne 100% bovina, bacon croccante, formaggio, salsa crispy.',
                 'price' => 5.50,
                 'visibility' => 1,
-                'cover' => 'https://www.mcdonalds.it/sites/default/files/styles/compressed/public/products/crispy-20anni--mcbacon-hero_desk.jpg?itok=AksAqxjr',
+                'cover' => 'img/products/gran-crispy-mcbacon.jpg',
                 'user_id' => 4
             ],
             [
@@ -186,7 +186,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Carne 100% bovina, bacon croccante, formaggio, salsa crispy.',
                 'price' => 4.50,
                 'visibility' => 1,
-                'cover' => 'https://www.mcdonalds.it/sites/default/files/styles/compressed/public/bundle/mcmenu-crispy-wrap-hero-dsk.jpg?itok=uhY1DPvX',
+                'cover' => 'img/products/crispy-mcwrap.jpg',
                 'user_id' => 4
             ],
             [
@@ -194,7 +194,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => '100% petto di pollo italiano avvolto in una nuova croccante panatura, Pecorino Toscano DOP, insalata, pomodoro, salsa ai tre pepi e pane con semi di sesamo.',
                 'price' => 5.50,
                 'visibility' => 1,
-                'cover' => 'https://www.mcdonalds.it/sites/default/files/styles/compressed/public/bundle/menu-mys-chicken_pepper-hero-dsk.jpg?itok=HAPMbcc9',
+                'cover' => 'img/products/crispy-mcwrap-1.jpg',
                 'user_id' => 4
             ],
             [
@@ -202,7 +202,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Croccantissimi bocconcini di 100% petto di pollo proveniente da allevamenti italiani, allevato a terra, senza mangimi OGM.',
                 'price' => 2.50,
                 'visibility' => 1,
-                'cover' => 'https://www.mcdonalds.it/sites/default/files/styles/compressed/public/bundle/mcmenu_large_McNuggets_desktop.jpg?itok=14iA8gwy',
+                'cover' => 'img/products/chicken-mc-nuggets.jpg',
                 'user_id' => 4
             ],
             [
