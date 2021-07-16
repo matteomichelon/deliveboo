@@ -829,6 +829,246 @@ class ProductsTableSeeder extends Seeder
                 'cover' => 'https://images.ctfassets.net/2x1b56neok6m/it-media-3402-asset/cc30deb6cd125328c213169aa955d426/shutterstock_531876007.jpg?w=799&q=50',
                 'user_id' => 20
             ],
+            [
+                'name' => 'Tartare di tonno',
+                'description' => 'Ingredienti: Tonno rosso, avocado, menta',
+                'price' => 12.00,
+                'visibility' => 1,
+                'cover' => 'https://cottoecrudo.it/wp-content/uploads/2019/09/tartare-tonno-avocado-tonno-1300x867.jpg',
+                'user_id' => 21
+            ],
+            [
+                'name' => 'Plateau dello chef',
+                'description' => 'Ingredienti: Plateau di pesce fresco di giornata.',
+                'price' => 20.00,
+                'visibility' => 1,
+                'cover' => 'https://media-cdn.tripadvisor.com/media/photo-s/06/44/f3/59/plateau-di-pesce-crudo.jpg',
+                'user_id' => 21
+            ],
+            [
+                'name' => 'Linguine allo scoglio',
+                'description' => 'Ingredienti: Linguine, calamari, seppie, gamberi, cozze, prezzemolo.',
+                'price' => 12.00,
+                'visibility' => 1,
+                'cover' => 'https://wips.plug.it/cips/buonissimo.org/cms/2012/11/linguine-pescatora.jpg?w=712&a=c&h=406',
+                'user_id' => 21
+            ],
+            [
+                'name' => 'Tagliolini all\'astice',
+                'description' => 'Ingredienti: Linguine, astice, pomodori cigliegino, peperonicno, prezzemolo.',
+                'price' => 15.00,
+                'visibility' => 1,
+                'cover' => 'https://it.rc-cdn.community.thermomix.com/recipeimage/ydq8wh5d-228ea-357019-d2121-u2wlwfnp/198e07c5-eba3-42cc-a30f-2dfe9a0a80a8/main/linguine-allastice-con-pomodorini.jpg',
+                'user_id' => 21
+            ],
+            [
+                'name' => 'Risotto con polipo',
+                'description' => 'Ingredienti: Riso carnaroli, polipo, pomodoro ramato, prezzemolo.',
+                'price' => 13.00,
+                'visibility' => 1,
+                'cover' => 'https://wips.plug.it/cips/buonissimo.org/cms/2011/09/risotto-con-il-polpo.jpg',
+                'user_id' => 21
+            ],
+            [
+                'name' => 'Spaghetti alle vongole',
+                'description' => 'Ingredienti: Spaghetti, vongole, peperoncino, prezzemolo.',
+                'price' => 12.00,
+                'visibility' => 1,
+                'cover' => 'https://wips.plug.it/cips/buonissimo.org/cms/2012/04/spaghetti-alle-vongole-5.jpg',
+                'user_id' => 22
+            ],
+            [
+                'name' => 'Seppie alla grigli',
+                'description' => 'Ingredienti: Seppie, prezzemolo, limone.',
+                'price' => 10.00,
+                'visibility' => 1,
+                'cover' => 'https://primochef.it/wp-content/uploads/2019/07/SH_seppie_griglia.jpg',
+                'user_id' => 22
+            ],
+            [
+                'name' => 'Tonno scottato',
+                'description' => 'Ingredienti: Tonno rosso, semi di sesamo, salsa di soia.',
+                'price' => 14.00,
+                'visibility' => 1,
+                'cover' => 'https://static.cookist.it/wp-content/uploads/sites/21/2018/07/tataki-di-tonno.jpg',
+                'user_id' => 22
+            ],
+            [
+                'name' => 'Branzino al forno',
+                'description' => 'Ingredienti: Branzino, pomodoro, cipolla, prezzemolo.',
+                'price' => 9.00,
+                'visibility' => 1,
+                'cover' => 'https://wips.plug.it/cips/buonissimo.org/cms/2011/08/branzino-al-forno.jpg',
+                'user_id' => 22
+            ],
+            [
+                'name' => 'Lasagne di mare',
+                'description' => 'Ingredienti: Lasagne all\'uovo, pesce del giorno, besciamella, prezzemolo.',
+                'price' => 9.50,
+                'visibility' => 1,
+                'cover' => 'https://www.repstatic.it/content/nazionale/img/2020/12/16/235712833-5922acc0-7441-4763-a50a-229e053d404c.jpg',
+                'user_id' => 22
+            ],
+            [
+                'name' => 'Gran fritto misto',
+                'description' => 'Ingredienti: Triglie, calamari, gamberi, alici impanati e fritti.',
+                'price' => 16,00,
+                'visibility' => 1,
+                'cover' => 'https://www.pizzeriaatarantella.it/wp-content/themes/yootheme/cache/paranza-frittura-mista-49a7e4fa.jpeg',
+                'user_id' => 23
+            ],
+            [
+                'name' => 'Trofie ragù di mare',
+                'description' => 'Ingredienti: Trofie, ragù con pesce del giorno.',
+                'price' => 9.50,
+                'visibility' => 1,
+                'cover' => 'https://www.repstatic.it/content/nazionale/img/2020/12/16/235712833-5922acc0-7441-4763-a50a-229e053d404c.jpg',
+                'user_id' => 23
+            ],
+            [
+                'name' => 'Salmone gratinato',
+                'description' => 'Ingredienti: Salmone, panatura dello chef.',
+                'price' => 8.50,
+                'visibility' => 1,
+                'cover' => 'https://www.manjoo.it/wp-content/uploads/large_dsk/1466692322_539_img.jpg',
+                'user_id' => 23
+            ],
+            [
+                'name' => 'Grigliata di pesce',
+                'description' => 'Ingredienti: Pesce fresco del giorno.',
+                'price' => 11.00,
+                'visibility' => 1,
+                'cover' => 'https://wips.plug.it/cips/buonissimo.org/cms/2013/04/grigliata-di-pesce.jpg?w=712&a=c&h=406',
+                'user_id' => 23
+            ],
+            [
+                'name' => 'Lasagne di mare',
+                'description' => 'Ingredienti: Lasagne all\'uovo, pesce del giorno, besciamella, prezzemolo.',
+                'price' => 9.50,
+                'visibility' => 1,
+                'cover' => 'https://www.repstatic.it/content/nazionale/img/2020/12/16/235712833-5922acc0-7441-4763-a50a-229e053d404c.jpg',
+                'user_id' => 23
+            ],
+            [
+                'name' => 'Insalata con germogli di soia',
+                'description' => 'Ingredienti: Cetrioli, carote, germogli di soia, sesamo, salsa di soia, bamboo.',
+                'price' => 3.50,
+                'visibility' => 1,
+                'cover' => 'https://wips.plug.it/cips/buonissimo.org/cms/2012/11/insalata-ai-germogli-di-soia.jpg?w=541&a=c&h=309',
+                'user_id' => 24
+            ],
+            [
+                'name' => 'Gamberi sale e pepe',
+                'description' => 'Ingredienti: Gamberi, sale, pepe.',
+                'price' => 4.50,
+                'visibility' => 1,
+                'cover' => 'https://i0.wp.com/www.cucinasenzaglutine.it/wp-content/uploads/2020/06/gamberi-sale-e-pepe-cucinasenzaglutine-sito4-scaled.jpg',
+                'user_id' => 24
+            ],
+            [
+                'name' => 'Anatra funghi e bambu',
+                'description' => 'Ingredienti: Anatra impanata e fritta, bambù, verdure.',
+                'price' => 5.50,
+                'visibility' => 1,
+                'cover' => 'https://media-cdn.tripadvisor.com/media/photo-s/16/f1/99/6a/anatra-con-funghi-e-bambu.jpg',
+                'user_id' => 24
+            ],
+            [
+                'name' => 'Bao',
+                'description' => 'Ingredienti: Pane cinese al vapore.',
+                'price' => 2.50,
+                'visibility' => 1,
+                'cover' => 'https://www.saporie.com/content/dam/saporie/it/ricette/Panini%20cinesi%20finale_0006%20copia.jpg',
+                'user_id' => 24
+            ],
+            [
+                'name' => 'Tempura di patate dolci',
+                'description' => 'Patate dolci in pastella.',
+                'price' => 3.00,
+                'visibility' => 1,
+                'cover' => 'https://p0.pikist.com/photos/867/129/tempura-sweet-potato-pumpkin-japanese-food-food.jpg',
+                'user_id' => 24
+            ],
+            [
+                'name' => 'Zuppa di wonton',
+                'description' => 'Pasta di wonton, zenzero, verza, macinato di maiale, coriandolo.',
+                'price' => 4.20,
+                'visibility' => 1,
+                'cover' => 'https://www.gustissimo.it/articoli/ricette/minestre-creme-zuppe/zuppa-wonton.jpg',
+                'user_id' => 25
+            ],
+            [
+                'name' => 'Nuvoletta di drago',
+                'description' => 'Fecola di patate e aroma di gamberi, fritti.',
+                'price' => 2.00,
+                'visibility' => 1,
+                'cover' => 'https://timgate.it/ecm/online-content/369/eac/a4d/nuvole-di-drago_d036ef71.jpg',
+                'user_id' => 25
+            ],
+            [
+                'name' => 'Tempura di patate dolci',
+                'description' => 'Patate dolci in pastella.',
+                'price' => 3.90,
+                'visibility' => 1,
+                'cover' => 'https://p0.pikist.com/photos/867/129/tempura-sweet-potato-pumpkin-japanese-food-food.jpg',
+                'user_id' => 25
+            ],
+            [
+                'name' => 'Riso saltato con gamberi',
+                'description' => 'Riso basmati, gamberi, zucchine, carote.',
+                'price' => 3.10,
+                'visibility' => 1,
+                'cover' => 'https://www.gnamgnam.it/wp-content/uploads/2017/11/6-riso-saltato-in-padella.jpg',
+                'user_id' => 25
+            ],
+            [
+                'name' => 'Calamari fritti',
+                'description' => 'Calamari fritti in pastella.',
+                'price' => 4.30,
+                'visibility' => 1,
+                'cover' => 'https://www.sanvitolocapoweb.co.uk/sw_images/ricette/anelli-di-calamari-fritti_14.jpg',
+                'user_id' => 25
+            ],
+            [
+                'name' => 'Ravioli alla piastra',
+                'description' => 'Ravioli ripieni di carne e verdure alla piastra.',
+                'price' => 4.30,
+                'visibility' => 1,
+                'cover' => 'https://www.ilricettariodibianca.com/wp-content/uploads/2020/05/Schermata-2020-05-20-alle-12.19.40.png?v=1589970175',
+                'user_id' => 26
+            ],
+            [
+                'name' => 'Calamari fritti',
+                'description' => 'Calamari fritti in pastella.',
+                'price' => 4.30,
+                'visibility' => 1,
+                'cover' => 'https://www.sanvitolocapoweb.co.uk/sw_images/ricette/anelli-di-calamari-fritti_14.jpg',
+                'user_id' => 26
+            ],
+            [
+                'name' => 'Calamari fritti',
+                'description' => 'Calamari fritti in pastella.',
+                'price' => 4.30,
+                'visibility' => 1,
+                'cover' => 'https://www.sanvitolocapoweb.co.uk/sw_images/ricette/anelli-di-calamari-fritti_14.jpg',
+                'user_id' => 26
+            ],
+            [
+                'name' => 'Calamari fritti',
+                'description' => 'Calamari fritti in pastella.',
+                'price' => 4.30,
+                'visibility' => 1,
+                'cover' => 'https://www.sanvitolocapoweb.co.uk/sw_images/ricette/anelli-di-calamari-fritti_14.jpg',
+                'user_id' => 26
+            ],
+            [
+                'name' => 'Calamari fritti',
+                'description' => 'Calamari fritti in pastella.',
+                'price' => 4.30,
+                'visibility' => 1,
+                'cover' => 'https://www.sanvitolocapoweb.co.uk/sw_images/ricette/anelli-di-calamari-fritti_14.jpg',
+                'user_id' => 26
+            ],
 
 
 
