@@ -6,9 +6,11 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
 
+
 class RestaurantController extends Controller
 {
-    
+
+
     // Metodo per accedere a tutti i ristoranti
     public function index() {
         $restaurants = User::all();
@@ -35,6 +37,7 @@ class RestaurantController extends Controller
     // Metodo per accedere ai piatti di un singolo ristorante
     public function show($id) {
         $restaurant = User::findOrFail($id);
+
 
         $products = $restaurant->products;
 
