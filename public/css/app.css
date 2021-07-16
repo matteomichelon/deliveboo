@@ -77,6 +77,7 @@ header .container_large {
 }
 header .container_large img {
   height: 30px;
+  width: auto;
 }
 header .container_large .nav-right .login_register ul {
   display: flex;
@@ -109,6 +110,7 @@ main .jumbotron_main {
 main .jumbotron_main .container_large .advertising {
   color: #003049;
 }
+
 section.category .container_medium {
   padding: 50px 0;
   position: relative;
@@ -206,6 +208,28 @@ section.research .research-details {
   padding: 20px;
 }
 
+.card-product {
+  width: calc( 100% / 3 );
+  padding: 20px;
+  margin-top: 3em;
+  transition: all 0.2s;
+}
+.card-product:hover {
+  cursor: pointer;
+}
+.card-product:active {
+  transform: scale(0.99);
+}
+.card-product .container-image {
+  height: 180px;
+}
+.card-product .container-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 section.app {
   background-color: #eae2b7;
   background-image: linear-gradient(to bottom right, #eae2b7, #003049);
@@ -213,11 +237,30 @@ section.app {
 section.app h2 {
   text-align: left;
 }
+<<<<<<< HEAD
 section.app .container_medium {
   display: flex;
   justify-content: space-between;
 }
 section.app .container_medium img {
+=======
+section.app .container_large {
+  position: relative;
+}
+section.app .container_large .box-app-left {
+  position: absolute;
+  top: 70px;
+  left: 0;
+}
+section.app .container_large .box-app-right {
+  padding-top: 10px;
+  height: 60px;
+  position: absolute;
+  top: 70px;
+  right: 0;
+}
+section.app .container_large .box-app-right img {
+>>>>>>> eb90f7e2d3cc808ba810089ec307c029e49c3a6c
   width: 150px;
   height: auto;
   padding-right: 20px;
