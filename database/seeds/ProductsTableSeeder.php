@@ -1046,28 +1046,108 @@ class ProductsTableSeeder extends Seeder
                 'user_id' => 26
             ],
             [
-                'name' => 'Calamari fritti',
-                'description' => 'Calamari fritti in pastella.',
-                'price' => 4.30,
+                'name' => 'Uramaki ebiten',
+                'description' => '8 pezzi, riso, alga, tempura di gamberi.',
+                'price' => 10.00,
                 'visibility' => 1,
-                'cover' => 'https://www.sanvitolocapoweb.co.uk/sw_images/ricette/anelli-di-calamari-fritti_14.jpg',
+                'cover' => 'https://i.pinimg.com/originals/47/96/91/4796916650fd8f76d150d589703edf12.jpg',
                 'user_id' => 26
             ],
             [
-                'name' => 'Calamari fritti',
-                'description' => 'Calamari fritti in pastella.',
-                'price' => 4.30,
+                'name' => 'Chirashi miyumi',
+                'description' => 'Ciotola di riso con salmone, mais, insalata, avocado, salsa di soia.',
+                'price' => 8.00,
                 'visibility' => 1,
-                'cover' => 'https://www.sanvitolocapoweb.co.uk/sw_images/ricette/anelli-di-calamari-fritti_14.jpg',
+                'cover' => 'https://cdn.simplesite.com/i/10/95/286823007430415632/i286823014327461298._rsw480h480_szw480h480_.jpg',
                 'user_id' => 26
             ],
             [
-                'name' => 'Calamari fritti',
-                'description' => 'Calamari fritti in pastella.',
-                'price' => 4.30,
+                'name' => 'Futomaki',
+                'description' => '5 pezzi, riso, alga , salmone, avocado, fritto.',
+                'price' => 7.50,
                 'visibility' => 1,
-                'cover' => 'https://www.sanvitolocapoweb.co.uk/sw_images/ricette/anelli-di-calamari-fritti_14.jpg',
+                'cover' => 'https://amysushi.it/wp-content/uploads/2016/06/29-Futomaki-fritto.jpg',
                 'user_id' => 26
+            ],
+            [
+                'name' => 'Pane al vapore fritto',
+                'description' => 'Pane cinese al vapore fritto.',
+                'price' => 2.50,
+                'visibility' => 1,
+                'cover' => 'http://www.ristorantelin.it/wp-content/uploads/2019/10/10-768x512.jpg',
+                'user_id' => 27
+            ],
+            [
+                'name' => 'Riso saltato con salmone',
+                'description' => 'riso saltato con salmone, verdure miste, uova e salsa teriyaki.',
+                'price' => 5.00,
+                'visibility' => 1,
+                'cover' => 'http://www.ristorantelin.it/wp-content/uploads/2019/10/102-768x512.jpg',
+                'user_id' => 27
+            ],
+            [
+                'name' => 'Pollo alle madorle',
+                'description' => 'pollo saltato con verdure e mandorle.',
+                'price' => 5.50,
+                'visibility' => 1,
+                'cover' => 'http://www.ristorantelin.it/wp-content/uploads/2019/10/113-768x511.jpg',
+                'user_id' => 27
+            ],
+            [
+                'name' => 'Vitello con patate',
+                'description' => 'vitello saltato con patate.',
+                'price' => 5.50,
+                'visibility' => 1,
+                'cover' => 'http://www.ristorantelin.it/wp-content/uploads/2019/10/120-768x511.jpg',
+                'user_id' => 27
+            ],
+            [
+                'name' => 'Doufu',
+                'description' => 'doufu saltate con funghi e bambù.',
+                'price' => 7.50,
+                'visibility' => 1,
+                'cover' => 'http://www.ristorantelin.it/wp-content/uploads/2019/10/133-768x512.jpg',
+                'user_id' => 27
+            ],
+            [
+                'name' => 'Stick di gamberi',
+                'description' => 'stick di gamberi* avvolti in una sfoglia croccante.',
+                'price' => 4.00,
+                'visibility' => 1,
+                'cover' => 'http://www.ristorantelin.it/wp-content/uploads/2019/10/1.png',
+                'user_id' => 28
+            ],
+            [
+                'name' => 'Gambero kataifi',
+                'description' => 'gambero avvolto da pasta kataifi.',
+                'price' => 5.00,
+                'visibility' => 1,
+                'cover' => 'http://www.ristorantelin.it/wp-content/uploads/2019/10/3-768x574.jpg',
+                'user_id' => 28
+            ],
+            [
+                'name' => 'Edamame',
+                'description' => 'bacelli di soia.',
+                'price' => 3.50,
+                'visibility' => 1,
+                'cover' => 'http://www.ristorantelin.it/wp-content/uploads/2019/10/16.png',
+                'user_id' => 28
+            ],
+            [
+                'name' => 'Zuppa di miso',
+                'description' => 'zuppa di miso con alghe e doufu.',
+                'price' => 3.50,
+                'visibility' => 1,
+                'cover' => 'http://www.ristorantelin.it/wp-content/uploads/2019/10/24.png',
+                'user_id' => 28
+            ],
+            [
+                'name' => 'Hosomaki kappa',
+                'description' => 'piccoli roll di riso farciti con cetrioli.',
+                'price' => 3.00,
+                'visibility' => 1,
+                'cover' => 'http://www.ristorantelin.it/wp-content/uploads/2019/10/55-768x683.jpg',
+                'user_id' => 28
             ],
 
 
