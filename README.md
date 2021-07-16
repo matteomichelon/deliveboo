@@ -1,78 +1,132 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+# Installare Braintree con Laravel
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## Installare il pacchetto di Braintree attraverso Composer
 
-## About Laravel
+        composer require braintree/braintree_php
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Aggiungere le seguenti righe al file .env
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+        BRAINTREE_ENV=sandbox
+        BRAINTREE_MERCHANT_ID=
+        BRAINTREE_PUBLIC_KEY=
+        BRAINTREE_PRIVATE_KEY=
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Registrarsi al sito Braintree Test Sandbox
 
-## Learning Laravel
+[link](https://www.braintreepayments.com/it/sandbox?referrer=https%3A%2F%2Fmedium.com%2Fzestgeek%2Fbraintree-integration-with-laravel-cd9d155f1184)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Collegarsi poi al [pannello di controllo](https://sandbox.braintreegateway.com/) dove troverete le keys per la configurazione
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+![](img/key-braintree.png)
 
-## Laravel Sponsors
+- Inserire nel file **.env** le keys
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Settiamo Braintree in Laravel
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
+- All'interno del file **App/Providers/AppServiceProvider.php** aggiungiamo nella funzione **boot** sempre i dati di braintree:
 
-## Contributing
+        $gateway = new \Braintree\Gateway([
+                    'environment' => 'sandbox',
+                    'merchantId' => 'enter_code_merchantId',
+                    'publicKey' => 'enter_public_key',
+                    'privateKey' => 'enter_private_key'
+                ]);
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+![](img/app-service-provider.png)
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Aggiorniamo il file services.php
 
-## Security Vulnerabilities
+- Apriamo il file **config/service.php**
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Aggiungiamo il controllo *braintree*
 
-## License
+        'braintree' => [
+                'environment' => env('BRAINTREE_ENV', 'sandbox'),
+                'merchantId' => env('BRAINTREE_MERCHANT_ID', false),
+                'publicKey' => env('BRAINTREE_PUBLIC_KEY', false),
+                'privateKey' => env('BRAINTREE_PRIVATE_KEY', false)
+            ]
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+![](img/controllo-braintree.png)
+
+
+## Creiamo il controller dedicato
+
+        php artisan make:controller GuestController
+
+- Aggiungiamo i seguenti **use**        
+        
+        use Braintree\Gateway;
+
+- Aggiungiamo la funzione **cart**
+
+        public function cart()
+            {
+
+                $gateway = new Gateway([
+                    'environment' => config('services.braintree.environment'),
+                    'merchantId' => config('services.braintree.merchantId'),
+                    'publicKey' => config('services.braintree.publicKey'),
+                    'privateKey' => config('services.braintree.privateKey')
+                ]);
+                
+                $token = $gateway->clientToken()->generate();
+
+                return view('cart', compact('token'));   
+                
+            }
+
+## Creiamo la route in web.php
+
+        Route::get('/cart', 'GuestController@cart')->name('cart');
+
+## Creiamo la views
+
+- la chiamiamo nel nostro esempio **cart.blade.php**
+- aggiungiamo lo script in *head*
+
+        <script src="https://js.braintreegateway.com/web/dropin/1.31.0/js/dropin.js"></script>
+
+- Testa con *php artisan serve* che la pagina si veda correttamente; se i dati non sono coerenti con quelli del sito braintree la pagina darà errore di collegamento
+
+
+## Crea lo script e il form di pagamento
+
+- Nel nostro esempio
+
+        <form id="pay_form" action="{{ route('cart.checkout')}}" method="POST">
+            @csrf
+            @method('POST')
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name">
+
+            <label for="lastname">cognome</label>
+            <input type="text" id="lastname" name="lastname">
+
+            <label for="email">email</label>
+            <input type="email" id="email" name="email">
+
+            <label for="address">indirizzo</label>
+            <input type="text" id="address" name="address">
+
+            <label for="phone">phone</label>
+            <input type="text" id="phone" name="phone">
+            
+            <div id="dropin-container"></div>
+            <input id="nonce" name="payment_method_nonce" type="hidden" />
+            <button type="submit" > Invia </button>              
+                
+        </form>
+
+- Inviamo il pagamento al server attraverso l'azione nel form: **action="{{ route('cart.checkout')}}"** andando poi nel controller a gestirlo.
+
+## Gestione collegamento server in GuestController
+
+
+# Varie
+
+## Numeri di carta da poter testare
+
+Vedi [link](https://developer.paypal.com/braintree/docs/reference/general/testing)
+
