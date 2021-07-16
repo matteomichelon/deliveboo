@@ -549,7 +549,6 @@ class ProductsTableSeeder extends Seeder
                 'cover' => 'https://nishkitchen.com/wp-content/uploads/2016/03/coconut-burfi-1B-480x480.jpg',
                 'user_id' => 13
             ],
-<<<<<<< HEAD
             [
                 'name' => 'Tagliata di angus',
                 'description' => 'Ingredienti: Controfiletto di Angus',
@@ -1070,8 +1069,6 @@ class ProductsTableSeeder extends Seeder
                 'cover' => 'https://www.sanvitolocapoweb.co.uk/sw_images/ricette/anelli-di-calamari-fritti_14.jpg',
                 'user_id' => 26
             ],
-=======
->>>>>>> eb90f7e2d3cc808ba810089ec307c029e49c3a6c
 
 
 
