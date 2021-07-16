@@ -182,7 +182,7 @@ section.research .research-text-back:active {
   transform: scale(0.95);
 }
 section.research .card-restaurant {
-  width: 30em;
+  width: calc( 100% / 3 );
   padding: 20px;
   margin-top: 3em;
   transition: all 0.2s;
@@ -226,6 +226,8 @@ section.app .container_medium .box-app-right {
   right: 0;
 }
 section.app .container_medium .box-app-right img {
+  width: 150px;
+  height: auto;
   padding-right: 20px;
   cursor: pointer;
 }
@@ -236,6 +238,7 @@ footer {
   position: relative;
 }
 footer .container-box {
+  display: flex;
   justify-content: space-between;
 }
 footer .container-box a {

@@ -28,7 +28,7 @@ section.research {
     }
 
     .card-restaurant {
-        width: 30em;
+        width: calc( 100% / 3 );
         padding: 20px;
         margin-top: 3em;
         transition: all 0.2s;
