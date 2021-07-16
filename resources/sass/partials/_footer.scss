@@ -1,8 +1,8 @@
 footer{
     background-color: $primary_color;
     color: $white_color;
-    position: relative;
-
+    
+    
     .container-box{
         display: flex;
         justify-content: space-between;
@@ -17,8 +17,8 @@ footer{
     }
 
     .copyright{
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
+        text-align: right;
+        padding: 20px;
+        
     }
 }

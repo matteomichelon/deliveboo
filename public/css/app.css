@@ -32,7 +32,7 @@ ul {
 }
 
 .padding-section {
-  padding: 50px 0;
+  padding: 20px 0;
 }
 
 h1 {
@@ -59,6 +59,10 @@ h2 {
 .menu-footer li a {
   list-style-type: none;
   color: #fcbf49;
+}
+
+.login-padding {
+  padding: 20px;
 }
 
 header {
@@ -229,11 +233,17 @@ section.research .research-details {
 section.app {
   background-color: #eae2b7;
   background-image: linear-gradient(to bottom right, #eae2b7, #003049);
-  height: 200px;
 }
 section.app h2 {
   text-align: left;
 }
+<<<<<<< HEAD
+section.app .container_medium {
+  display: flex;
+  justify-content: space-between;
+}
+section.app .container_medium img {
+=======
 section.app .container_large {
   position: relative;
 }
@@ -250,6 +260,7 @@ section.app .container_large .box-app-right {
   right: 0;
 }
 section.app .container_large .box-app-right img {
+>>>>>>> eb90f7e2d3cc808ba810089ec307c029e49c3a6c
   width: 150px;
   height: auto;
   padding-right: 20px;
@@ -259,7 +270,6 @@ section.app .container_large .box-app-right img {
 footer {
   background-color: #003049;
   color: #fcbf49;
-  position: relative;
 }
 footer .container-box {
   display: flex;
@@ -272,9 +282,8 @@ footer .container-box a:hover {
   color: #eae2b7;
 }
 footer .copyright {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+  text-align: right;
+  padding: 20px;
 }
 
 /*!
