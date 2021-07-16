@@ -18,7 +18,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Riso tipico cinese saltato con prosciutto, piselli, mais, uova.',
                 'price' => 4.00,
                 'visibility' => 1,
-                'cover' => 'https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/1dd71a6b-bd81-4a7a-8013-114c731d1165/Derivates/21db79a0-9d69-44d2-8852-6945bc8fc0de.jpg',
+                'cover' => 'img/products/riso-alla-cantonese.jpg',
                 'user_id' => 2                
             ],
             [
@@ -26,7 +26,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'La pizza più famosa e più buona del mondo. Ingredienti: pomodoro, mozzarella e basilico.',
                 'price' => 6.50,
                 'visibility' => 1,
-                'cover' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Pizza-napoletana.jpg/1200px-Pizza-napoletana.jpg',
+                'cover' => 'img/products/margherita.jpg',
                 'user_id' => 1
             ],
             [
@@ -34,7 +34,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Classica pizza. Ingredienti: pomodoro, mozzarella e basilico.',
                 'price' => 6.00,
                 'visibility' => 1,
-                'cover' => 'https://www.ricettapizzanapoletana.it/wp-content/uploads/2019/07/pizza-napoletana.jpg',
+                'cover' => 'img/products/pizza-napoletana.jpg',
                 'user_id' => 10
             ],
             [
