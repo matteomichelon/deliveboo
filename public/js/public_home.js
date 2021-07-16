@@ -2139,11 +2139,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-module.exports = __webpack_require__(/*! /Users/catalinzahariea/Desktop/Boolean/Deliveboo/deliveboo/resources/js/public_home.js */"./resources/js/public_home.js");
-=======
 module.exports = __webpack_require__(/*! C:\Users\usuario\Desktop\deliveboo\resources\js\public_home.js */"./resources/js/public_home.js");
->>>>>>> 37135698a1a41f0a2cab9c34e472e037b19a580c
 
 
 /***/ })
