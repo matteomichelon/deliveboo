@@ -2,8 +2,11 @@
 
 @section('content')
 <div class="container">
-    <div class="d-flex">
+    <div class="d-flex flex-wrap">
+        
         @foreach ($products as $product)
+
+            {{-- Product Card --}}
             <div class="card" style="width: 18rem;">
                 
                 {{-- 
@@ -11,7 +14,7 @@
                     it will display a standard image.    
                 --}}
                 @if (isset($product->cover) )
-                    <img src="{{asset('storage/' . $product->cover)}}" class="card-img-top" alt="{{$product->name}}">
+                    <img src="{{$product->cover}}" class="card-img-top" alt="{{$product->name}}">
                 @else
                     <img src="https://picsum.photos/300" class="card-img-top" alt="{{$product->name}}">
                 @endif
@@ -33,7 +36,9 @@
 
                 </div>
             </div>
+
         @endforeach
+
     </div>
 </div>
 @endsection
