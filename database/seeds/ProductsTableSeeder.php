@@ -210,7 +210,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Hai mai provato la Caesar Salad con il petto pollo croccante 100% italiano? La sua gustosa panatura si sposa alla perfezione con il mix di insalata tenera, la dolcezza dei pomodorini ciliegia e il formaggio a scaglie. Un mix di ingredienti dal sapore unico.',
                 'price' => 4.00,
                 'visibility' => 1,
-                'cover' => 'https://www.mcdonalds.it/sites/default/files/styles/compressed/public/bundle/bundle-insalata-pollo_croccante-hero-dsk.jpg?itok=hWRGqIbg',
+                'cover' => 'img/products/cesar-salad-con-pollo-croccante.jpg',
                 'user_id' => 4
             ],
             [
@@ -218,7 +218,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Salmone, riso.',
                 'price' => 2.80,
                 'visibility' => 1,
-                'cover' => 'https://homebeer.it/wp-content/uploads/2019/11/otosan_nigiri_salmone.jpg',
+                'cover' => 'img/products/nighiri-sake.jpg',
                 'user_id' => 5
             ],
             [
@@ -226,7 +226,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Tonno.',
                 'price' => 3.50,
                 'visibility' => 1,
-                'cover' => 'https://www.sushibe.it/wordpress/wp-content/uploads/2018/04/Gunkan-Maguro-Spicy.jpg',
+                'cover' => 'img/products/gunkan-maguro.jpg',
                 'user_id' => 5
             ],
             [
@@ -234,7 +234,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Riso, alghe, gambero in tempura.',
                 'price' => 5.00,
                 'visibility' => 1,
-                'cover' => 'https://www.youkimagenta.it/wp-content/uploads/2020/03/45.jpg',
+                'cover' => 'img/products/hosomaki-ebiten.jpg',
                 'user_id' => 5
             ],
             [
@@ -242,7 +242,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Salmone, avocado, sesamo.',
                 'price' => 5.00,
                 'visibility' => 1,
-                'cover' => 'https://www.daiki.it/wp-content/uploads/2019/11/IMG_8599.jpg',
+                'cover' => 'img/products/sake-tartare.jpg',
                 'user_id' => 5
             ],
             [
@@ -250,7 +250,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => '',
                 'price' => 8.90,
                 'visibility' => 1,
-                'cover' => 'https://www.sakurarc.it/wp-content/uploads/2020/04/55.-sushi-misto.jpg',
+                'cover' => 'img/products/sushi-misto.jpg',
                 'user_id' => 5
             ],
             [
@@ -258,7 +258,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Farina, olio evo, acqua, sale, patate e salsiccia',
                 'price' => 5.90,
                 'visibility' => 1,
-                'cover' => 'https://media-cdn.tripadvisor.com/media/photo-s/0c/fe/29/cd/piada-salsiccia-e-patate.jpg',
+                'cover' => 'img/products/piada-salsiccia-e-patate.jpg',
                 'user_id' => 6
             ],
             [
@@ -266,7 +266,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Farina, olio evo, acqua, sale, rucoal, scamorza, pomodorini, cotto',
                 'price' => 5.00,
                 'visibility' => 1,
-                'cover' => 'https://primochef.it/wp-content/uploads/2020/03/SH_piadina.jpg',
+                'cover' => 'img/products/piada-lucia.jpg',
                 'user_id' => 6
             ],
             [
@@ -274,7 +274,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Farina, olio evo, acqua, sale, crudo, rucola, pomodoro, bufala',
                 'price' => 6.50,
                 'visibility' => 1,
-                'cover' => 'https://wips.plug.it/cips/buonissimo.org/cms/2019/01/piadina-al-crudo.jpg',
+                'cover' => 'img/products/piadina-ernesto.jpg',
                 'user_id' => 6
             ],
             [
@@ -282,7 +282,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Farina, olio evo, acqua, sale, avocado, salmone',
                 'price' => 7.50,
                 'visibility' => 1,
-                'cover' => 'https://www.piadinaromagnola.info/wp-content/uploads/2020/02/piadina-salmone-avocado-scaled-e1581457082394-1024x766.jpg',
+                'cover' => 'img/products/piada-vittoria.jpg',
                 'user_id' => 6
             ],
             [
@@ -290,7 +290,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Farina, olio evo, acqua, sale, funghi, speck, crescenza',
                 'price' => 6.00,
                 'visibility' => 1,
-                'cover' => 'https://www.negroni.com/sites/negroni.com/files/piadina-con-prosciutto-crudo-e-funghi.jpg',
+                'cover' => 'img/products/piada-franco.jpg',
                 'user_id' => 6
             ],
             [
@@ -298,7 +298,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Pane, hamburger da 150g di manzo, cheddar, bacon, insalata, pomodoro, cipolla',
                 'price' => 7.00,
                 'visibility' => 1,
-                'cover' => 'https://www.mrdoyle.it/wp-content/uploads/2019/01/AdobeStock_209775207-scaled-e1575394210352.jpeg',
+                'cover' => 'img/products/classico.jpg',
                 'user_id' => 7
             ],
             [
@@ -306,7 +306,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Hamburger da 150g di Angus, doppio bacon, scamorza, pomodoro',
                 'price' => 8.00,
                 'visibility' => 1,
-                'cover' => 'https://www.tribugolosa.com/media/untitled-collage-jpg_crop.jpeg/rh/hamburger-con-fonduta-di-brie-e-pancetta-croccante.jpg',
+                'cover' => 'img/products/1987.jpg',
                 'user_id' => 7
             ],
             [
@@ -314,7 +314,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Hamburger da 150g di maiale, soffritto della casa, melanzana, maionese',
                 'price' => 7.50,
                 'visibility' => 1,
-                'cover' => 'https://www.schaer.com/sites/default/files/2016-07/1064_Hamburger%20ai%20capperi%20con%20porri%20e%20melanzane.jpg',
+                'cover' => 'img/products/old-style.jpg',
                 'user_id' => 7
             ],
             [
@@ -322,7 +322,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Farina, olio evo, lenticchie, carote, cipolla, paprika dolca, dadolata di peperoni',
                 'price' => 7.00,
                 'visibility' => 1,
-                'cover' => 'https://www.buttalapasta.it/wp-content/uploads/2016/06/Hamburger-di-lenticchie.jpg',
+                'cover' => 'img/products/veggie.jpg',
                 'user_id' => 7
             ],
             [
@@ -330,7 +330,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Hamburger da 200g mi bovino, bacon, uovo occhio di bue, battuta di aromi',
                 'price' => 7.00,
                 'visibility' => 1,
-                'cover' => 'https://www.donnamoderna.com/content/uploads/2006/11/Hamburger-alla-Bismarck-ricetta-830x625.jpg',
+                'cover' => 'img/products/bismark.jpg',
                 'user_id' => 7
             ],
             [
@@ -338,7 +338,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Latte, crema di pistacchio e pistacchio.',
                 'price' => 2.00,
                 'visibility' => 1,
-                'cover' => 'https://cdn.shopify.com/s/files/1/0262/8580/1553/products/coppetta-gelato.jpg?v=1590158435',
+                'cover' => 'img/products/pistacchio.jpg',
                 'user_id' => 8
             ],
             [
@@ -346,7 +346,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Latte, sciroppo di fragola fragole.',
                 'price' => 2.50,
                 'visibility' => 1,
-                'cover' => 'https://cdn.shopify.com/s/files/1/0262/8580/1553/products/coppetta-fragola.jpg?v=1590159387',
+                'cover' => 'img/products/fragola.jpg',
                 'user_id' => 8
             ],
             [
@@ -354,7 +354,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Fior di latte e caffè',
                 'price' => 3.00,
                 'visibility' => 1,
-                'cover' => 'https://cdn.shopify.com/s/files/1/0262/8580/1553/products/coppetta-gelato-panna-piccola.jpg?v=1590158513',
+                'cover' => 'img/products/yin-yang.jpg',
                 'user_id' => 8
             ],
             [
@@ -362,7 +362,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Latte, cacao',
                 'price' => 2.00,
                 'visibility' => 1,
-                'cover' => 'https://www.tuttogelatoshop.it/wp-content/uploads/2021/02/012_coppetta_cioccolato_fragola_tuttogelato.jpg',
+                'cover' => 'img/products/cioccolato.jpg',
                 'user_id' => 8
             ],
             [
@@ -370,7 +370,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Latte, banane, ciliege',
                 'price' => 3.50,
                 'visibility' => 1,
-                'cover' => 'https://www.bombagiu.it/wp-content/uploads/2017/07/gelato-coppetta-600x353-3.jpg',
+                'cover' => 'img/products/tropical.jpg',
                 'user_id' => 8
             ],
             [
@@ -378,7 +378,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Pasticcini vari, prezzo al kg.',
                 'price' => 25.00,
                 'visibility' => 1,
-                'cover' => 'https://redacademy.it/wp-content/uploads/2017/07/mignon-pasticceria-1.jpg',
+                'cover' => 'img/products/pasticcini-assortiti.jpg',
                 'user_id' => 9
             ],
             [
@@ -386,7 +386,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Prezzo al kg.',
                 'price' => 30.00,
                 'visibility' => 1,
-                'cover' => 'https://i0.wp.com/www.piccolericette.net/piccolericette/wp-content/uploads/2018/09/3711_Sbrisolona.jpg?resize=895%2C616&ssl=1',
+                'cover' => 'img/products/sbrisolona.jpg',
                 'user_id' => 9
             ],
             [
@@ -394,7 +394,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Prezzo al kg.',
                 'price' => 33.50,
                 'visibility' => 1,
-                'cover' => 'https://www.buttalapasta.it/wp-content/uploads/2012/07/torta-sacher.jpg',
+                'cover' => 'img/products/sacher.jpg',
                 'user_id' => 9
             ],
             [
@@ -402,7 +402,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Prezzo al kg.',
                 'price' => 40.50,
                 'visibility' => 1,
-                'cover' => 'https://matildevicenzi.it/wp-content/uploads/2016/11/Vicenzi-069-e1478278252111.jpg',
+                'cover' => 'img/products/millefoglie.jpg',
                 'user_id' => 9
             ],
             [
@@ -410,7 +410,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Prezzo al kg.',
                 'price' => 31.50,
                 'visibility' => 1,
-                'cover' => 'https://images.fidhouse.com/fidelitynews/wp-content/uploads/sites/6/2015/10/muffin-al-cocco-ripieni-di-Nutella-e1444311173417.jpg?w=580',
+                'cover' => 'img/products/muffin-alla-nutella.jpg',
                 'user_id' => 9
             ],
             [
@@ -418,7 +418,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Mozzarella, melanzae, cipolla, peperoni, funghi.',
                 'price' => 7.50,
                 'visibility' => 1,
-                'cover' => 'https://i0.wp.com/www.piccolericette.net/piccolericette/wp-content/uploads/2017/12/3243_Pizza.jpg?resize=895%2C616&ssl=1',
+                'cover' => 'img/products/ortolana.jpg',
                 'user_id' => 10
             ],
             [
@@ -426,7 +426,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Mozzarella, fiori di zucca, acciughe basilico.',
                 'price' => 31.50,
                 'visibility' => 1,
-                'cover' => 'https://www.ricettedalmondo.it/images/foto-ricette/p/31389-pizza-con-fiori-di-zucca-e-alici.jpg',
+                'cover' => 'img/products/fiori-di-zucca-e-acciughe.jpg',
                 'user_id' => 10
             ],
             [
@@ -434,7 +434,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Pesce spada.',
                 'price' => 8.50,
                 'visibility' => 1,
-                'cover' => 'https://www.misya.info/wp-content/uploads/2017/03/pesce-spada-alla-piastra.jpg',
+                'cover' => 'img/products/trancio-di-spada-alla-griglia.jpg',
                 'user_id' => 11
             ],
             [
@@ -442,7 +442,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Manzo Italiano.',
                 'price' => 14.50,
                 'visibility' => 1,
-                'cover' => 'https://www.lacucinadipier.it/wp-content/uploads/2017/09/Filetto-vitello-e1508918901371.jpg',
+                'cover' => 'img/products/filetto-di-manzo-alla-griglia.jpg',
                 'user_id' => 11
             ],
             [
@@ -450,7 +450,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: formaggi del giorno.',
                 'price' =>7.50,
                 'visibility' => 1,
-                'cover' => 'https://www.ilgiornaledelcibo.it/wp-content/uploads/2018/01/tagliere-di-formaggi.jpg',
+                'cover' => 'img/products/tagliere-di-formaggi.jpg',
                 'user_id' => 11
             ],
             [
@@ -458,7 +458,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Vitello italiano.',
                 'price' => 10.00,
                 'visibility' => 1,
-                'cover' => 'https://www.divinamilano.it/wp-content/uploads/2020/02/cotoletta-alla-milanese.jpg',
+                'cover' => 'img/products/cotoletta-alla-milanese.jpg',
                 'user_id' => 11
             ],
             [
@@ -466,7 +466,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Pollo italiano alla griglia.',
                 'price' => 6.50,
                 'visibility' => 1,
-                'cover' => 'https://cdn.ilclubdellericette.it/wp-content/uploads/2018/05/petto-pollo-griglia-790x500.jpg',
+                'cover' => 'img/products/petto-di-pollo-alla-griglia.jpg',
                 'user_id' => 11
             ],
             [
@@ -474,7 +474,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Carne di maiale, funghi e bambù.',
                 'price' => 5.00,
                 'visibility' => 1,
-                'cover' => 'https://www.unmondodisapori.it/wp-content/uploads/2017/10/vitellofunghibambu-1.jpg',
+                'cover' => 'img/products/maiale-funghi-e-bambu.jpg',
                 'user_id' => 12
             ],
             [
@@ -482,7 +482,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Maiale, peperoni, ananas.',
                 'price' => 5.50,
                 'visibility' => 1,
-                'cover' => 'https://static.cookist.it/wp-content/uploads/sites/21/2017/05/maiale-in-agrodolce-copertina.png',
+                'cover' => 'img/products/maiale-agrodolce.jpg',
                 'user_id' => 12
             ],
             [
@@ -490,7 +490,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Spaghetti di riso, germogli di soia, zucchine, carote.',
                 'price' => 3.80,
                 'visibility' => 1,
-                'cover' => 'https://blog.giallozafferano.it/danicucina/wp-content/uploads/2020/09/DSC_0871q-720x480.jpg',
+                'cover' => 'img/products/spaghetti-di-soia.jpg',
                 'user_id' => 12
             ],
             [
@@ -498,7 +498,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Farina di riso, gamberi.',
                 'price' => 2.50,
                 'visibility' => 1,
-                'cover' => 'https://primochef.it/wp-content/uploads/2016/11/SH_ravioli_cinesi_gamberi_vapore.jpg',
+                'cover' => 'img/products/ravioli-di-gambero-al-vapore.jpg',
                 'user_id' => 12
             ],
             [
@@ -506,7 +506,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: alghe fritte.',
                 'price' => 3.00,
                 'visibility' => 1,
-                'cover' => 'https://www.tuttogreen.it/wp-content/uploads/2016/04/shutterstock_255225709.jpg',
+                'cover' => 'img/products/alghe-fritte.jpg',
                 'user_id' => 12
             ],
             [
@@ -514,7 +514,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Verdure miste fritte in pastella e spezie.',
                 'price' => 4.00,
                 'visibility' => 1,
-                'cover' => 'https://ikneadtoeat.com/wp-content/uploads/2019/09/Mixed-Vegetable-Pakora-1.jpg',
+                'cover' => 'img/products/mix-pakora.jpg',
                 'user_id' => 13
             ],
             [
@@ -522,7 +522,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Paste triangolari fritte ripiene di verdure miste.',
                 'price' => 4.50,
                 'visibility' => 1,
-                'cover' => 'https://wips.plug.it/cips/buonissimo.org/cms/2012/02/samosa-6.jpg',
+                'cover' => 'img/products/samosa.jpg',
                 'user_id' => 13
             ],
             [
@@ -530,7 +530,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Riso basmati al vapore.',
                 'price' => 2.50,
                 'visibility' => 1,
-                'cover' => 'https://www.donnesulweb.it/wp-content/uploads/2018/01/cucinare-riso-al-vapore-senza-vaporiera.jpg',
+                'cover' => 'img/products/basmati-bianco.jpg',
                 'user_id' => 13
             ],
             [
@@ -538,7 +538,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Riso basmati allo zafferano e mandorle.',
                 'price' => 3.50,
                 'visibility' => 1,
-                'cover' => 'https://cdn.shortpixel.ai/client/to_avif,q_glossy,ret_img,w_980/https://www.combiyou.it/wp-content/uploads/2018/11/riso-basmati-al-curry.jpg',
+                'cover' => 'img/products/riso-zafferano.jpg',
                 'user_id' => 13
             ],
             [
@@ -546,7 +546,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Cocco, aroma di rose.',
                 'price' => 3.00,
                 'visibility' => 1,
-                'cover' => 'https://nishkitchen.com/wp-content/uploads/2016/03/coconut-burfi-1B-480x480.jpg',
+                'cover' => 'img/products/coconut-barfi.jpg',
                 'user_id' => 13
             ],
 
