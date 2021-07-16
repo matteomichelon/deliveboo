@@ -7,18 +7,28 @@ section.app {
         text-align: left;
     }
 
-    .container_medium{
-        
+    .container_large{
         display: flex;
         justify-content: space-between;
 
-        
-        img{
-            width: 150px;
-            height: auto;
-            padding-right: 20px;
-            cursor: pointer;
+        .box-app-left{
+            
+            height: 40px;
         }
+
+        .box-app-right{
+         width: 150px;
+
+            img{
+                cursor: pointer;
+                padding-bottom: 10px;
+            }
+
+        }
+
+
+        
+        
         
     }
 

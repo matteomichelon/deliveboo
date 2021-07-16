@@ -237,34 +237,19 @@ section.app {
 section.app h2 {
   text-align: left;
 }
-<<<<<<< HEAD
-section.app .container_medium {
+section.app .container_large {
   display: flex;
   justify-content: space-between;
 }
-section.app .container_medium img {
-=======
-section.app .container_large {
-  position: relative;
-}
 section.app .container_large .box-app-left {
-  position: absolute;
-  top: 70px;
-  left: 0;
+  height: 40px;
 }
 section.app .container_large .box-app-right {
-  padding-top: 10px;
-  height: 60px;
-  position: absolute;
-  top: 70px;
-  right: 0;
+  width: 150px;
 }
 section.app .container_large .box-app-right img {
->>>>>>> eb90f7e2d3cc808ba810089ec307c029e49c3a6c
-  width: 150px;
-  height: auto;
-  padding-right: 20px;
   cursor: pointer;
+  padding-bottom: 10px;
 }
 
 footer {
