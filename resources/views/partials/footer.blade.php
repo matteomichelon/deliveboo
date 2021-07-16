@@ -1,7 +1,7 @@
 <!-- FOOTER -->
 <footer>
 
-    <div class="container_medium padding-section">
+    <div class="container_large padding-section">
 
         <div class="container-box">
             

@@ -73,6 +73,7 @@ header .container_large {
 }
 header .container_large img {
   height: 30px;
+  width: auto;
 }
 header .container_large .nav-right .login_register ul {
   display: flex;
@@ -105,6 +106,7 @@ main .jumbotron_main {
 main .jumbotron_main .container_large .advertising {
   color: #003049;
 }
+
 section.category .container_medium {
   padding: 50px 0;
   position: relative;
@@ -232,22 +234,22 @@ section.app {
 section.app h2 {
   text-align: left;
 }
-section.app .container_medium {
+section.app .container_large {
   position: relative;
 }
-section.app .container_medium .box-app-left {
+section.app .container_large .box-app-left {
   position: absolute;
   top: 70px;
   left: 0;
 }
-section.app .container_medium .box-app-right {
+section.app .container_large .box-app-right {
   padding-top: 10px;
   height: 60px;
   position: absolute;
   top: 70px;
   right: 0;
 }
-section.app .container_medium .box-app-right img {
+section.app .container_large .box-app-right img {
   width: 150px;
   height: auto;
   padding-right: 20px;
