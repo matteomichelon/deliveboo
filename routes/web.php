@@ -13,14 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Home Controller per le pagine pubbliche istituzionali
+Route::get('/', 'HomeController@index')->name('home');
 
+// Route protette per gestire i piatti
 Route::prefix('admin')
     ->namespace('User')
     ->name('admin.')
@@ -30,4 +28,5 @@ Route::prefix('admin')
         Route::resource('products', 'ProductController');
 });
 
+// Route pubblica per lo show dei ristoranti con i piatti
 Route::get('/restaurant/{slug}', 'Guest\UserController@show')->name('restaurant.show');
