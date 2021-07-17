@@ -26,6 +26,7 @@ class GuestController extends Controller
     /* Function Checkout */
     public function checkout(Request $request)
     {
+        /* Generating Token */
         $gateway = new Gateway([
             'environment' => config('services.braintree.environment'),
             'merchantId' => config('services.braintree.merchantId'),
@@ -33,26 +34,29 @@ class GuestController extends Controller
             'privateKey' => config('services.braintree.privateKey')
         ]);
 
+        /* TODO: create order */
         $order = Order::where('id', 1)->first();
-        dump($order);
-
+        /* Variables */
+        $guest_name = $request->name;
+        $guest_surname = $request->surname;
+        $guest_address = $request->address;
+        $guest_telephone_number = $request->telephone_number;
         $guest_email = $request->email;
         $nonce = $request->payment_method_nonce;
 
+        /* Creating a Transaction */
         $result = $gateway->transaction()->sale([
-                            'amount' => '10.00',
+                            'amount' => '1500',
                             'paymentMethodNonce' => $nonce,
                             'options' => [
                                        'submitForSettlement' => true
                                          ]
               ]);
-        dd($result);
+        /* Message Result */
         if ($result->success) {
-            return view('success');
+            return redirect()->back()->with('message', 'Pagamento Avvenuto con successo!');
         } else {
-            return back()->withErrors('Qualcosa è andato storto');
+            return redirect()->back()->with('message', 'Il pagamento non è andato a buon fine, per favore riprovare');
         }
-
-        //return response()->json($status);
     }
 }

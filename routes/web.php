@@ -19,12 +19,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
+// Route Home
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Route for payments
+// Route for payments
 Route::get('/cart', 'GuestController@cart')->name('cart');
 Route::post('/cart', 'GuestController@checkout')->name('cart.checkout');
 
+// Route admin
 Route::prefix('admin')
     ->namespace('User')
     ->name('admin.')
