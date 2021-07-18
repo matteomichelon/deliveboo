@@ -1149,6 +1149,374 @@ class ProductsTableSeeder extends Seeder
                 'cover' => 'http://www.ristorantelin.it/wp-content/uploads/2019/10/55-768x683.jpg',
                 'user_id' => 28
             ],
+            [
+                'name' => 'Pork burritos',
+                'description' => 'Tortilla grande ripiena di maiale sfilacciato cotto in salsa bbq e formaggio, riso bianco e fagioli neri, avocado.',
+                'price' => 11.00,
+                'visibility' => 1,
+                'cover' => 'https://img.taste.com.au/JUM3_5uZ/w506-h253-cfill/taste/2017/04/pulled-pork-burrito-125400-1.jpg',
+                'user_id' => 29
+            ],
+            [
+                'name' => 'Chicken tulip',
+                'description' => 'Sfiziose coscette di pollo fritto servite con salsa bbq.',
+                'price' => 7.00,
+                'visibility' => 1,
+                'cover' => 'https://lh3.googleusercontent.com/proxy/Zw7PZjoSWOQ-Tgk_rqjXcjXKXSRWoEODl_fEoRi9I3u7-cQOQo3Dmb2o8ev0dJ37XhHgBQ-oVTo9ZhDAw3RjB4YOfpx1Jv3ssYkRE291bd8G0rWcaQRXF02R-Els3g076t5CB0yJ7NGamQ-uRqeADeg',
+                'user_id' => 29
+            ],
+            [
+                'name' => 'Pastrami',
+                'description' => 'Panino farcito con ca. 250 gr. di manzo cotto, affumicato e speziato con senape, cheddar e salsa speciale.',
+                'price' => 12.00,
+                'visibility' => 1,
+                'cover' => 'https://www.agrodolce.it/app/uploads/2020/02/pastrami-2020-r-011.jpg',
+                'user_id' => 29
+            ],
+            [
+                'name' => 'Ribs',
+                'description' => 'ostine di maiale in salsa bbq servite con patate al forno.',
+                'price' => 14.00,
+                'visibility' => 1,
+                'cover' => 'https://www.godairyfree.org/wp-content/uploads/2008/03/pics-sweet-bbq-ribs-feature.jpg',
+                'user_id' => 29
+            ],
+            [
+                'name' => 'Veggie burger',
+                'description' => 'La nostra speciale proposta vegetariana, 180g hamburger vegetale con maionese, insalata, pomodoro, cipolla e scamorza .',
+                'price' => 9.00,
+                'visibility' => 1,
+                'cover' => 'https://www.noracooks.com/wp-content/uploads/2018/09/Square-500x375.jpg',
+                'user_id' => 29
+            ],
+            [
+                'name' => 'Simple burger',
+                'description' => 'Bun con sesamo, insalata, pomodoro, cheddar, bacon, cipolla e carne di bovino. Accompagnato con patatine e salsa a scelta.',
+                'price' => 11.50,
+                'visibility' => 1,
+                'cover' => 'https://www.buttalapasta.it/wp-content/uploads/2016/01/hamburger-di-carne-americano.jpg',
+                'user_id' => 30
+            ],
+            [
+                'name' => 'Double burger',
+                'description' => 'Bun con sesamo, doppio hamburger da 150g di manzo, rucola, grana, pomodoro e senape, accompagnato da patatine.',
+                'price' => 14.00,
+                'visibility' => 1,
+                'cover' => 'https://www.ilgiornaledelcibo.it/wp-content/uploads/2018/01/hamburger-milano-2.jpg',
+                'user_id' => 30
+            ],
+            [
+                'name' => 'Italy burger',
+                'description' => 'Bun con semi di papavero, carne di suino da 150g, caciocavallo, pomodori secchi, marmellata di cipolle rosse, insalata, accompagnato da patatine.',
+                'price' => 11.00,
+                'visibility' => 1,
+                'cover' => 'https://www.giallozafferano.it/images/169-16957/Hamburger-all-italiana_650x433_wm.jpg',
+                'user_id' => 30
+            ],
+            [
+                'name' => 'N.Y. Burger',
+                'description' => 'Bun con semi di papavero, carne di angus da 159g, ketchup, cetrioli, cipolla, cheddar, pomodoro e insalata, accompagnato da patatine.',
+                'price' => 9.50,
+                'visibility' => 1,
+                'cover' => 'https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/1C3E2D92-6F5D-4AE1-A01D-C7374B371494/Derivates/A91E2EA7-7066-4250-8C04-C72F15F29353.jpg',
+                'user_id' => 30
+            ],
+            [
+                'name' => 'Veggie burger',
+                'description' => '180g hamburger vegetale con maionese, insalata, pomodoro, cipolla e scamorza .',
+                'price' => 9.00,
+                'visibility' => 1,
+                'cover' => 'https://www.noracooks.com/wp-content/uploads/2018/09/Square-500x375.jpg',
+                'user_id' => 30
+            ],
+            [
+                'name' => 'European burger',
+                'description' => 'Bun con semi di sesamo, uovo fritto, carne di pecosa da 150g, spinaci, accompagnato da patatine.',
+                'price' => 10.50,
+                'visibility' => 1,
+                'cover' => 'https://static.cookist.it/wp-content/uploads/sites/21/2020/10/hamburger-storia-1200x900.jpg',
+                'user_id' => 30
+            ],
+            [
+                'name' => 'Hamburger di pesce spada',
+                'description' => 'Bun con semi vari, burger di spada, pesto di zucchine e timo, cipolla.',
+                'price' => 12.50,
+                'visibility' => 1,
+                'cover' => 'https://primochef.it/wp-content/uploads/2017/10/SH_hamburger_pesce_spada-1200x800.jpg',
+                'user_id' => 31
+            ],
+            [
+                'name' => 'Hamburger di merluzzo',
+                'description' => 'Bun con semi di sesamo, burger di merluzzo in pastella, zucchine marinate, cipolla, pomodoro, insalata.',
+                'price' => 11.50,
+                'visibility' => 1,
+                'cover' => 'https://www.agrodolce.it/app/uploads/2020/03/hamburger-di-pesce-2020-i-050-980x400.jpg',
+                'user_id' => 31
+            ],
+            [
+                'name' => 'Hamburger di salmone',
+                'description' => 'Bun con semi di sesamo, burger di salmone, maionese allo zenzero, insalata.',
+                'price' => 11.50,
+                'visibility' => 1,
+                'cover' => 'https://s3.eu-central-1.amazonaws.com/quomi/media/2331/conversions/Hamburger-di-pesce-con-maionese-allo-zenzero-thumb-big.jpg',
+                'user_id' => 31
+            ],
+            [
+                'name' => 'Hamburger di gamberi',
+                'description' => 'Bun con semi di sesamo, burger di gamberi, gorgonzola, lattuga.',
+                'price' => 12.50,
+                'visibility' => 1,
+                'cover' => 'https://www.ricettedigusto.info/wp-content/uploads/2017/03/fishburger-hamburger-di-pesce3.jpg',
+                'user_id' => 31
+            ],
+            [
+                'name' => 'Hamburger di polpo e gamberi',
+                'description' => 'Bun con semi di papavero, burger di polipo e gamberi, salsa allo yogurt con cetriolo e lime, marmellata di pomodorino giallo, songino.',
+                'price' => 15.50,
+                'visibility' => 1,
+                'cover' => 'https://www.contemporaneofood.com/NEW/wp-content/uploads/2015/07/hamburger-di-pesce-2-contemporaneo-food.jpg',
+                'user_id' => 31
+            ],
+            [
+                'name' => 'Penne all\'amatriciana',
+                'description' => 'Ingredienti: Penne, guanciale, pomodori ramati, pepe, pecorino.',
+                'price' => 7.50,
+                'visibility' => 1,
+                'cover' => 'https://wips.plug.it/cips/buonissimo.org/cms/2016/11/sugo-amatriciana.jpg',
+                'user_id' => 32
+            ],
+            [
+                'name' => 'Spaghetti alla carbonara',
+                'description' => 'Ingredienti: Spaghetti, guanciale, uovo, pecorino romano, pepe.',
+                'price' => 8.50,
+                'visibility' => 1,
+                'cover' => 'https://www.scambiaricette.it/wp-content/uploads/2018/11/carbonara2.jpg',
+                'user_id' => 32
+            ],
+            [
+                'name' => 'Lasagne alla bolognese',
+                'description' => 'Ingredienti: Lasagne all\'uovo, ragu di manzo con carote, sedano e cipolla, besciamella, grana.',
+                'price' => 8.00,
+                'visibility' => 1,
+                'cover' => 'https://www.granarolo.it/system/granarolo_consumer/attachments/data/000/001/606/original/lasagne-alla-bolognese.jpg?1490627827',
+                'user_id' => 32
+            ],
+            [
+                'name' => 'Trofie al pesto',
+                'description' => 'Ingredienti: Trofie, pesto fatto con: parmigiano, olio evo, basilico, pinoli, pecorino sardo.',
+                'price' => 8.50,
+                'visibility' => 1,
+                'cover' => 'https://images.lacucinaitaliana.it/wp-content/uploads/2015/07/25124620/trofie-al-pesto1.jpg',
+                'user_id' => 32
+            ],
+            [
+                'name' => 'Spaghetti alla puttanesca',
+                'description' => 'Ingredienti: Spaghetti, pomodori pelati, capperi, prezzemolo, acciughe, olive.',
+                'price' => 7.50,
+                'visibility' => 1,
+                'cover' => 'https://www.giallozafferano.it/images/ricette/197/19789/foto_hd/hd650x433_wm.jpg',
+                'user_id' => 32
+            ],
+            [
+                'name' => 'Valtellina',
+                'description' => 'Ingredienti: Pomodoro, mozzarella, bresaola, rucola, grana.',
+                'price' => 8.00,
+                'visibility' => 1,
+                'cover' => 'https://cortilettomazzini.com/wp-content/uploads/2020/05/pizza_bres_rucola_grana.png',
+                'user_id' => 33
+            ],
+            [
+                'name' => 'Amatriciana',
+                'description' => 'Ingredienti: Pomodoro, mozzarella, guanciale, pecorino, pepe.',
+                'price' => 7.50,
+                'visibility' => 1,
+                'cover' => 'https://www.unmondodisapori.it/wp-content/uploads/2017/10/Amatriciana-e1508425759164.jpg',
+                'user_id' => 33
+            ],
+            [
+                'name' => 'Norvegese',
+                'description' => 'Ingredienti: Mozzarella, salmone, crescenza, prezzemolo.',
+                'price' => 8.50,
+                'visibility' => 1,
+                'cover' => 'https://www.mysocialrecipe.com/files/admin/immagini/batrakov-master.jpg',
+                'user_id' => 33
+            ],
+            [
+                'name' => 'Friarielli',
+                'description' => 'Ingredienti: Mozzarella, salsiccia, friarielli.',
+                'price' => 7.00,
+                'visibility' => 1,
+                'cover' => 'https://www.ristorazioneitalianamagazine.it/CMS/wp-content/uploads/2019/11/pizza-salsiccia-e-friarielli-napoleat-malta-walter-caputo.jpeg',
+                'user_id' => 33
+            ],
+            [
+                'name' => 'Frutti di mare',
+                'description' => 'Ingredienti: Pomodoro, cozze, vongole, calamari, gamberetti, prezzemolo.',
+                'price' => 9.50,
+                'visibility' => 1,
+                'cover' => 'https://wips.plug.it/cips/buonissimo.org/cms/2012/05/pizza-con-zafferano-e-frutti-di-mare.jpg',
+                'user_id' => 33
+            ],
+            [
+                'name' => 'Samosa di carne',
+                'description' => 'Ingredienti: Manzo macinato, carote, cipolle, curry, zenzero, coriandolo, cardamomo, olio evo.',
+                'price' => 4.50,
+                'visibility' => 1,
+                'cover' => 'https://lh3.googleusercontent.com/proxy/bLIwZKUCMtnDRzxsubPm8G5IqYZpnK0LXc19ko4bK_3rpoznzvD75habhb4gD57Cjl92LZTIjMzhDk0zVjdEhKZ71RO8mMJ3VVZMEypRt-z9fUZsp1FbZjkLPt2Dvjjf29diWA',
+                'user_id' => 34
+            ],
+            [
+                'name' => 'Gamberoni tandoori',
+                'description' => 'Ingredienti: Gamberoni, yogurt greco, spezie miste, succo di limone.',
+                'price' => 6.50,
+                'visibility' => 1,
+                'cover' => 'https://www.guruganesh.it/img/cibo/gamberoni%20tandoori.JPG',
+                'user_id' => 34
+            ],
+            [
+                'name' => 'Zuppa dahl',
+                'description' => 'Ingredienti: Lenticchie rosse, curcuma, paprika, pepe nero, zenzero, curry, germogli alfa alfa, canapa.',
+                'price' => 4.00,
+                'visibility' => 1,
+                'cover' => 'https://static.cookist.it/wp-content/uploads/sites/21/2019/11/dahl-curry-di-lenticchie-indiano.jpg',
+                'user_id' => 34
+            ],
+            [
+                'name' => 'Dhai raitha',
+                'description' => 'Ingredienti: Yogurt, cumino, peperoncino verde, peperoncino in polvere, cetrioli, pomodoro.',
+                'price' => 3.50,
+                'visibility' => 1,
+                'cover' => 'https://myfoodstory.com/wp-content/uploads/2018/08/Indian-Raita-How-to-make-it-2.jpg',
+                'user_id' => 34
+            ],
+            [
+                'name' => 'Pollo kashmir',
+                'description' => 'Ingredienti: Pollo, zenzero, finocchio in polvere, pepe nero,curry.',
+                'price' => 10.50,
+                'visibility' => 1,
+                'cover' => 'https://rs-menus-api.roocdn.com/images/4c275571-a594-4cf5-83f1-52eef563d9f9/image.jpeg?width=1200&height=630&auto=webp&format=jpg&fit=crop&v=',
+                'user_id' => 34
+            ],
+            [
+                'name' => 'Lamb biryani',
+                'description' => 'Riso aromatizzato cotto insieme all\'agnello.',
+                'price' => 14.50,
+                'visibility' => 1,
+                'cover' => 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/lamb-biryani-83e5c3d.jpg?quality=90&resize=504,458',
+                'user_id' => 35
+            ],
+            [
+                'name' => 'Rogan josh',
+                'description' => 'Agnello cotto in una salsa a base di yogurt, peperoni e cumino.',
+                'price' => 10.50,
+                'visibility' => 1,
+                'cover' => 'https://static.toiimg.com/photo/53192600.cms',
+                'user_id' => 35
+            ],
+            [
+                'name' => 'Pollo korma',
+                'description' => 'Pollo cotto con yogurt e cocco.',
+                'price' => 12.00,
+                'visibility' => 1,
+                'cover' => 'https://food-images.files.bbci.co.uk/food/recipes/chicken_korma_09900_16x9.jpg',
+                'user_id' => 35
+            ],
+            [
+                'name' => 'Sag gost',
+                'description' => 'Agnello speziato con spinaci',
+                'price' => 14.50,
+                'visibility' => 1,
+                'cover' => 'https://www.foodrepublic.com/wp-content/uploads/2017/01/saaggosht-700x596.jpg',
+                'user_id' => 35
+            ],
+            [
+                'name' => 'Matar pani',
+                'description' => 'Formaggio magro con piselli e spezie',
+                'price' => 10.50,
+                'visibility' => 1,
+                'cover' => 'https://recipesinhindi.net/wp-content/uploads/2018/06/matar-paneer-recipe-in-hindi-1.jpg',
+                'user_id' => 35
+            ],
+            [
+                'name' => 'Nachos',
+                'description' => 'Chips ricoperte con formaggio fuso e chili jalapeno',
+                'price' => 8.50,
+                'visibility' => 1,
+                'cover' => 'https://primochef.it/wp-content/uploads/2018/12/SH_pollo_con_nachos.jpg',
+                'user_id' => 36
+            ],
+            [
+                'name' => 'Ojos del diablo',
+                'description' => 'Polpette di carne piccanti',
+                'price' => 9.00,
+                'visibility' => 1,
+                'cover' => 'https://blog.giallozafferano.it/danicucina/wp-content/uploads/2020/07/DSC_0943-720x480.jpg',
+                'user_id' => 36
+            ],
+            [
+                'name' => 'Chimichangas',
+                'description' => 'Tortilla fritte, ripiene di pollo, manzo o formaggio e verure',
+                'price' => 10.50,
+                'visibility' => 1,
+                'cover' => 'https://www.lemontreedwelling.com/wp-content/uploads/2021/02/chimichangas-11.jpg',
+                'user_id' => 36
+            ],
+            [
+                'name' => 'Enchiladas',
+                'description' => 'Tortilla ripiene di pollo e ricoperte con salsa chilie, formaggio e sour cream',
+                'price' => 15.50,
+                'visibility' => 1,
+                'cover' => 'https://d1e3z2jco40k3v.cloudfront.net/-/media/mccormick-us/recipes/mccormick/b/800/beef-enchiladas.jpg',
+                'user_id' => 36
+            ],
+            [
+                'name' => 'Plato charrito',
+                'description' => 'Tagliata di maiale speziata al chile, servita con riso e fagioli',
+                'price' => 10.50,
+                'visibility' => 1,
+                'cover' => 'https://media-cdn.tripadvisor.com/media/photo-s/0d/7a/9f/f1/photo1jpg.jpg',
+                'user_id' => 36
+            ],
+            [
+                'name' => 'Chilaquiles',
+                'description' => 'Triangoli di mais con crema di pomodoro e formaggio',
+                'price' => 8.50,
+                'visibility' => 1,
+                'cover' => 'https://thriftandspice.com/wp-content/uploads/2018/07/chilaquiles-rojos-on-a-white-plate.jpg',
+                'user_id' => 37
+            ],
+            [
+                'name' => 'Camarones al ajillo',
+                'description' => 'Gamberi al profumo di aglio',
+                'price' => 9.00,
+                'visibility' => 1,
+                'cover' => 'https://comidasecuatorianas.online/wp-content/uploads/2020/01/camarones-al-ajillo.jpg',
+                'user_id' => 37
+            ],
+            [
+                'name' => 'Tinga',
+                'description' => 'Piatto di carne sfilacciata con pomodoro, cipolle e spezie',
+                'price' => 15.50,
+                'visibility' => 1,
+                'cover' => 'https://www.recetin.com/wp-content/uploads/2012/03/tinga-de-pollo.jpg',
+                'user_id' => 37
+            ],
+            [
+                'name' => 'Flautas',
+                'description' => 'Flauti di mais fritti, ripieni di pollo o formaggio e ricoperti con sour cream, guacamole e insalata',
+                'price' => 12.50,
+                'visibility' => 1,
+                'cover' => 'https://lilluna.com/wp-content/uploads/2019/05/flautas-resize-6.jpg',
+                'user_id' => 37
+            ],
+            [
+                'name' => 'Pollo fritto',
+                'description' => 'Bocconcini di pollo marinati nel lime, accompagnati da insalata e riso',
+                'price' => 17.50,
+                'visibility' => 1,
+                'cover' => 'https://i0.wp.com/www.piccolericette.net/piccolericette/wp-content/uploads/2019/01/3849_Bocconcini.jpg?resize=895%2C616&ssl=1',
+                'user_id' => 37
+            ],
 
 
 
