@@ -2106,11 +2106,30 @@ var _require = __webpack_require__(/*! axios */ "./node_modules/axios/index.js")
 
 var app = new Vue({
   el: '#root',
+
+  /* DATA */
   data: {
     categories: [],
     restaurants: [],
+    limit: 6,
+    // Number you wish to limit to
     activeCategory: ""
   },
+
+  /* COMPUTED */
+  computed: {
+    restaurantsComputed: function restaurantsComputed() {
+      restaurant_views = this.restaurants;
+
+      if (this.limit) {
+        restaurant_views = this.restaurants.slice(0, this.limit);
+      }
+
+      return restaurant_views;
+    }
+  },
+
+  /* METHODS */
   methods: {
     getCategoryRestaurant: function getCategoryRestaurant(categoryId) {
       var _this = this;
@@ -2144,6 +2163,8 @@ var app = new Vue({
       });
     }
   },
+
+  /* MOUNTED */
   mounted: function mounted() {
     var _this3 = this;
 
@@ -2167,7 +2188,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/catalinzahariea/Desktop/Boolean/Deliveboo/deliveboo/resources/js/public_home.js */"./resources/js/public_home.js");
+module.exports = __webpack_require__(/*! C:\Users\usuario\Desktop\deliveboo\resources\js\public_home.js */"./resources/js/public_home.js");
 
 
 /***/ })
