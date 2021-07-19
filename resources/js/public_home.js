@@ -17,7 +17,7 @@ var app = new Vue(
 
             restaurantsComputed () {
                 
-                restaurant_views = this.restaurants;
+                restaurant_views = this.restaurants;  
 
                 if (this.limit) {
                     restaurant_views = this.restaurants.slice(0, this.limit);
