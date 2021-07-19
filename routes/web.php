@@ -30,3 +30,7 @@ Route::prefix('admin')
 
 // Route pubblica per lo show dei ristoranti con i piatti
 Route::get('/restaurant/{slug}', 'Guest\UserController@show')->name('restaurant.show');
+
+//Route pubblica per pagamento
+Route::get('/cart', 'PaymentController@cart')->name('cart');
+Route::post('/cart', 'PaymentController@checkout')->name('cart.checkout');
