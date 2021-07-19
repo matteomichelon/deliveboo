@@ -10,7 +10,6 @@
 
         <div class="container-cart-right">
 
-            {{-- TODO: risposta avvenuto pagamento da sistemare nel template --}}
             @if (session()->has('message'))
                 <div class="alert alert-success">
                     {{ session()->get('message') }}

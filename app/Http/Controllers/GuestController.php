@@ -46,7 +46,7 @@ class GuestController extends Controller
 
         /* Creating a Transaction */
         $result = $gateway->transaction()->sale([
-                            'amount' => '1500',
+                            'amount' => '150',
                             'paymentMethodNonce' => $nonce,
                             'options' => [
                                        'submitForSettlement' => true
@@ -54,7 +54,7 @@ class GuestController extends Controller
               ]);
         /* Message Result */
         if ($result->success) {
-            return redirect()->back()->with('message', 'Pagamento Avvenuto con successo!');
+            return view('success');
         } else {
             return redirect()->back()->with('message', 'Il pagamento non è andato a buon fine, per favore riprovare');
         }

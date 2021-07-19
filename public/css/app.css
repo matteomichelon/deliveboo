@@ -61,6 +61,11 @@ h2 {
   color: #fcbf49;
 }
 
+section.cart {
+  display: flex;
+  justify-content: space-around;
+}
+
 header {
   background-color: #003049;
   color: #fcbf49;
