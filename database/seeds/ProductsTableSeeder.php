@@ -1598,11 +1598,11 @@ class ProductsTableSeeder extends Seeder
                 'user_id' => 39
             ],
             [
-                'name' => 'Torta gelato mango e misto bosco',
+                'name' => 'Torta gelato mango e fragole',
                 'description' => 'Prezzo al kg.',
                 'price' => 30.00,
                 'visibility' => 1,
-                'cover' => 'https://lh3.googleusercontent.com/proxy/KpeyjzkFJKTckk-dPRFcUY6yFxCW2dn8K-tCvSW9W4PWwSO7h-ejNVkIz8nPP9L9XHBxQbgD05bDXfBmGGIfzgd8dF_6tUxF60guskM_4j8phHYP0gpUl793CmVpqyscA11YH-xkj_0',
+                'cover' => 'https://cucinaamoremio.it/wp-content/uploads/2018/07/CheesecakeMango.jpg',
                 'user_id' => 40
             ],
             [
