@@ -1517,9 +1517,206 @@ class ProductsTableSeeder extends Seeder
                 'cover' => 'https://i0.wp.com/www.piccolericette.net/piccolericette/wp-content/uploads/2019/01/3849_Bocconcini.jpg?resize=895%2C616&ssl=1',
                 'user_id' => 37
             ],
-
-
-
+            [
+                'name' => 'Lamponi e cioccolato',
+                'description' => 'Frolla con crema al cioccolato e lamponi, prezzo al kg.',
+                'price' => 30.00,
+                'visibility' => 1,
+                'cover' => 'https://www.dolcementeconmagda.it/wp-content/uploads/2018/10/WhatsApp-Image-2018-10-17-at-09.09.19.jpeg',
+                'user_id' => 38
+            ],
+            [
+                'name' => 'Crostata ai frutti di bosco',
+                'description' => 'prezzo al kg',
+                'price' => 32.00,
+                'visibility' => 1,
+                'cover' => 'https://wips.plug.it/cips/buonissimo.org/cms/2018/11/Crostata-ai-frutti-di-bosco.jpg',
+                'user_id' => 38
+            ],
+            [
+                'name' => 'Saint honoré',
+                'description' => 'Prezzo al kg.',
+                'price' => 38.50,
+                'visibility' => 1,
+                'cover' => 'https://www.dolcicolcuore.it/wp-content/uploads/2018/09/IMG_0059-1.jpg',
+                'user_id' => 38
+            ],
+            [
+                'name' => 'Sacher',
+                'description' => 'Prezzo al kg.',
+                'price' => 31.00,
+                'visibility' => 1,
+                'cover' => 'https://www.tribugolosa.com/uploads/media/sacher-torte-2.jpg?1390503791',
+                'user_id' => 38
+            ],
+            [
+                'name' => 'Tiramisù',
+                'description' => 'Prezzo al kg.',
+                'price' => 34.00,
+                'visibility' => 1,
+                'cover' => 'https://www.conad.it/content/dam/conad/conad-consumer/ricette/viabagutta/logo_rosso/tiramis%C3%B9%20ricetta%20classica.jpg',
+                'user_id' => 38
+            ],
+            [
+                'name' => 'Crostata marmellata di mirtilli',
+                'description' => 'Prezzo al kg.',
+                'price' => 26.00,
+                'visibility' => 1,
+                'cover' => 'https://ilpiccoloseme.altervista.org/wp-content/uploads/2018/10/crostata-alla-confettura-di-mirtilli-neri.jpg',
+                'user_id' => 39
+            ],
+            [
+                'name' => 'Bignè al cioccolato',
+                'description' => 'Prezzo al kg.',
+                'price' => 13.00,
+                'visibility' => 1,
+                'cover' => 'https://www.gustissimo.it/articoli/ricette/dolci-paste-fresche/bigne-al-cioccolato.jpg',
+                'user_id' => 39
+            ],
+            [
+                'name' => 'Bavarese al limone',
+                'description' => 'Prezzo al kg.',
+                'price' => 29.00,
+                'visibility' => 1,
+                'cover' => 'https://blog.giallozafferano.it/lericettesvelate/wp-content/uploads/2018/01/E4D90421-6A5B-4DD3-BF1C-906AEC728C19.jpeg',
+                'user_id' => 39
+            ],
+            [
+                'name' => 'Tartellette alle fragole',
+                'description' => 'Prezzo al kg.',
+                'price' => 14.00,
+                'visibility' => 1,
+                'cover' => 'http://pasticceriaclandestina.it/wp-content/uploads/2014/03/tartelletta-fragole-e-crema-al-limone.jpg',
+                'user_id' => 39
+            ],
+            [
+                'name' => 'Cannoli siciliani',
+                'description' => 'Prezzo al kg.',
+                'price' => 18.00,
+                'visibility' => 1,
+                'cover' => 'https://primochef.it/wp-content/uploads/2017/06/SH_Gli-spettacolari-cannoli-siciliani.jpg',
+                'user_id' => 39
+            ],
+            [
+                'name' => 'Torta gelato mango e misto bosco',
+                'description' => 'Prezzo al kg.',
+                'price' => 30.00,
+                'visibility' => 1,
+                'cover' => 'https://lh3.googleusercontent.com/proxy/KpeyjzkFJKTckk-dPRFcUY6yFxCW2dn8K-tCvSW9W4PWwSO7h-ejNVkIz8nPP9L9XHBxQbgD05bDXfBmGGIfzgd8dF_6tUxF60guskM_4j8phHYP0gpUl793CmVpqyscA11YH-xkj_0',
+                'user_id' => 40
+            ],
+            [
+                'name' => 'Torta gelato cioccolato e caffè',
+                'description' => 'Prezzo al kg.',
+                'price' => 30.00,
+                'visibility' => 1,
+                'cover' => 'https://primochef.it/wp-content/uploads/2021/05/SH_torta_gelato_bimby.jpg',
+                'user_id' => 40
+            ],
+            [
+                'name' => 'Torta gelato vaniglia e fragola',
+                'description' => 'Prezzo al kg.',
+                'price' => 29.00,
+                'visibility' => 1,
+                'cover' => 'https://www.dolcidee.it/media/uploads/recipe/5d3089b09d4af_torta-gelato-vaniglia-e-fragole-cover-web.jpg',
+                'user_id' => 40
+            ],
+            [
+                'name' => 'Torta gelato 3 gusti',
+                'description' => 'Prezzo al kg.',
+                'price' => 34.00,
+                'visibility' => 1,
+                'cover' => 'https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/vimdb/157279.jpg',
+                'user_id' => 40
+            ],
+            [
+                'name' => 'Torta gelato fantasia di cioccolato',
+                'description' => 'Prezzo al kg.',
+                'price' => 40.00,
+                'visibility' => 1,
+                'cover' => 'https://www.cuochemabuone.it/wp-content/uploads/2020/09/torta-gelato-alla-nutella.jpg',
+                'user_id' => 40
+            ],
+            [
+                'name' => 'Panino kebab',
+                'description' => 'Ingredienti: carne, insalata, pomodoro, maionese, patatine.',
+                'price' => 4.50,
+                'visibility' => 1,
+                'cover' => 'https://www.aiafood.com/sites/default/files/recipes/panino-kebs.jpg',
+                'user_id' => 41
+            ],
+            [
+                'name' => 'Piadina kebab',
+                'description' => 'Ingredienti: carne, cipolla, insalata, pomodoro, salse.',
+                'price' => 4.00,
+                'visibility' => 1,
+                'cover' => 'https://media-cdn.tripadvisor.com/media/photo-s/05/1f/f6/d4/tie-break.jpg',
+                'user_id' => 41
+            ],
+            [
+                'name' => 'Pizza kebab',
+                'description' => 'Ingredienti: carne, pomodoro, mozzarella, salse.',
+                'price' => 8.00,
+                'visibility' => 1,
+                'cover' => 'https://static.nexilia.it/indiscreto/2015/07/Pizza-Kebab.jpg',
+                'user_id' => 41
+            ],
+            [
+                'name' => 'Calzone kebab',
+                'description' => 'Ingredienti: carne, pomodoro, mozzarella, salse.',
+                'price' => 7.00,
+                'visibility' => 1,
+                'cover' => 'https://dzpybaqldk5xx.cloudfront.net/prod/spree/2130/products/785/product/CALZONE_KEBAB.jpg?1616418156',
+                'user_id' => 41
+            ],
+            [
+                'name' => 'Falafel',
+                'description' => 'Falafel con patate e salse.',
+                'price' => 9.00,
+                'visibility' => 1,
+                'cover' => 'https://wips.plug.it/cips/buonissimo.org/cms/2012/03/falafel-di-fagioli.jpg?w=712&a=c&h=406',
+                'user_id' => 41
+            ],
+            [
+                'name' => 'Pizza kebab',
+                'description' => 'Ingredienti: carne, pomodoro, mozzarella, salse.',
+                'price' => 8.00,
+                'visibility' => 1,
+                'cover' => 'https://static.nexilia.it/indiscreto/2015/07/Pizza-Kebab.jpg',
+                'user_id' => 42
+            ],
+            [
+                'name' => 'Falafel',
+                'description' => 'Falafel con patate e salse.',
+                'price' => 9.00,
+                'visibility' => 1,
+                'cover' => 'https://wips.plug.it/cips/buonissimo.org/cms/2012/03/falafel-di-fagioli.jpg?w=712&a=c&h=406',
+                'user_id' => 42
+            ],
+            [
+                'name' => 'Calzone kebab',
+                'description' => 'Ingredienti: carne, pomodoro, mozzarella, salse.',
+                'price' => 7.00,
+                'visibility' => 1,
+                'cover' => 'https://dzpybaqldk5xx.cloudfront.net/prod/spree/2130/products/785/product/CALZONE_KEBAB.jpg?1616418156',
+                'user_id' => 42
+            ],
+            [
+                'name' => 'Piadina kebab',
+                'description' => 'Ingredienti: carne, cipolla, insalata, pomodoro, salse.',
+                'price' => 4.00,
+                'visibility' => 1,
+                'cover' => 'https://media-cdn.tripadvisor.com/media/photo-s/05/1f/f6/d4/tie-break.jpg',
+                'user_id' => 42
+            ],
+            [
+                'name' => 'Panino kebab',
+                'description' => 'Ingredienti: carne, insalata, pomodoro, maionese, patatine.',
+                'price' => 4.50,
+                'visibility' => 1,
+                'cover' => 'https://www.aiafood.com/sites/default/files/recipes/panino-kebs.jpg',
+                'user_id' => 42
+            ],
         ];
 
         foreach($products as $product) {
