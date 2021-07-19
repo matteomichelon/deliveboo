@@ -33,7 +33,7 @@
                 <!-- Duck box -->
                 <div class="duck-box">
 
-                    <img src="{{ asset('img/logo/DeliveBoo_Pittogramma.svg') }}" alt="Duck">
+                    <img src="{{ asset('img/logo/DeliveBoo_Logo_Pittogramma.svg') }}" alt="Duck">
 
                 </div>
                 <!-- END Duck box -->
@@ -47,8 +47,6 @@
         <section class="category">
 
             <div class="container_medium">
-
-                <h2>Scegli tra la nostra selezione</h2>
 
                 <div class="chevron-right">
                     <i class="fas fa-chevron-right" @click="scrollRight()"></i>
@@ -107,9 +105,9 @@
 
                                 <div class="research-details">
 
-                                    <h3> @{{ restaurant.name }} </h3>
+                                    <div class="research-details-title"> @{{ restaurant.name }} </div>
 
-                                    <p> @{{ restaurant.address }} </p>
+                                    <div class="research-details-address"> @{{ restaurant.address }} </div>
 
                                 </div>
 

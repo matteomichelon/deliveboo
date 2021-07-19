@@ -1,20 +1,20 @@
 section.app {
 
-    background-color: $secondary_color;
-    background-image: linear-gradient(to bottom right, $secondary_color, $primary_color);
+    background-color: $primary_accent;
 
     h2{
         text-align: left;
     }
 
-    .container_medium{
+    .container_large{
         
         display: flex;
+        align-items: center;
         justify-content: space-between;
 
         
-        img{
-            width: 150px;
+        img {
+            width: 10em;
             height: auto;
             padding-right: 20px;
             cursor: pointer;
