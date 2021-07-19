@@ -23,6 +23,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $gateway = new \BrainTree\Gateway([
+            'environment' => 'sandbox',
+            'merchantId' => '28444sphxcjb55cr',            
+            'publicKey' => '6h8fc9p3vdrwvdgt',
+            'privateKey' => 'c6e61f1278c40cbbca173795315a5531'
+        ]);
     }
 }
