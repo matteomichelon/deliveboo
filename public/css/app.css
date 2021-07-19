@@ -7,6 +7,10 @@ body {
   font-family: "Roboto", sans-serif !important;
 }
 
+main {
+  min-height: calc(100vh - 75px - 322.8px);
+}
+
 img {
   height: auto;
   width: 100%;
@@ -20,6 +24,12 @@ img {
 
 .container_medium {
   width: 70%;
+  height: 100%;
+  margin: auto;
+}
+
+.container_small {
+  width: 60%;
   height: 100%;
   margin: auto;
 }
@@ -103,14 +113,19 @@ header .container_large .nav-right .btn-nav:hover {
   background-color: #FF9F1C;
 }
 
-main .jumbotron_main {
+main {
   background-color: #fff;
-  height: 350px;
-  box-shadow: 0px -3px 10px 1px rgba(0, 0, 0, 0.1);
+}
+main .jumbotron_main {
+  background-image: -webkit-linear-gradient(-80deg, #2EC4B6 0%, #2EC4B6 60%, #CBF3F0 60%, #CBF3F0 100%);
+  height: 35em;
+  box-shadow: 0px -40em 10px 1px rgba(0, 0, 0, 0.1);
   z-index: 1;
+  overflow: hidden;
 }
 main .jumbotron_main .container_large .advertising {
-  color: #2EC4B6;
+  width: 60%;
+  color: #fff;
 }
 
 section.category {
@@ -120,16 +135,26 @@ section.category .container_medium {
   position: relative;
 }
 section.category .container_medium .chevron-left i {
+  color: #2EC4B6;
   position: absolute;
-  left: -5%;
-  top: 50%;
+  left: -2%;
+  top: 47%;
   cursor: pointer;
+  transition: all 0.2s;
+}
+section.category .container_medium .chevron-left i:active {
+  transform: scale(0.9);
 }
 section.category .container_medium .chevron-right i {
+  color: #2EC4B6;
   position: absolute;
-  right: -5%;
+  right: -2%;
   cursor: pointer;
-  top: 50%;
+  top: 47%;
+  transition: all 0.2s;
+}
+section.category .container_medium .chevron-right i:active {
+  transform: scale(0.9);
 }
 section.category .container_medium .container-box {
   overflow: auto;
@@ -156,7 +181,7 @@ section.category .container_medium .container-box .category-card img {
 }
 section.category .container_medium .container-box .category-card:hover {
   cursor: pointer;
-  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.1);
 }
 section.category .container_medium .container-box .category-card:active {
   transform: scale(0.95);
@@ -173,7 +198,7 @@ section.category .container_medium .container-box .category-card .category-name 
 section.research {
   background-color: #fff;
 }
-section.research .research-text-back {
+section.research .research-text-back, section.research .research-text-more {
   text-align: center;
   color: #2EC4B6;
   font-weight: 500;
@@ -182,20 +207,27 @@ section.research .research-text-back {
   width: 10em;
   margin: auto;
   padding: 0.5em 1em;
-  border: 1px solid transparent;
-  border-radius: 1em;
-}
-section.research .research-text-back:hover {
-  cursor: pointer;
-  border-radius: 1em;
   border: 1px solid #2EC4B6;
-  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 1em;
+  background-color: #fff;
 }
-section.research .research-text-back:active {
+section.research .research-text-back:hover, section.research .research-text-more:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+}
+section.research .research-text-back:active, section.research .research-text-more:active {
+  color: #fff;
+  background-color: #2EC4B6;
   transform: scale(0.95);
 }
+section.research .research-more {
+  padding: 2em 0;
+}
+section.research .research-more div {
+  text-align: center;
+}
 section.research .card-restaurant {
-  width: calc( 100% / 3 );
+  width: 25em;
   padding: 0.5em;
   margin-top: 1em;
   transition: all 0.2s;
@@ -256,12 +288,12 @@ section.app {
 section.app h2 {
   text-align: left;
 }
-section.app .container_large {
+section.app .container_small {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-section.app .container_large img {
+section.app .container_small img {
   width: 10em;
   height: auto;
   padding-right: 20px;
@@ -276,15 +308,23 @@ footer .container-box {
   display: flex;
   justify-content: space-between;
 }
-footer .container-box a {
-  text-decoration: none;
+footer .container-box .footer-menu .footer-title {
+  font-weight: 700;
+  font-size: 1.2em;
 }
-footer .container-box a:hover {
-  color: #FF9F1C;
+footer .container-box .footer-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 0.9em;
+}
+footer .container-box .footer-menu a:hover {
+  color: #CBF3F0;
 }
 footer .copyright {
-  text-align: right;
-  padding: 20px;
+  text-align: center;
+  font-weight: 300;
+  padding-bottom: 2em;
 }
 
 /*!

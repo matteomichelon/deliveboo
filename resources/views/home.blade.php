@@ -30,14 +30,6 @@
                 </div>
                 <!-- END Advertising box -->
 
-                <!-- Duck box -->
-                <div class="duck-box">
-
-                    <img src="{{ asset('img/logo/DeliveBoo_Logo_Pittogramma.svg') }}" alt="Duck">
-
-                </div>
-                <!-- END Duck box -->
-
             </div>
 
         </section>
@@ -79,7 +71,7 @@
         <!-- end Category section -->
 
         <!-- Research section -->
-        <section class="research padding-section">
+        <section class="research">
 
             <div class="container_large">
 
@@ -89,19 +81,8 @@
                             class="fas fa-arrow-right"></i> Torna indietro</div>
                 </div>
 
-                <!-- Show more-less -->
-                <div v-if="restaurants.length > 6">
-                    <div v-if="limit">
-                        <button type="button" class="btn btn-primary" @click="limit = null">Vedi Tutto</button>
-                    </div>
-
-                    <div v-else>
-                        <button type="button" class="btn btn-secondary" @click="limit = 6">Vedi Meno</button>
-                    </div>
-                </div>
-
                 <!-- Container box -->
-                <div class="container-box d-flex flex-wrap">
+                <div class="container-box d-flex justify-content-between flex-wrap">
 
                     <!-- Single card Restaurant -->
 
@@ -133,33 +114,21 @@
                 </div>
                 <!-- end Container box -->
 
+                <!-- Show more-less -->
+                <div class="research-more" v-if="restaurants.length > 6">
+                    <div v-if="limit">
+                        <button type="button" class="research-text-more" @click="limit = null">Mostra tutto</button>
+                    </div>
+
+                    <div v-else>
+                        <button type="button" class="research-text-more" @click="limit = 6">Mostra meno</button>
+                    </div>
+                </div>
+
             </div>
 
         </section>
         <!-- end Research section -->
-
-        <!-- App section -->
-        <section class="app">
-
-            <div class="container_large padding-section">
-
-                <!--box-app-left-->
-                <div class="box-app-left">
-                    <h2>Scarica la nostra app</h2>
-                </div>
-
-                <!--box-app-->
-                <div class="box-app-right">
-                    <img src="{{ asset('img/app-store-badge.png') }}" alt="App Store Badge">
-                    <img src="{{ asset('img/play-store-badge.png') }}" alt="Play Store Badge">
-                </div>
-                <!--box-app-right-->
-
-            </div>
-
-
-        </section>
-        <!-- end App section -->
 
     </div>
 @endsection

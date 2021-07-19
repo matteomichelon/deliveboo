@@ -6,6 +6,10 @@ body {
     font-family: 'Roboto', sans-serif !important;
 }
 
+main {
+    min-height: calc(100vh - 75px - 322.8px);
+}
+
 img {
     height: auto;
     width: 100%;
@@ -19,6 +23,12 @@ img {
 
 .container_medium {
     width: 70%;
+    height: 100%;
+    margin: auto;
+}
+
+.container_small {
+    width: 60%;
     height: 100%;
     margin: auto;
 }

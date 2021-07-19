@@ -1,4 +1,4 @@
-footer{
+footer {
     background-color: $primary_color;
     color: $white;
     
@@ -7,18 +7,29 @@ footer{
         display: flex;
         justify-content: space-between;
         
-        a{
-            text-decoration: none;
-            
-            &:hover{
-                color: $secondary_color;
+        .footer-menu {
+
+            .footer-title {
+                font-weight: 700;
+                font-size: 1.2em;
             }
-        }
+
+            a {
+                color: $white;
+                text-decoration: none;
+                font-weight: 300;
+                font-size: 0.9em;
+                
+                &:hover {
+                    color: $primary_accent;
+                }
+            }
+        }   
     }
 
     .copyright{
-        text-align: right;
-        padding: 20px;
-        
+        text-align: center;
+        font-weight: 300;
+        padding-bottom: 2em;       
     }
 }

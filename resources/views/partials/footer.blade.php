@@ -1,15 +1,38 @@
 <!-- FOOTER -->
 <footer>
 
-    <div class="container_large padding-section">
+    <!-- App section -->
+    <section class="app">
+
+        <div class="container_small padding-section">
+
+            <!--box-app-left-->
+            <div class="box-app-left">
+                <h2>Scarica la nostra app</h2>
+            </div>
+
+            <!--box-app-->
+            <div class="box-app-right">
+                <img src="{{ asset('img/app-store-badge.png') }}" alt="App Store Badge">
+                <img src="{{ asset('img/play-store-badge.png') }}" alt="Play Store Badge">
+            </div>
+            <!--box-app-right-->
+
+        </div>
+
+
+    </section>
+    <!-- end App section -->
+
+    <div class="container_medium padding-section">
 
         <div class="container-box">
             
             <!--menu-aiuto-->
-            <ul class="menu-footer">
+            <ul class="footer-menu">
 
                 <li>
-                    <h5>aiuto</h5>
+                    <div class="footer-title">Aiuto</div>
                 </li>
 
                 <li>
@@ -32,10 +55,10 @@
             <!--end menu-aiuto-->
 
             <!--menu-note legali-->
-            <ul class="menu-footer">
+            <ul class="footer-menu">
 
                 <li>
-                    <h5>note legali</h5>
+                    <div class="footer-title">Note legali</div>
                 </li>
 
                 <li>
@@ -54,10 +77,10 @@
             <!--end menu-note legali-->
 
             <!--menu-contatti-->
-            <ul class="menu-footer">
+            <ul class="footer-menu">
 
                 <li>
-                    <h5>contatti</h5>
+                    <div class="footer-title">Contatti</div>
                 </li>
 
                 <li>
@@ -76,10 +99,11 @@
             <!--end menu-contatti-->
 
             <!--menu-social-->
-            <ul class="menu-footer">
+            
+            <ul class="footer-menu">
 
                 <li>
-                    <h5>social</h5>
+                    <div class="footer-title">Social</div>
                 </li>
 
                 <li>

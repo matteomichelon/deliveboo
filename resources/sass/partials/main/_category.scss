@@ -5,17 +5,29 @@ section.category {
         position: relative;
 
         .chevron-left i {
+            color: $primary-color;
             position: absolute;
-            left: -5%;
-            top: 50%;
+            left: -2%;
+            top: 47%;
             cursor: pointer;
+            transition: all 0.2s;
+
+            &:active {
+                transform: scale(0.90);
+            }
         }
 
         .chevron-right i {
+            color: $primary-color;
             position: absolute;
-            right: -5%;
+            right: -2%;
             cursor: pointer;
-            top: 50%;
+            top: 47%;
+            transition: all 0.2s;
+
+            &:active {
+                transform: scale(0.90);
+            }
         }
 
         .container-box {
@@ -45,7 +57,7 @@ section.category {
 
                 &:hover {
                     cursor: pointer;
-                    box-shadow: 0px 0px 20px 1px rgba($color: #000000, $alpha: 0.2);
+                    box-shadow: 0px 0px 20px 1px rgba($color: #000000, $alpha: 0.1);
                 }
 
                 &:active {
