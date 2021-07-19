@@ -13,6 +13,17 @@
 
         </div>
 
+        @foreach ($restaurant_products as $product) 
+            <div>{{ $product->name }}</div>
+            @if ($product->path_load_image)
+                <img src="{{ asset('storage/' . $product->cover) }}" alt="">
+            @else
+            <img src="{{ $product->cover }}" alt="">
+            @endif
+            
+            
+        @endforeach
+
     </section>
 
 @endsection

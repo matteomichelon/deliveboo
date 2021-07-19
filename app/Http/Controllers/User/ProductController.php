@@ -78,13 +78,17 @@ class ProductController extends Controller
 
             if($img_path) {
                 $form_data['cover'] = $img_path;
+                $new_product->path_load_image = 1;
             }
+        } else {
+            $form_data['cover'] = 'img/defaultproduct.jpg';
+            $new_product->path_load_image = 0;
         }
 
         // --------------------------------------------|
         // Saving $form_data in a new Product instance.|
         // --------------------------------------------|
-        $new_product->fill($form_data);
+        $new_product->fill($form_data);        
         $new_product->save();
 
         return redirect()->route('admin.products.index');

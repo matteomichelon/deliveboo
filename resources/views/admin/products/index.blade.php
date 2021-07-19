@@ -14,10 +14,10 @@
                     {{--  If the product has a cover image set it will display it, otherwise
                     it will display a standard image.    --}}
                     
-                    @if (isset($product->cover) )
-                        <img src="{{$product->cover}}" class="card-img-top" alt="{{$product->name}}">
+                    @if ($product->path_load_image) )
+                        <img src="{{ asset('storage/' . $product->cover) }}" class="card-img-top" alt="{{$product->name}}">
                     @else
-                        <img src="https://picsum.photos/300" class="card-img-top" alt="{{$product->name}}">
+                        <img src="{{ $product->cover }}" class="card-img-top" alt="{{$product->name}}">
                     @endif
                 </div>
 
