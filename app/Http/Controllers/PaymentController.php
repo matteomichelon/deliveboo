@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Braintree\Gateway;
 use App\Order;
+use App\Product;
 
 class PaymentController extends Controller
 {
@@ -14,8 +15,22 @@ class PaymentController extends Controller
         
         $product_quantities = $form_data['quantity'];
 
+        $products = [];
+        foreach($product_quantities as $product_id=>$quantity) {
+            if($quantity) {
+                $product = Product::findOrFail($product_id);
+
+                $products[] = [
+                    'id' => $product->id,
+                    'name' => $product->name,
+                    'price' => $product->price,
+                    'quantity' => $quantity
+                ];
+            }
+        }
+
         $data = [
-            'product_quantities' => $product_quantities,
+            'products' => $products,
             'token' => $this->cart()
         ];
 

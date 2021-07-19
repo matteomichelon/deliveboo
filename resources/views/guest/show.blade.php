@@ -14,7 +14,7 @@
         </div>
 
         <div class="container_large">
-            <form action="{{ route('cart.quantity') }}" method="post">
+            <form action="{{ route('cart') }}" method="post">
                 @csrf
                 @method('POST')                
 
