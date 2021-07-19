@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Braintree\Gateway;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +24,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $gateway = new Gateway([
+            'environment' => env('BRAINTREE_ENV', 'sandbox'),
+            'merchantId' => env('BRAINTREE_MERCHANT_ID', false),
+            'publicKey' => env('BRAINTREE_PUBLIC_KEY', false),
+            'privateKey' => env('BRAINTREE_PRIVATE_KEY', false)
+        ]);
     }
 }

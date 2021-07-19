@@ -18,12 +18,15 @@ class RestaurantController extends Controller
         $result = [];
 
         foreach($restaurants as $restaurant) {
+            $cover = $restaurant->products->first()->cover;
+
             $result[] = [
                 'id' => $restaurant->id,
                 'name' => $restaurant->restaurant_name,
                 'slug' => $restaurant->slug,
                 'address' => $restaurant->restaurant_address,
-                'email' => $restaurant->email
+                'email' => $restaurant->email,
+                'cover' => $cover
             ]; 
         }
         
