@@ -5,7 +5,7 @@
     <div class="container-box d-flex flex-wrap">
         
         @foreach ($products as $product)
-
+            @if(Auth::id() == $product->user_id)
             {{-- Product Card --}}
             <div class="card-product">
                 
@@ -41,6 +41,7 @@
 
                 </div>
             </div>
+            @endif
 
         @endforeach
 
