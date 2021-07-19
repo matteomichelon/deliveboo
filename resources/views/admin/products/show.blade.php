@@ -6,7 +6,12 @@
         <h1 class="display-4">{{$product['name']}}</h1>
         <h6 class="card-subtitle mb-2 text-muted">€{{ number_format($product->price,2) }}</h6>
         <div class="mt-2 mb-2">
-            <img src="{{$product->cover}}" alt="{{ $product->name }}">
+            @if ($product->path_load_image)
+                <img src="{{ asset('storage/' . $product->cover) }}" alt="{{ $product->name }}">
+            @else
+                <img src="{{ $product->cover }}" alt="{{ $product->name }}">
+            @endif
+            
         </div>
         <p class="lead">{{$product['description']}}</p>
         <a class="btn btn-primary btn-lg" href="{{route('admin.products.index')}}" role="button">Torna indietro</a>

@@ -39,9 +39,14 @@ class CategoryController extends Controller
 
         $result = [];
         foreach($restaurants as $restaurant) {
-
-            // Per ricavare la cover del primo prodotto            
-            $cover = $restaurant->products->first()->cover;                               
+ 
+            // Se il ristorante ha prodotti, mostro l'immagine del primo prodotto
+            if(count($restaurant->products)) {
+                $cover = $restaurant->products->first()->cover;
+            } else {
+                // Se non ha prodotti, mostro immagine di default
+                $cover = 'img/defaultproduct.jpg';
+            }                            
             
             // $products = $restaurant->products;
             // dump($restaurant->restaurant_name);
