@@ -16,7 +16,7 @@ class OrdersTableSeeder extends Seeder
             [
                 'code' => 'FNO68143TD',
                 'price' => 20.20,
-                'status' => 'accepted',
+                'status' => 1,
                 'date' => '2021-07-12 09:17:35',
                 'address' => 'Via Manzoni 25',
                 'name' => 'Mario',
@@ -28,7 +28,7 @@ class OrdersTableSeeder extends Seeder
             [
                 'code' => 'FNO68143TD',
                 'price' => 18.50,
-                'status' => 'accepted',
+                'status' => 1,
                 'date' => '2021-07-15 09:17:35',
                 'address' => 'Via Garibaldi 44',
                 'name' => 'Valentina',
@@ -40,7 +40,7 @@ class OrdersTableSeeder extends Seeder
             [
                 'code' => 'FNO68143TD',
                 'price' => 10.55,
-                'status' => 'accepted',
+                'status' => 1,
                 'date' => '2021-07-10 09:17:35',
                 'address' => 'Via Mazzini 108',
                 'name' => 'Giuseppe',

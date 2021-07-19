@@ -68,8 +68,8 @@
 
             <!-- Message input -->
             <div class="form-outline mb-4">
-                <label class="form-label" for="note">Note per il Rider</label>
-                <textarea class="form-control" id="note" name="note" rows="4"></textarea>
+                <label class="form-label" for="notes">Note per il Rider</label>
+                <textarea class="form-control" id="notes" name="notes" rows="4"></textarea>
             </div>
 
             <!-- Dropin Container Braintree -->

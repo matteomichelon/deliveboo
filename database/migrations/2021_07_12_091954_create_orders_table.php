@@ -17,7 +17,7 @@ class CreateOrdersTable extends Migration
             $table->id();
             $table->string('code', 45);
             $table->float('price', 7, 2);
-            $table->string('status', 20);
+            $table->tinyInteger('status')->default(0);
             $table->dateTime('date');
             $table->string('address', 100);
             $table->string('name', 45);

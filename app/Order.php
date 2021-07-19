@@ -7,10 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     protected $fillable = [
-        'code',
-        'price',
-        'status',
-        'date',
         'address',
         'name',
         'surname',
