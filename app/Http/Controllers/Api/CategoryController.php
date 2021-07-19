@@ -40,8 +40,11 @@ class CategoryController extends Controller
         $result = [];
         foreach($restaurants as $restaurant) {
 
-            // Per ricavare la cover del primo prodotto
-            $cover = $restaurant->products->first()->cover;            
+            // Per ricavare la cover del primo prodotto            
+            $cover = $restaurant->products->first()->cover;                               
+            
+            // $products = $restaurant->products;
+            // dump($restaurant->restaurant_name);
 
             // Per ricavare le categorie per ogni ristorante.
             $categories = [];
