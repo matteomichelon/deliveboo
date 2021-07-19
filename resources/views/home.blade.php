@@ -7,7 +7,7 @@
 
 {{-- Link to script for this page --}}
 @section('footer_scripts')
-    <script src="{{ asset('js/public_home.js') }}"></script>    
+    <script src="{{ asset('js/public_home.js') }}"></script>
 @endsection
 
 
@@ -24,7 +24,7 @@
 
                     <h1>Affamato? <br>
                         Ci pensiamo noi a portarti a casa <br>
-                        i cibi che più ami. 
+                        i cibi che più ami.
                     </h1>
 
                 </div>
@@ -57,12 +57,13 @@
                 </div>
 
                 <!-- Box category -->
-                <div class="container-box d-flex flex-nowrap" >                    
+                <div class="container-box d-flex flex-nowrap">
 
                     <!-- Single box -->
-                    <div class="category-card pe-auto" v-for="category in categories" @click="getCategoryRestaurant(category.id); getActiveCategory(category.name);">
+                    <div class="category-card pe-auto" v-for="category in categories"
+                        @click="getCategoryRestaurant(category.id); getActiveCategory(category.name);">
 
-                        <h5 class="category-name"> @{{ category.name }} </h5>
+                        <h5 class="category-name"> @{{ category . name }} </h5>
                         <img class="img-fluid" :src="category.cover" :alt="'Immagine piatto: ' + category.name">
 
                     </div>
@@ -83,20 +84,30 @@
             <div class="container_large">
 
                 <div class="research-text" v-if="activeCategory">
-                    <h2 >Risultati della tua ricerca per: @{{ activeCategory }} </h2>
-                    <div class="research-text-back" @click="getActiveCategory(''); getAllRestaurants();"><i class="fas fa-arrow-right"></i> Torna indietro</div>
+                    <h2>Risultati della tua ricerca per: @{{ activeCategory }} </h2>
+                    <div class="research-text-back" @click="getActiveCategory(''); getAllRestaurants();"><i
+                            class="fas fa-arrow-right"></i> Torna indietro</div>
                 </div>
-                
+
+                <!-- Show more-less -->
+                <div v-if="limit">
+                    <button type="button" class="btn btn-primary" @click="limit = null">Vedi Tutto</button>
+                </div>
+
+                <div v-else>
+                    <button type="button" class="btn btn-secondary" @click="limit = 6">Vedi Meno</button>
+                </div>
+
 
                 <!-- Container box -->
                 <div class="container-box d-flex flex-wrap">
 
                     <!-- Single card Restaurant -->
-                    
-                    <div class="card-restaurant" v-for="restaurant in restaurants">
+
+                    <div class="card-restaurant" v-for="restaurant in restaurantsComputed">
 
                         <a :href="`restaurant/${restaurant.slug}`">
-                            
+
                             <div class="background-hover">
 
                                 <div class="research-image">
@@ -105,16 +116,16 @@
 
                                 <div class="research-details">
 
-                                    <div class="research-details-title"> @{{ restaurant.name }} </div>
+                                    <div class="research-details-title"> @{{ restaurant . name }} </div>
 
-                                    <div class="research-details-address"> @{{ restaurant.address }} </div>
+                                    <div class="research-details-address"> @{{ restaurant . address }} </div>
 
                                 </div>
 
                             </div>
 
                         </a>
-                        
+
                     </div>
                     <!-- end Single card Restaurant -->
 
@@ -135,7 +146,7 @@
                 <div class="box-app-left">
                     <h2>Scarica la nostra app</h2>
                 </div>
-                
+
                 <!--box-app-->
                 <div class="box-app-right">
                     <img src="{{ asset('img/app-store-badge.png') }}" alt="App Store Badge">
@@ -149,5 +160,5 @@
         </section>
         <!-- end App section -->
 
-    </div>    
+    </div>
 @endsection
