@@ -90,14 +90,15 @@
                 </div>
 
                 <!-- Show more-less -->
-                <div v-if="limit">
-                    <button type="button" class="btn btn-primary" @click="limit = null">Vedi Tutto</button>
-                </div>
+                <div v-if="restaurants.length > 6">
+                    <div v-if="limit">
+                        <button type="button" class="btn btn-primary" @click="limit = null">Vedi Tutto</button>
+                    </div>
 
-                <div v-else>
-                    <button type="button" class="btn btn-secondary" @click="limit = 6">Vedi Meno</button>
+                    <div v-else>
+                        <button type="button" class="btn btn-secondary" @click="limit = 6">Vedi Meno</button>
+                    </div>
                 </div>
-
 
                 <!-- Container box -->
                 <div class="container-box d-flex flex-wrap">
@@ -111,7 +112,7 @@
                             <div class="background-hover">
 
                                 <div class="research-image">
-                                    <img :src="restaurant.cover" alt="">
+                                    <img :src="restaurant.cover" :alt="'Foto Piatto ' + restaurant.name">
                                 </div>
 
                                 <div class="research-details">
