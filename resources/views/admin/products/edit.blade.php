@@ -57,7 +57,11 @@
             <div>
                 <h3>Anteprima immagine corrente</h3>
 
-                <img src="{{ asset('storage/' . $product->cover) }}" alt="{{ $product->name }}">
+                @if ($product->path_load_image)
+                    <img src="{{ asset('storage/' . $product->cover) }}" alt="{{ $product->name }}">
+                @else
+                    <img src="{{ $product->cover }}" alt="{{ $product->name }}">
+                @endif
             </div>
         @endif
 
