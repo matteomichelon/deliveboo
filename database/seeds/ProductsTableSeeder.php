@@ -666,7 +666,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Carne di manzo, patate, curry.',
                 'price' => 5.50,
                 'visibility' => 1,
-                'cover' => 'http://www.kung-food.it/wp-content/uploads/2014/11/spezzatino-di-vitello-al-curry.jpg',
+                'cover' => 'https://www.gustissimo.it/articoli/ricette/carne-di-manzo/manzo-al-curry.jpg',
                 'user_id' => 16
             ],
             [
@@ -746,7 +746,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Straccetti di manzo saltati in padella con salsa di soia, peperoni e cipolla, accompagnate da calde tortillas.',
                 'price' => 26.00,
                 'visibility' => 1,
-                'cover' => 'https://www.diablosaloon.com/wp-content/uploads/2020/12/fajits-pavia-1.jpg',
+                'cover' => 'https://theeverykitchen.com/wp-content/uploads/2019/04/easy-steak-fajitas-500x500.jpg',
                 'user_id' => 18
             ],
             [
@@ -1162,7 +1162,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Sfiziose coscette di pollo fritto servite con salsa bbq.',
                 'price' => 7.00,
                 'visibility' => 1,
-                'cover' => 'https://lh3.googleusercontent.com/proxy/Zw7PZjoSWOQ-Tgk_rqjXcjXKXSRWoEODl_fEoRi9I3u7-cQOQo3Dmb2o8ev0dJ37XhHgBQ-oVTo9ZhDAw3RjB4YOfpx1Jv3ssYkRE291bd8G0rWcaQRXF02R-Els3g076t5CB0yJ7NGamQ-uRqeADeg',
+                'cover' => 'https://www.kitchenclub.eu/sites/default/files/styles/full-format/public/product/webfoto-chickentulips.jpg?itok=Eb84JTNb',
                 'user_id' => 29
             ],
             [
@@ -1362,7 +1362,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: Manzo macinato, carote, cipolle, curry, zenzero, coriandolo, cardamomo, olio evo.',
                 'price' => 4.50,
                 'visibility' => 1,
-                'cover' => 'https://lh3.googleusercontent.com/proxy/bLIwZKUCMtnDRzxsubPm8G5IqYZpnK0LXc19ko4bK_3rpoznzvD75habhb4gD57Cjl92LZTIjMzhDk0zVjdEhKZ71RO8mMJ3VVZMEypRt-z9fUZsp1FbZjkLPt2Dvjjf29diWA',
+                'cover' => 'https://indiaincucina.files.wordpress.com/2020/10/samosa.png',
                 'user_id' => 34
             ],
             [
@@ -1642,7 +1642,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: carne, insalata, pomodoro, maionese, patatine.',
                 'price' => 4.50,
                 'visibility' => 1,
-                'cover' => 'https://www.aiafood.com/sites/default/files/recipes/panino-kebs.jpg',
+                'cover' => 'https://www.ristorantepizzeriajanna.com/wp-content/uploads/2015/12/panino-kebab1.jpg',
                 'user_id' => 41
             ],
             [
@@ -1714,7 +1714,7 @@ class ProductsTableSeeder extends Seeder
                 'description' => 'Ingredienti: carne, insalata, pomodoro, maionese, patatine.',
                 'price' => 4.50,
                 'visibility' => 1,
-                'cover' => 'https://www.aiafood.com/sites/default/files/recipes/panino-kebs.jpg',
+                'cover' => 'https://www.ristorantepizzeriajanna.com/wp-content/uploads/2015/12/panino-kebab1.jpg',
                 'user_id' => 42
             ],
         ];
