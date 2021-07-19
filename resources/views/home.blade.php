@@ -100,7 +100,7 @@
                             <div class="background-hover">
 
                                 <div class="research-image">
-                                    <img src="{{ asset('img/pizzeria.png') }}" alt="">
+                                    <img :src="restaurant.cover" alt="">
                                 </div>
 
                                 <div class="research-details">

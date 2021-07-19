@@ -261,22 +261,11 @@ section.app .container_large {
   align-items: center;
   justify-content: space-between;
 }
-<<<<<<< HEAD
 section.app .container_large img {
   width: 10em;
   height: auto;
   padding-right: 20px;
-=======
-section.app .container_large .box-app-left {
-  height: 40px;
-}
-section.app .container_large .box-app-right {
-  width: 150px;
-}
-section.app .container_large .box-app-right img {
->>>>>>> 5cbca5eac8f146c239ac836186ddbf6080b38e94
   cursor: pointer;
-  padding-bottom: 10px;
 }
 
 footer {
