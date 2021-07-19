@@ -8,6 +8,20 @@ use App\Order;
 
 class PaymentController extends Controller
 {
+
+    public function getProductsQuantities(Request $request) {
+        $form_data = $request->all();
+        
+        $product_quantities = $form_data['quantity'];
+
+        $data = [
+            'product_quantities' => $product_quantities,
+            'token' => $this->cart()
+        ];
+
+        return view('guest.cart', $data);
+    }
+
     public function cart()
       {
 
@@ -20,7 +34,8 @@ class PaymentController extends Controller
 
           $token = $gateway->clientToken()->generate();
 
-          return view('guest.cart', compact('token'));
+          //return view('guest.cart', compact('token'));
+          return $token;
 
       }
 

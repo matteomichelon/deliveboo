@@ -32,5 +32,8 @@ Route::prefix('admin')
 Route::get('/restaurant/{slug}', 'Guest\UserController@show')->name('restaurant.show');
 
 //Route pubblica per pagamento
-Route::get('/cart', 'PaymentController@cart')->name('cart');
+Route::post('/order', 'PaymentController@getProductsQuantities')->name('cart.quantity');
+// Route::get('/cart', 'PaymentController@cart')->name('cart');
 Route::post('/cart', 'PaymentController@checkout')->name('cart.checkout');
+
+
