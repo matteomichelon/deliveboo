@@ -1,29 +1,23 @@
 section.app {
 
-    background-color: $secondary_color;
-    background-image: linear-gradient(to bottom right, $secondary_color, $primary_color);
+    background-color: $primary_accent;
 
     h2{
         text-align: left;
     }
 
     .container_large{
+        
         display: flex;
+        align-items: center;
         justify-content: space-between;
 
-        .box-app-left{
-            
-            height: 40px;
-        }
-
-        .box-app-right{
-         width: 150px;
-
-            img{
-                cursor: pointer;
-                padding-bottom: 10px;
-            }
-
+        
+        img {
+            width: 10em;
+            height: auto;
+            padding-right: 20px;
+            cursor: pointer;
         }
 
 

@@ -1,21 +1,21 @@
 section.category {
+    background-color: $white;
 
     .container_medium {
-        padding: 50px 0;
         position: relative;
 
         .chevron-left i {
             position: absolute;
-            left: -2%;
-            top: 56%;
+            left: -5%;
+            top: 50%;
             cursor: pointer;
         }
 
         .chevron-right i {
             position: absolute;
-            right: -2%;
+            right: -5%;
             cursor: pointer;
-            top: 56%;
+            top: 50%;
         }
 
         .container-box {
