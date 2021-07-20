@@ -9,33 +9,37 @@ var app = new Vue(
             cartDisplay: []
         },
         methods: {
-            cartProductsDisplay() {
+            cartProductsDisplay() {                
                 let result = [];
 
                 if (this.cart.length > 0) {
 
                     this.cart.forEach(element => {
-                        if ( !result.includes(element)) {
+                        let product_id = element.id;
+                        if ( !result.includes(this.cart.find(product => product.id === product_id))) {
                             result.push(element)
                         }
                     })
                 } else {
                     result = [];
-                }
-                return this.cartDisplay = result;
+                }     
+
+                return this.cartDisplay = result;                                
             },
             countProduct(product_id) {
                 let result = this.cart.filter(element => element.id === product_id);
                 return result.length;
             },
-            addProduct(index) {
-                this.cart.push(this.products[index]);
+            addProduct(index) {                
+                this.cart.push(this.products[index]);                                
+                this.refreshStorage();
             },
             removeProduct(product_id) {
                 let index = this.cart.indexOf(this.cart.find(element => element.id === product_id));
                 if (this.cart.includes(this.cart.find(element => element.id === product_id))) {
                     this.cart.splice(index, 1); 
-                }               
+                } 
+                this.refreshStorage();          
             },
             calculateProduct(product_id, product_price) {
                 let quantity = this.cart.filter(element => element.id === product_id).length;
@@ -48,7 +52,10 @@ var app = new Vue(
                     price += this.cart[i].price;
                 }
                 return price.toFixed(2);
-            }
+            },
+            refreshStorage() {
+                localStorage.setItem('cart', JSON.stringify(this.cart));                
+            }            
         },
         mounted() {
 
@@ -58,9 +65,12 @@ var app = new Vue(
                 element.count = 0;
             });
 
-            // console.log(this.products);
-            // console.log(this.cart);
-            // console.log(this.cartDisplay);
+            let cart = localStorage.getItem('cart');            
+
+            if(cart) {
+                this.cart = JSON.parse(cart);                
+                this.cartProductsDisplay();                
+            }
         }
     }
 )

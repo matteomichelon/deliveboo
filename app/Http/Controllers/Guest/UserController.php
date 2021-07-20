@@ -20,7 +20,7 @@ class UserController extends Controller
         $data = [
             'restaurant_products' => $restaurant_products,
             'restaurant' => $user
-        ];
+        ];     
 
         return view('guest.show', $data);
     }

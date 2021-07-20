@@ -2113,11 +2113,17 @@ var app = new Vue({
   },
   methods: {
     cartProductsDisplay: function cartProductsDisplay() {
+      var _this = this;
+
       var result = [];
 
       if (this.cart.length > 0) {
         this.cart.forEach(function (element) {
-          if (!result.includes(element)) {
+          var product_id = element.id;
+
+          if (!result.includes(_this.cart.find(function (product) {
+            return product.id === product_id;
+          }))) {
             result.push(element);
           }
         });
@@ -2135,6 +2141,7 @@ var app = new Vue({
     },
     addProduct: function addProduct(index) {
       this.cart.push(this.products[index]);
+      this.refreshStorage();
     },
     removeProduct: function removeProduct(product_id) {
       var index = this.cart.indexOf(this.cart.find(function (element) {
@@ -2146,6 +2153,8 @@ var app = new Vue({
       }))) {
         this.cart.splice(index, 1);
       }
+
+      this.refreshStorage();
     },
     calculateProduct: function calculateProduct(product_id, product_price) {
       var quantity = this.cart.filter(function (element) {
@@ -2162,15 +2171,22 @@ var app = new Vue({
       }
 
       return price.toFixed(2);
+    },
+    refreshStorage: function refreshStorage() {
+      localStorage.setItem('cart', JSON.stringify(this.cart));
     }
   },
   mounted: function mounted() {
     this.products = window.restaurant_products;
     this.products.forEach(function (element) {
       element.count = 0;
-    }); // console.log(this.products);
-    // console.log(this.cart);
-    // console.log(this.cartDisplay);
+    });
+    var cart = localStorage.getItem('cart');
+
+    if (cart) {
+      this.cart = JSON.parse(cart);
+      this.cartProductsDisplay();
+    }
   }
 });
 
@@ -2183,7 +2199,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/catalinzahariea/Desktop/Boolean/Deliveboo/deliveboo/resources/js/restaurant_show.js */"./resources/js/restaurant_show.js");
+module.exports = __webpack_require__(/*! C:\Users\usuario\Desktop\deliveboo\resources\js\restaurant_show.js */"./resources/js/restaurant_show.js");
 
 
 /***/ })
