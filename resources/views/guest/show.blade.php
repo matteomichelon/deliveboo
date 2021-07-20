@@ -19,10 +19,12 @@
         
             <div class="restaurant-show-jumbo">
     
-                <div class="container_medium">
-                    <h1 class="restaurant-show-title">{{$restaurant->restaurant_name}}</h1>
-                    <p class="restaurant-show-address">{{$restaurant->restaurant_address}}</p>                    
-                    <a class="btn-deliveboo-white" href="{{route('home')}}" role="button">Torna indietro</a>
+                <div class="container_medium d-flex align-items-center">
+                    <div>
+                        <h1 class="restaurant-show-title">{{$restaurant->restaurant_name}}</h1>
+                        <p class="restaurant-show-address pb-5">{{$restaurant->restaurant_address}}</p>                    
+                        <a class="btn-deliveboo-white" href="{{route('home')}}" role="button">Torna indietro</a>
+                    </div>
                 </div>
                 
     

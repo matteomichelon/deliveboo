@@ -94,7 +94,7 @@ h2 {
     margin: auto;
     padding: 0.5em 1em;
     border: 1px solid $primary-color;
-    border-radius: 1em;
+    border-radius: 0.2em;
     background-color: $white;
 
     &:hover {
@@ -119,7 +119,7 @@ h2 {
     margin: auto;
     padding: 0.5em 1em;
     border: 1px solid $white;
-    border-radius: 1em;
+    border-radius: 0.2em;
     background-color: transparent;
 
     &:hover {

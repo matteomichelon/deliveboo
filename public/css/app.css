@@ -85,7 +85,7 @@ h2 {
   margin: auto;
   padding: 0.5em 1em;
   border: 1px solid #2EC4B6;
-  border-radius: 1em;
+  border-radius: 0.2em;
   background-color: #fff;
 }
 .btn-deliveboo-primary:hover {
@@ -108,7 +108,7 @@ h2 {
   margin: auto;
   padding: 0.5em 1em;
   border: 1px solid #fff;
-  border-radius: 1em;
+  border-radius: 0.2em;
   background-color: transparent;
 }
 .btn-deliveboo-white:hover {
