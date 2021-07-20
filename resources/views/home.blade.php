@@ -78,7 +78,7 @@
                 <div class="research-text" v-if="activeCategory">
                     <h2>Risultati della tua ricerca per: @{{ activeCategory }} </h2>
                     <div class="research-text-back" @click="getActiveCategory(''); getAllRestaurants();"><i
-                            class="fas fa-arrow-right"></i> Torna indietro</div>
+                            class="fas fa-arrow-right"></i>Torna indietro</div>
                 </div>
 
                 <!-- Container box -->

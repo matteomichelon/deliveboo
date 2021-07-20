@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2094,10 +2094,10 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
-/***/ "./resources/js/public_home.js":
-/*!*************************************!*\
-  !*** ./resources/js/public_home.js ***!
-  \*************************************/
+/***/ "./resources/js/restaurant_show.js":
+/*!*****************************************!*\
+  !*** ./resources/js/restaurant_show.js ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2106,89 +2106,63 @@ var _require = __webpack_require__(/*! axios */ "./node_modules/axios/index.js")
 
 var app = new Vue({
   el: '#root',
-
-  /* DATA */
   data: {
-    categories: [],
-    restaurants: [],
-    limit: 6,
-    // Number you wish to limit to
-    activeCategory: ""
+    products: [],
+    cart: [],
+    cartDisplay: []
   },
-
-  /* COMPUTED */
-  computed: {
-    restaurantsComputed: function restaurantsComputed() {
-      restaurant_views = this.restaurants;
-
-      if (this.limit) {
-        restaurant_views = this.restaurants.slice(0, this.limit);
-      }
-
-      return restaurant_views;
-    }
-  },
-
-  /* METHODS */
   methods: {
-    getCategoryRestaurant: function getCategoryRestaurant(categoryId) {
-      var _this = this;
-
-      axios.get("api/categories/".concat(categoryId)).then(function (response) {
-        var result = response.data.restaurants;
-        _this.restaurants = result;
+    cartProductsDisplay: function cartProductsDisplay() {
+      var result = [];
+      this.cart.forEach(function (element) {
+        if (!result.includes(element)) {
+          result.push(element);
+        }
       });
+      return this.cartDisplay = result;
     },
-    getAllRestaurants: function getAllRestaurants() {
-      var _this2 = this;
-
-      axios.get('api/restaurants').then(function (response) {
-        var result = response.data.restaurants;
-        _this2.restaurants = result;
+    countProduct: function countProduct(product_id) {
+      var result = this.cart.filter(function (element) {
+        return element.id === product_id;
       });
+      console.log(result.length);
+      return result.length;
     },
-    getActiveCategory: function getActiveCategory(categoryName) {
-      this.activeCategory = categoryName;
+    addProduct: function addProduct(index) {
+      this.cart.push(this.products[index]);
     },
-    scrollRight: function scrollRight() {
-      document.querySelector('.container-box').scrollBy({
-        left: 1000,
-        behavior: 'smooth'
+    removeProduct: function removeProduct(product_id) {
+      index = this.cart.find(function (element) {
+        return element.id === product_id;
       });
+      this.cart.splice(index, 1);
     },
-    scrollLeft: function scrollLeft() {
-      document.querySelector('.container-box').scrollBy({
-        left: -1000,
-        behavior: 'smooth'
-      });
+    calculateCart: function calculateCart() {
+      for (var i = 0; i < this.cart.length; i++) {// console.log(this.cart[i]);
+      }
     }
   },
-
-  /* MOUNTED */
   mounted: function mounted() {
-    var _this3 = this;
-
-    axios.get('api/categories').then(function (response) {
-      var result = response.data.categories;
-      _this3.categories = result;
+    this.products = window.restaurant_products;
+    this.products.forEach(function (element) {
+      element.count = 0;
     });
-    axios.get('api/restaurants').then(function (response) {
-      var result = response.data.restaurants;
-      _this3.restaurants = result;
-    });
+    console.log(this.products);
+    console.log(this.cart);
+    console.log(this.cartDisplay);
   }
 });
 
 /***/ }),
 
-/***/ 1:
-/*!*******************************************!*\
-  !*** multi ./resources/js/public_home.js ***!
-  \*******************************************/
+/***/ 2:
+/*!***********************************************!*\
+  !*** multi ./resources/js/restaurant_show.js ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/catalinzahariea/Desktop/Boolean/Deliveboo/deliveboo/resources/js/public_home.js */"./resources/js/public_home.js");
+module.exports = __webpack_require__(/*! /Users/catalinzahariea/Desktop/Boolean/Deliveboo/deliveboo/resources/js/restaurant_show.js */"./resources/js/restaurant_show.js");
 
 
 /***/ })

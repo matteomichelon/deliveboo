@@ -1,62 +1,75 @@
 @extends('layouts.app')
 
+@section('header_scripts')
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+@endsection
+
+@section('footer_scripts')
+    <script>
+        window.restaurant_products = @json($restaurant_products);
+    </script>
+
+    <script src="{{ asset('js/restaurant_show.js') }}"></script>
+@endsection
+
 @section('content')
 
-    <section class="container">
+    <div id="root">
+        <section class="restaurant-show">
         
-        <div class="jumbotron">
-
-            <h1 class="display-4">{{$restaurant->restaurant_name}}</h1>
-            <p class="lead">{{$restaurant->restaurant_address}}</p>
-            
-            <a class="btn btn-primary btn-lg" href="{{route('home')}}" role="button">Torna indietro</a>
-
-        </div>
-
-        <div class="container_large">
-            <form action="{{ route('cart') }}" method="post">
-                @csrf
-                @method('POST')                
-
-                <div class="container-box d-flex flex-wrap">
-
-                    @foreach ($restaurant_products as $product)
-                        
-                        {{-- Product Card --}}
-                        <div class="card-product">
-                                            
-                            <div class="container-image">
-                                {{--  If the product has a cover image set it will display it, otherwise
-                                it will display a standard image.    --}}
-                                
-                                @if ($product->path_load_image) )
-                                    <img src="{{ asset('storage/' . $product->cover) }}" class="card-img-top" alt="{{$product->name}}">
-                                @else
-                                    <img src="{{ $product->cover }}" class="card-img-top" alt="{{$product->name}}">
-                                @endif
+            <div class="restaurant-show-jumbo">
+    
+                <div class="container_medium">
+                    <h1 class="restaurant-show-title">{{$restaurant->restaurant_name}}</h1>
+                    <p class="restaurant-show-address">{{$restaurant->restaurant_address}}</p>
+                    
+                    <a class="btn-deliveboo-white" href="{{route('home')}}" role="button">Torna indietro</a>
+                </div>
+                
+    
+            </div>
+    
+            <div class="container_large">
+                <div class="row">
+    
+                    <div class="col-8 restaurant-show-products d-flex flex-wrap">
+                        <div
+                        class="product-card"
+                        v-for="(product, index) in products"
+                        :key="product.id"  
+                        >
+                            <img :src="product.cover" alt="product.name">
+                            <div>@{{product.name}}</div>
+                            <div>@{{product.price}}</div>
+                            <div>@{{product.description}}</div>
+                            <div class="product-control">
+                                <i class="fas fa-minus" v-on:click="removeProduct(product.id)"></i>
+                                <span>@{{countProduct(product.id)}}</span>
+                                <i class="fas fa-plus" v-on:click="addProduct(index); countProduct(product.id); cartProductsDisplay()"></i>
                             </div>
+                        </div>
+                    </div>
     
-                            <div class="card-body">
-                                <h5 class="card-title">{{$product->name}}</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">€{{ number_format($product->price,2) }}</h6>
-    
-                                @if ($product->description)
-                                    <p class="card-text">{{substr($product->description, 0, 70)}}...</p>
-                                @endif                            
-    
-                                <label for="quantity">Quantità</label>
-                                <input type="number" id="quantity" name="quantity[{{$product->id}}]">
+                    <div class="col-4 restaurant-show-cart">
+                        <div
+                        class="product-card"
+                        v-for="(product, index) in cartDisplay"
+                        :key="product.count">   
+                            <div>@{{product.name}}</div>
+                            <div>Price: @{{product.price}}</div>
+                            <div>Count: @{{product.count}}</div>
+                            <div class="product-control">
+                                <i class="fas fa-minus" v-on:click="removeProduct(product)"></i>
+                                    <span>@{{countProduct(product.id)}}</span>
+                                <i class="fas fa-plus" v-on:click="addProduct(index) cartProductsDisplay()"></i>
                             </div>
-                        </div>           
-    
-                    @endforeach
-
-                    <input type="submit" class="btn btn-success" value="Aggiungi al carrello">
+                        </div>
+                    </div>
     
                 </div>
-            </form>
-        </div>       
-
-    </section>
+            </div>       
+    
+        </section>
+    </div>
 
 @endsection

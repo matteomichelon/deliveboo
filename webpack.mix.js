@@ -16,3 +16,5 @@ mix.js( 'resources/js/app.js', 'public/js' )
     .options( { processCssUrls: false } );
 
 mix.js( 'resources/js/public_home.js', 'public/js' );
+
+mix.js( 'resources/js/restaurant_show.js', 'public/js' );
