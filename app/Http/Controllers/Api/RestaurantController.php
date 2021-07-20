@@ -67,6 +67,7 @@ class RestaurantController extends Controller
         }
 
         $response = [
+            'restaurant_id' => $id,
             'products' => $result,
             'success' => true
         ];
