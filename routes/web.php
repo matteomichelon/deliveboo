@@ -26,14 +26,16 @@ Route::prefix('admin')
     ->group(function () {
         Route::get('/', 'HomeController@index')->name('home');
         Route::resource('products', 'ProductController');
+        Route::get('/chartjs', 'ChartJsController@index')->name('chartjs.index');
 });
 
 // Route pubblica per lo show dei ristoranti con i piatti
 Route::get('/restaurant/{slug}', 'Guest\UserController@show')->name('restaurant.show');
 
-//Route pubblica per pagamento
+// Route pubblica per pagamento
 Route::post('/cart', 'PaymentController@getProductsQuantities')->name('cart');
-// Route::get('/cart', 'PaymentController@cart')->name('cart');
 Route::post('/cart-checkout', 'PaymentController@checkout')->name('cart.checkout');
+
+
 
 

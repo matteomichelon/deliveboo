@@ -1,0 +1,8 @@
+SELECT users.id AS `id_ristoratore`, users.restaurant_name AS `nome_ristorante`, orders.date AS `data_ordine`, orders.name AS `nome_pagante`, orders.surname AS `cognome_pagante`, orders.price AS `totale_ordine`, YEAR(`date`) AS `anno_ordine`, MONTH(`date`) AS `mese ordine`
+FROM `order_product` 
+INNER JOIN `products`
+ON order_product.product_id = products.id
+INNER JOIN `users`
+ON products.user_id = users.id
+INNER JOIN `orders`
+ON order_product.order_id = orders.id

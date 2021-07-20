@@ -6,6 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
+                <a href="{{route('admin.chartjs.index')}}">Statistiche</a>
                 <a href="{{route('admin.products.index')}}">Lista prodotti</a>
                 <a href="{{route('admin.products.create')}}">Crea nuovo prodotto</a>
             </div>
