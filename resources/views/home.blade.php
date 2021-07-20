@@ -92,15 +92,16 @@
 
                             <div class="background-hover">
 
-                                <div class="research-image">
-                                    <img :src="restaurant.cover" :alt="'Foto Piatto ' + restaurant.name">
-                                </div>
+                                <img v-if='restaurant.path_load_image' :src="'storage/' + restaurant.cover"
+                                    :alt="'Foto Piatto ' + restaurant.name">
+
+                                <img v-else :src="restaurant.cover" :alt="'Foto Piatto ' + restaurant.name">
 
                                 <div class="research-details">
 
-                                    <div class="research-details-title"> @{{ restaurant . name }} </div>
+                                    <div class="research-details-title"> @{{ restaurant.name }} </div>
 
-                                    <div class="research-details-address"> @{{ restaurant . address }} </div>
+                                    <div class="research-details-address"> @{{ restaurant.address }} </div>
 
                                 </div>
 

@@ -42,7 +42,9 @@ class CategoryController extends Controller
  
             // Se il ristorante ha prodotti, mostro l'immagine del primo prodotto
             if(count($restaurant->products)) {
-                $cover = $restaurant->products->first()->cover;
+                $first_product = $restaurant->products->first();
+                $cover = $first_product->cover;
+                $path_load_image = $first_product->path_load_image;
             } else {
                 // Se non ha prodotti, mostro immagine di default
                 $cover = 'img/defaultproduct.jpg';
@@ -61,13 +63,13 @@ class CategoryController extends Controller
             }
 
             $result[] = [
-                'id' => $restaurant->id,
                 'name' => $restaurant->restaurant_name,
                 'slug' => $restaurant->slug,
                 'address' => $restaurant->restaurant_address,
                 'email' => $restaurant->email,
                 'categories' => $categories,
-                'cover' => $cover
+                'cover' => $cover,
+                'path_load_image' => isset($path_load_image) ? $path_load_image : null
             ];            
         }
 
