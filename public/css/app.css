@@ -400,12 +400,12 @@ section.research .research-details-address {
   font-size: 1.2em;
 }
 .restaurant-show-cart .cart-total-price {
-  font-size: 1.2em;
-  font-weight: 700;
+  font-size: 1em;
+  font-weight: 500;
   color: #000;
 }
 .restaurant-show-cart .cart-total-price span {
-  font-size: 2em;
+  font-size: 1.2em;
 }
 
 section.app {

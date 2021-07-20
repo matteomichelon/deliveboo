@@ -81,11 +81,14 @@
                             <div class="restaurant-show-cart-product-name">Quantità: @{{countProduct(product.id)}}</div>
                             <div class="restaurant-show-cart-product-price">Prezzo: <span>€@{{calculateProduct(product.id, product.price)}}</span></div>
                         </div>
-                        <div class="cart-total-price">
-                            <div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="cart-total-price">
                                 Totale da pagare: <span>€@{{calculateCart()}}</span>
                             </div>
-                        </div>
+                            <div class="cart-checkout text-right p-3">
+                                <a class="btn-deliveboo-primary" href="#">Vai al pagamento</a>
+                            </div>
+                        </div>                       
                     </div>
 
                     <div class="col-4 restaurant-show-cart" v-if="cartDisplay.length == 0">

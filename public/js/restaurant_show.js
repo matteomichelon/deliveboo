@@ -2125,7 +2125,6 @@ var app = new Vue({
         result = [];
       }
 
-      console.log(result);
       return this.cartDisplay = result;
     },
     countProduct: function countProduct(product_id) {
@@ -2138,10 +2137,15 @@ var app = new Vue({
       this.cart.push(this.products[index]);
     },
     removeProduct: function removeProduct(product_id) {
-      var index = this.cart.find(function (element) {
+      var index = this.cart.indexOf(this.cart.find(function (element) {
         return element.id === product_id;
-      });
-      this.cart.splice(index, 1);
+      }));
+
+      if (this.cart.includes(this.cart.find(function (element) {
+        return element.id === product_id;
+      }))) {
+        this.cart.splice(index, 1);
+      }
     },
     calculateProduct: function calculateProduct(product_id, product_price) {
       var quantity = this.cart.filter(function (element) {
@@ -2164,10 +2168,9 @@ var app = new Vue({
     this.products = window.restaurant_products;
     this.products.forEach(function (element) {
       element.count = 0;
-    });
-    console.log(this.products);
-    console.log(this.cart);
-    console.log(this.cartDisplay);
+    }); // console.log(this.products);
+    // console.log(this.cart);
+    // console.log(this.cartDisplay);
   }
 });
 
