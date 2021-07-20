@@ -2114,32 +2114,50 @@ var app = new Vue({
   methods: {
     cartProductsDisplay: function cartProductsDisplay() {
       var result = [];
-      this.cart.forEach(function (element) {
-        if (!result.includes(element)) {
-          result.push(element);
-        }
-      });
+
+      if (this.cart.length > 0) {
+        this.cart.forEach(function (element) {
+          if (!result.includes(element)) {
+            result.push(element);
+          }
+        });
+      } else {
+        result = [];
+      }
+
+      console.log(result);
       return this.cartDisplay = result;
     },
     countProduct: function countProduct(product_id) {
       var result = this.cart.filter(function (element) {
         return element.id === product_id;
       });
-      console.log(result.length);
       return result.length;
     },
     addProduct: function addProduct(index) {
       this.cart.push(this.products[index]);
     },
     removeProduct: function removeProduct(product_id) {
-      index = this.cart.find(function (element) {
+      var index = this.cart.find(function (element) {
         return element.id === product_id;
       });
       this.cart.splice(index, 1);
     },
+    calculateProduct: function calculateProduct(product_id, product_price) {
+      var quantity = this.cart.filter(function (element) {
+        return element.id === product_id;
+      }).length;
+      var price = product_price * quantity;
+      return price.toFixed(2);
+    },
     calculateCart: function calculateCart() {
-      for (var i = 0; i < this.cart.length; i++) {// console.log(this.cart[i]);
+      var price = 0;
+
+      for (var i = 0; i < this.cart.length; i++) {
+        price += this.cart[i].price;
       }
+
+      return price.toFixed(2);
     }
   },
   mounted: function mounted() {

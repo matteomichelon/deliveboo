@@ -11,30 +11,42 @@ var app = new Vue(
         methods: {
             cartProductsDisplay() {
                 let result = [];
-                this.cart.forEach(element => {
-                    if ( !result.includes(element)) {
-                        result.push(element)
-                    }
-                });
 
+                if (this.cart.length > 0) {
+
+                    this.cart.forEach(element => {
+                        if ( !result.includes(element)) {
+                            result.push(element)
+                        }
+                    })
+                } else {
+                    result = [];
+                }
+                console.log(result);
                 return this.cartDisplay = result;
             },
             countProduct(product_id) {
                 let result = this.cart.filter(element => element.id === product_id);
-                console.log(result.length);
                 return result.length;
             },
             addProduct(index) {
                 this.cart.push(this.products[index]);
             },
             removeProduct(product_id) {
-                index = this.cart.find ( element => element.id === product_id);
+                let index = this.cart.find(element => element.id === product_id);
                 this.cart.splice(index, 1);                
             },
+            calculateProduct(product_id, product_price) {
+                let quantity = this.cart.filter(element => element.id === product_id).length;
+                let price = product_price * quantity;
+                return price.toFixed(2);
+            },
             calculateCart() {
+                let price = 0;
                 for(let i = 0; i < this.cart.length; i++) {
-                    // console.log(this.cart[i]);
+                    price += this.cart[i].price;
                 }
+                return price.toFixed(2);
             }
         },
         mounted() {
