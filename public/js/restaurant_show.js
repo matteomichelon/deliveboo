@@ -2177,10 +2177,19 @@ var app = new Vue({
     }
   },
   mounted: function mounted() {
-    this.products = window.restaurant_products;
-    this.products.forEach(function (element) {
-      element.count = 0;
-    });
+    this.products = window.restaurant_products; // +-----------------------------------------------+
+    // | Controllo ristorante.id per il local storage. |
+    // +-----------------------------------------------+
+
+    var oldRestaurantId = localStorage.getItem('oldRestaurantId');
+    var newRestaurantId = window.restaurant_id;
+
+    if (newRestaurantId != oldRestaurantId) {
+      localStorage.clear();
+      localStorage.setItem('oldRestaurantId', window.restaurant_id);
+    } // +-----------------------------------------------+
+
+
     var cart = localStorage.getItem('cart');
 
     if (cart) {

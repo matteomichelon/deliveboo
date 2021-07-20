@@ -7,7 +7,9 @@
 @section('footer_scripts')
     <script>
         window.restaurant_products = @json($restaurant_products);
+        window.restaurant_id = @json($restaurant->id);
     </script>
+    
 
     <script src="{{ asset('js/restaurant_show.js') }}"></script>
 @endsection

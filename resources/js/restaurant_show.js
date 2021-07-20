@@ -60,10 +60,19 @@ var app = new Vue(
         mounted() {
 
             this.products = window.restaurant_products;
+            
 
-            this.products.forEach(element => {
-                element.count = 0;
-            });
+            // +-----------------------------------------------+
+            // | Controllo ristorante.id per il local storage. |
+            // +-----------------------------------------------+
+            let oldRestaurantId = localStorage.getItem('oldRestaurantId')
+            let newRestaurantId = window.restaurant_id;
+
+            if (newRestaurantId != oldRestaurantId) {
+                localStorage.clear();
+                localStorage.setItem('oldRestaurantId', window.restaurant_id);
+            }
+            // +-----------------------------------------------+
 
             let cart = localStorage.getItem('cart');            
 
