@@ -24,7 +24,7 @@ class CreateOrdersTable extends Migration
             $table->string('surname', 45);
             $table->string('email', 100);
             $table->text('notes')->nullable();
-            $table->string('telephone_number', 20);
+            $table->string('telephone_number', 45);
             $table->timestamps();
         });
     }
