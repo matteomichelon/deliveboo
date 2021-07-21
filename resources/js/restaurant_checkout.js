@@ -13,7 +13,8 @@ var app = new Vue({
             telephone_number : "",
             email : "",
             notes : "",
-            _token : document.querySelector('meta[name="csrf-token"]').content
+            _token : document.querySelector('meta[name="csrf-token"]').content,
+            payment_method_nonce : ''
         },
         restaurantId: localStorage.getItem('RestaurantPaymentId'),
     },

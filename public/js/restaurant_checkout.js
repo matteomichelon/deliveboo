@@ -2117,7 +2117,8 @@ var app = new Vue({
       telephone_number: "",
       email: "",
       notes: "",
-      _token: document.querySelector('meta[name="csrf-token"]').content
+      _token: document.querySelector('meta[name="csrf-token"]').content,
+      payment_method_nonce: ''
     },
     restaurantId: localStorage.getItem('RestaurantPaymentId')
   },
@@ -2198,7 +2199,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/catalinzahariea/Desktop/Boolean/Deliveboo/deliveboo/resources/js/restaurant_checkout.js */"./resources/js/restaurant_checkout.js");
+module.exports = __webpack_require__(/*! C:\Users\usuario\Desktop\deliveboo\resources\js\restaurant_checkout.js */"./resources/js/restaurant_checkout.js");
 
 
 /***/ })
