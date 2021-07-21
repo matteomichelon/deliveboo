@@ -9,8 +9,6 @@ use App\User;
 
 class RestaurantController extends Controller
 {
-
-
     // Metodo per accedere a tutti i ristoranti
     public function index() {
         $restaurants = User::all();
@@ -74,4 +72,6 @@ class RestaurantController extends Controller
 
         return response()->json($response);
     }
+
+    
 }
