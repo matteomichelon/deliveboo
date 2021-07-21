@@ -55,7 +55,6 @@ var app = new Vue({
             .post('http://127.0.0.1:8000/cart-checkout', { productIds : this.cartSend, restaurantId : this.restaurantId, formData : this.formData })
             .then(result => {
                 return res = result;
-                console.log(result);
             });
         }
     },

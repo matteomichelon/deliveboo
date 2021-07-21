@@ -50,6 +50,7 @@ class PaymentController extends Controller
         
         $order->price = $this->calculatePrice($productIds);
         $order->date = Carbon::now()->setTimezone('Europe/Rome')->toDateTimeString();
+
         $order->save();
 
         // Sync dei prodotti e delle quantità
@@ -61,7 +62,6 @@ class PaymentController extends Controller
         }
         $order->products()->sync($products_array);
         
-
         $nonce = $request->payment_method_nonce;
 
         /* Creating a Transaction */

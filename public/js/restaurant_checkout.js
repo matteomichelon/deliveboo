@@ -2172,7 +2172,6 @@ var app = new Vue({
         formData: this.formData
       }).then(function (result) {
         return res = result;
-        console.log(result);
       });
     }
   },

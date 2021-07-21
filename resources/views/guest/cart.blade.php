@@ -2,14 +2,9 @@
 
 @section('header_scripts')
 
+    
+    <script src="https://js.braintreegateway.com/web/dropin/1.30.0/js/dropin.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="https://js.braintreegateway.com/web/dropin/1.30.0/js/dropin.js"> </script> 
-
-@endsection
-
-@section('footer_scripts')
-
-    <script src="{{ asset('js/restaurant_checkout.js') }}"></script>
 
 @endsection
 
@@ -67,7 +62,7 @@
             
                         <!-- Dropin Container Braintree -->
                         <div class="form-outline mb-4">
-                            <div id="dropin-container"></div>
+                            <div id="dropin-container"></div>                           
                             <input id="nonce" name="payment_method_nonce" type="hidden" />
                             <input type="submit" value="Invia Pagamento" class="btn btn-primary" />
                         </div>
@@ -97,8 +92,6 @@
             </div>
         </div>
     </div>
-
-
 
 @endsection
 
@@ -138,9 +131,10 @@
 
                             });
                     });
-
             });
     </script>
     <!-- Script Stop -->
+
+    <script src="{{asset('js/restaurant_checkout.js')}}"></script>
     
 @endsection
