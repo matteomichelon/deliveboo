@@ -90,7 +90,7 @@
                                 Totale da pagare: <span>€@{{calculateCart()}}</span>
                             </div>
                             <div class="cart-checkout text-right p-3">
-                                <a class="btn-deliveboo-primary" href="#">Vai al pagamento</a>
+                                <a class="btn-deliveboo-primary" href="{{ route('cart') }}">Vai al pagamento</a>
                             </div>
                         </div>                       
                     </div>

@@ -9,35 +9,7 @@ use App\Product;
 use Carbon\Carbon;
 
 class PaymentController extends Controller
-{
-
-    public function getProductsQuantities(Request $request) {
-        $form_data = $request->all();
-        
-        $product_quantities = $form_data['quantity'];
-
-        $products = [];
-        foreach($product_quantities as $product_id=>$quantity) {
-            if($quantity) {
-                $product = Product::findOrFail($product_id);
-
-                $products[] = [
-                    'id' => $product->id,
-                    'name' => $product->name,
-                    'price' => $product->price,
-                    'quantity' => $quantity
-                ];
-            }
-        }
-
-        $data = [
-            'products' => $products,
-            'token' => $this->cart()
-        ];
-
-        return view('guest.cart', $data);
-    }
-
+{    
     public function cart()
       {
 
@@ -50,9 +22,7 @@ class PaymentController extends Controller
 
           $token = $gateway->clientToken()->generate();
 
-          //return view('guest.cart', compact('token'));
-          return $token;
-
+          return view('guest.cart', compact('token'));          
       }
 
       /* Function Checkout */
