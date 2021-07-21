@@ -9,6 +9,7 @@ use App\Order;
 use App\Product;
 use Carbon\Carbon;
 use App\Mail\NewOrderAdminNotification;
+use App\Mail\NewOrderGuestNotification;
 
 class PaymentController extends Controller
 {
@@ -44,7 +45,7 @@ class PaymentController extends Controller
         $order->fill($form_data);
 
         $order->code = $form_data['_token'];
-        $order->price = 15;/* $this->calculatePrice($form_data['quantity']); */
+        $order->price = $this->calculatePrice($form_data['quantity']);
         $order->date = Carbon::now()->setTimezone('Europe/Rome')->toDateTimeString();
         $order->save();
 
@@ -77,6 +78,11 @@ class PaymentController extends Controller
             // Send new admin Mail.|
             // --------------------|
             Mail::to('matteo@email.com')->send(new NewOrderAdminNotification($order));
+
+            // --------------------|
+            // Send new guest Mail.|
+            // --------------------|
+            Mail::to($form_data['email'])->send(new NewOrderGuestNotification($order));
 
             $order->update();
 
