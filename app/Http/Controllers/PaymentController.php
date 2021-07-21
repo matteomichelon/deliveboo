@@ -52,7 +52,6 @@ class PaymentController extends Controller
         $order->date = Carbon::now()->setTimezone('Europe/Rome')->toDateTimeString();
         
         $order->save();
-        dd($order);
 
         // Sync dei prodotti e delle quantità
         $products_array = [];
@@ -63,15 +62,20 @@ class PaymentController extends Controller
         }
         $order->products()->sync($products_array);
         
+<<<<<<< HEAD
         $nonce = $request->payment_method_nonce;
+=======
+
+        $nonce = $form_data['payment_method_nonce'];
+>>>>>>> fccfece6b9b1be3e39808f115d254c994149eea2
 
         /* Creating a Transaction */
         $result = $gateway->transaction()->sale([
                             'amount' => $order->price,
                             'paymentMethodNonce' => $nonce,
-                            'options' => [
-                                       'submitForSettlement' => true
-                                         ]
+                            'options' => [                                
+                                'submitForSettlement' => true
+                            ]
               ]);
         /* Message Result */
         if ($result->success) {
@@ -90,12 +94,11 @@ class PaymentController extends Controller
 
             $order->update();
 
-            return view('guest.success');
+            return dd('payment success');
         } else {
             // return redirect()->back()->with('message', 'Il pagamento non è andato a buon fine, per favore riprovare');
             //return $this->getProductsQuantities($request)->with('message', 'Il pagamento non è andato a buon fine, per favore riprovare');
-
-            dd('not processed');
+            dd('payment not processed');
         }
     }
 

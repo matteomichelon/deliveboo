@@ -61,8 +61,13 @@
             
                         <!-- Dropin Container Braintree -->
                         <div class="form-outline mb-4">
+<<<<<<< HEAD
                             <div id="dropin-container"></div>                           
                             <input id="nonce" name="payment_method_nonce" type="hidden" />
+=======
+                            <div id="dropin-container"></div>
+                            <input id="nonce" name="payment_method_nonce" v-model="formData.payment_method_nonce" type="hidden" />
+>>>>>>> fccfece6b9b1be3e39808f115d254c994149eea2
                             <input type="submit" value="Invia Pagamento" class="btn btn-primary" />
                         </div>
                     </form>
