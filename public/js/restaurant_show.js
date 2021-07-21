@@ -2187,8 +2187,6 @@ var app = new Vue({
       this.cart = cart;
       this.cartProductsDisplay();
     }
-
-    console.log(this.cart);
   }
 });
 
