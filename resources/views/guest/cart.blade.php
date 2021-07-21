@@ -10,27 +10,24 @@
 
     <div class="container">
 
+        <div class="container-box d-flex flex-wrap">
+            {{-- Prodotti selezionati --}}
+            
+                
+            {{-- Product Card --}}
+            <div class="card-product">                                                                
+                <div class="card-body">
+                    <h5 class="card-title">ProductName</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">€ProductPrice</h6>                                                                        
+                </div>
+            </div>           
+
+            
+        </div>
+
         <form id="payment-form" action="{{ route('cart.checkout') }}" method="POST">
             @csrf
-            ​@method('POST')
-
-            <div class="container-box d-flex flex-wrap">
-                {{-- Prodotti selezionati --}}
-                @foreach ($products as $product)
-                    
-                    {{-- Product Card --}}
-                    <div class="card-product">                                                                
-                        <div class="card-body">
-                            <h5 class="card-title">{{$product['name']}}</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">€{{ number_format($product['price'],2) }}</h6>                                                    
-
-                            <label for="quantity">Quantità</label>
-                            <input type="number" id="quantity" name="quantity[{{$product['id']}}]" value="{{ $product['quantity'] }}">
-                        </div>
-                    </div>           
-
-                @endforeach
-            </div>            
+            ​@method('POST')                        
 
             <!-- 2 column grid layout with text inputs for the first and last names -->
             <div class="row mb-4">
