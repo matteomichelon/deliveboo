@@ -6,7 +6,8 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-class NewOrderAdminNotification extends Mailable
+
+class NewOrderGuestNotification extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -20,7 +21,6 @@ class NewOrderAdminNotification extends Mailable
     public function __construct($_order)
     {
         $this->order = $_order;
-        
     }
 
     /**
@@ -35,6 +35,6 @@ class NewOrderAdminNotification extends Mailable
             'order' => $this->order
         ];
 
-        return $this->view('emails.new-order-admin-notification', $data);
+        return $this->view('emails.new-order-guest-notification', $data);
     }
 }

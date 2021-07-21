@@ -9,9 +9,10 @@ use App\Order;
 use App\Product;
 use Carbon\Carbon;
 use App\Mail\NewOrderAdminNotification;
+use App\Mail\NewOrderGuestNotification;
 
 class PaymentController extends Controller
-{    
+{
     public function cart()
     {
         $gateway = new Gateway([
@@ -72,6 +73,16 @@ class PaymentController extends Controller
         if ($result->success) {
             // Se va a buon fine, salviamo l'ordine con status true
             $order->status = 1;
+
+            // --------------------|
+            // Send new admin Mail.|
+            // --------------------|
+            Mail::to('matteo@email.com')->send(new NewOrderAdminNotification($order));
+
+            // --------------------|
+            // Send new guest Mail.|
+            // --------------------|
+            Mail::to($form_data['email'])->send(new NewOrderGuestNotification($order));
 
             $order->update();
 
