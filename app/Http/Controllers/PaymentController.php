@@ -11,7 +11,7 @@ use Carbon\Carbon;
 use App\Mail\NewOrderAdminNotification;
 
 class PaymentController extends Controller
-{    
+{
     public function cart()
     {
         $gateway = new Gateway([
@@ -21,10 +21,10 @@ class PaymentController extends Controller
               'privateKey' => config('services.braintree.privateKey')
           ]);
 
-          $token = $gateway->clientToken()->generate();
+        $token = $gateway->clientToken()->generate();
 
-          return view('guest.cart', compact('token'));          
-      }
+        return view('guest.cart', compact('token'));
+    }
 
     /* Function Checkout */
     public function checkout(Request $request)
@@ -44,7 +44,7 @@ class PaymentController extends Controller
         $order->fill($form_data);
 
         $order->code = $form_data['_token'];
-        $order->price = $this->calculatePrice($form_data['quantity']);
+        $order->price = 15;/* $this->calculatePrice($form_data['quantity']); */
         $order->date = Carbon::now()->setTimezone('Europe/Rome')->toDateTimeString();
         $order->save();
 
@@ -72,6 +72,11 @@ class PaymentController extends Controller
         if ($result->success) {
             // Se va a buon fine, salviamo l'ordine con status true
             $order->status = 1;
+
+            // --------------------|
+            // Send new admin Mail.|
+            // --------------------|
+            Mail::to('matteo@email.com')->send(new NewOrderAdminNotification($order));
 
             $order->update();
 

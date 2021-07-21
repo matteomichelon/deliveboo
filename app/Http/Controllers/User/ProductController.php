@@ -93,12 +93,6 @@ class ProductController extends Controller
         $new_product->fill($form_data);
         $new_product->save();
 
-        // --------------------|
-        // Send new admin Mail.|
-        // --------------------|
-        /* TODO */
-        Mail::to('matteo@email.com')->send(new NewOrderAdminNotification($new_product));
-
         return redirect()->route('admin.products.index');
     }
 
