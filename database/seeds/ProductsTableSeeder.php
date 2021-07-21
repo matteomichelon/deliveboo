@@ -327,7 +327,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'name' => 'Bismark',
-                'description' => 'Ingredienti: Hamburger da 200g mi bovino, bacon, uovo occhio di bue, battuta di aromi',
+                'description' => 'Ingredienti: Hamburger da 200g di bovino, bacon, uovo occhio di bue, battuta di aromi',
                 'price' => 7.00,
                 'visibility' => 1,
                 'cover' => 'https://www.donnamoderna.com/content/uploads/2006/11/Hamburger-alla-Bismarck-ricetta-830x625.jpg',
