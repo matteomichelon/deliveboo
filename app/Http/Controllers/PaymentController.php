@@ -38,14 +38,13 @@ class PaymentController extends Controller
             'privateKey' => config('services.braintree.privateKey')
         ]);
 
-        $form_data= $request->formData;
-        $restaurantId = $request->restaurantId;
-        $productIds = $request->productIds;
+        $form_data = $request->input('formData');
+        $restaurantId = $request->input('restaurantId');
+        $productIds = $request->input('productIds');
 
         /* Create new order */
         $order = new Order;
         $order->fill($form_data);
-        
         $order->code = $form_data['_token'];
         
         $order->price = $this->calculatePrice($productIds);
@@ -62,12 +61,7 @@ class PaymentController extends Controller
         }
         $order->products()->sync($products_array);
         
-<<<<<<< HEAD
-        $nonce = $request->payment_method_nonce;
-=======
-
         $nonce = $form_data['payment_method_nonce'];
->>>>>>> fccfece6b9b1be3e39808f115d254c994149eea2
 
         /* Creating a Transaction */
         $result = $gateway->transaction()->sale([
@@ -77,6 +71,7 @@ class PaymentController extends Controller
                                 'submitForSettlement' => true
                             ]
               ]);
+        dd($result);
         /* Message Result */
         if ($result->success) {
             // Se va a buon fine, salviamo l'ordine con status true
@@ -94,7 +89,7 @@ class PaymentController extends Controller
 
             $order->update();
 
-            return dd('payment success');
+            return view('guest.success');
         } else {
             // return redirect()->back()->with('message', 'Il pagamento non è andato a buon fine, per favore riprovare');
             //return $this->getProductsQuantities($request)->with('message', 'Il pagamento non è andato a buon fine, per favore riprovare');

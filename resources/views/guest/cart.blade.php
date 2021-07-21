@@ -17,7 +17,7 @@
                     <form id="payment-form" v-on:submit.prevent="sendPayment()">      
                         
                         @csrf
-            
+
                         <!-- 2 column grid layout with text inputs for the first and last names -->
                         <div class="row mb-4">
                             <div class="col">
@@ -56,18 +56,12 @@
                         <div class="form-outline mb-4">
                             <label class="form-label" for="notes">Note per il Rider</label>
                             <textarea class="form-control" v-model="formData.notes" id="notes" name="notes" rows="4"></textarea>
-                        </div>
-                        
-            
+                        </div>                      
+
                         <!-- Dropin Container Braintree -->
                         <div class="form-outline mb-4">
-<<<<<<< HEAD
-                            <div id="dropin-container"></div>                           
-                            <input id="nonce" name="payment_method_nonce" type="hidden" />
-=======
                             <div id="dropin-container"></div>
-                            <input id="nonce" name="payment_method_nonce" v-model="formData.payment_method_nonce" type="hidden" />
->>>>>>> fccfece6b9b1be3e39808f115d254c994149eea2
+                            <input id="nonce" name="payment_method_nonce" type="hidden" />
                             <input type="submit" value="Invia Pagamento" class="btn btn-primary" />
                         </div>
                     </form>
@@ -131,12 +125,13 @@
 
                                 /* Nonce query */
                                 document.querySelector('#nonce').value = payload.nonce;
+                                console.log(payload.nonce);
                                 form.submit();
 
                             });
                     });
             });
-    </script>
+    // </script>
     <!-- Script Stop -->
 
     <script src="{{ asset('js/restaurant_checkout.js') }}"></script>

@@ -52,11 +52,20 @@ var app = new Vue({
             return price.toFixed(2);
         },
         sendPayment() {
+
+            this.formData['payment_method_nonce'] = document.getElementById('nonce').value;
+
+            let data = {
+                productIds : this.cartSend,
+                restaurantId : this.restaurantId,
+                formData : this.formData
+            };
+            
             axios
-            .post('http://127.0.0.1:8000/cart-checkout', { productIds : this.cartSend, restaurantId : this.restaurantId, formData : this.formData })
-            .then(result => {
-                return res = result;
-            });
+            .post('/api/cart-checkout', data)
+            .then(response => {
+                { data : response.data };
+            });           
         }
     },
     mounted() {

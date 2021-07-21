@@ -2167,12 +2167,17 @@ var app = new Vue({
       return price.toFixed(2);
     },
     sendPayment: function sendPayment() {
-      axios.post('http://127.0.0.1:8000/cart-checkout', {
+      this.formData['payment_method_nonce'] = document.getElementById('nonce').value;
+      var data = {
         productIds: this.cartSend,
         restaurantId: this.restaurantId,
         formData: this.formData
-      }).then(function (result) {
-        return res = result;
+      };
+      axios.post('/api/cart-checkout', data).then(function (response) {
+        {
+          data: response.data;
+        }
+        ;
       });
     }
   },
@@ -2198,7 +2203,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\usuario\Desktop\deliveboo\resources\js\restaurant_checkout.js */"./resources/js/restaurant_checkout.js");
+module.exports = __webpack_require__(/*! /Users/catalinzahariea/Desktop/Boolean/Deliveboo/deliveboo/resources/js/restaurant_checkout.js */"./resources/js/restaurant_checkout.js");
 
 
 /***/ })
