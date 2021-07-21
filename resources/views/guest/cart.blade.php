@@ -124,8 +124,7 @@
                                 }
 
                                 /* Nonce query */
-                                document.querySelector('#nonce').value = payload.nonce;
-                                console.log(payload.nonce);
+                                document.getElementById('nonce').value = payload.nonce;
                                 form.submit();
 
                             });

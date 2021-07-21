@@ -52,7 +52,6 @@ var app = new Vue({
             return price.toFixed(2);
         },
         sendPayment() {
-
             this.formData['payment_method_nonce'] = document.getElementById('nonce').value;
 
             let data = {
