@@ -2,5 +2,6 @@
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/js/public_home.js": "/js/public_home.js",
+    "/js/restaurant_checkout.js": "/js/restaurant_checkout.js",
     "/js/restaurant_show.js": "/js/restaurant_show.js"
 }

@@ -22,7 +22,7 @@ class PaymentController extends Controller
           ]);
 
           $token = $gateway->clientToken()->generate();
-
+          
           return view('guest.cart', compact('token'));          
       }
 

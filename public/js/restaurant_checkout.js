@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2094,10 +2094,10 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
-/***/ "./resources/js/restaurant_show.js":
-/*!*****************************************!*\
-  !*** ./resources/js/restaurant_show.js ***!
-  \*****************************************/
+/***/ "./resources/js/restaurant_checkout.js":
+/*!*********************************************!*\
+  !*** ./resources/js/restaurant_checkout.js ***!
+  \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2107,7 +2107,6 @@ var _require = __webpack_require__(/*! axios */ "./node_modules/axios/index.js")
 var app = new Vue({
   el: '#root',
   data: {
-    products: [],
     cart: [],
     cartDisplay: []
   },
@@ -2139,23 +2138,6 @@ var app = new Vue({
       });
       return result.length;
     },
-    addProduct: function addProduct(index) {
-      this.cart.push(this.products[index]);
-      this.refreshStorage();
-    },
-    removeProduct: function removeProduct(product_id) {
-      var index = this.cart.indexOf(this.cart.find(function (element) {
-        return element.id === product_id;
-      }));
-
-      if (this.cart.includes(this.cart.find(function (element) {
-        return element.id === product_id;
-      }))) {
-        this.cart.splice(index, 1);
-      }
-
-      this.refreshStorage();
-    },
     calculateProduct: function calculateProduct(product_id, product_price) {
       var quantity = this.cart.filter(function (element) {
         return element.id === product_id;
@@ -2171,39 +2153,27 @@ var app = new Vue({
       }
 
       return price.toFixed(2);
-    },
-    refreshStorage: function refreshStorage() {
-      localStorage.setItem(restaurant_id, JSON.stringify(this.cart));
-    },
-    getRestaurantPaymentData: function getRestaurantPaymentData() {
-      localStorage.setItem('RestaurantPaymentData', JSON.stringify(this.cart));
-      localStorage.setItem('RestaurantPaymentId', restaurant_id);
     }
   },
   mounted: function mounted() {
-    this.products = window.restaurant_products; // +-----------------------------------------------+
-    // | Controllo ristorante.id per il local storage. |
-    // +-----------------------------------------------+
-
-    var cart = JSON.parse(localStorage.getItem(restaurant_id));
-
-    if (cart.length > 0) {
-      this.cart = cart;
-      this.cartProductsDisplay();
-    }
+    var RestaurantPaymentData = localStorage.getItem('RestaurantPaymentData');
+    var RestaurantPaymentId = localStorage.getItem('RestaurantPaymentId');
+    this.cart = JSON.parse(RestaurantPaymentData);
+    this.cartProductsDisplay();
+    console.log(this.cartDisplay);
   }
 });
 
 /***/ }),
 
-/***/ 2:
-/*!***********************************************!*\
-  !*** multi ./resources/js/restaurant_show.js ***!
-  \***********************************************/
+/***/ 3:
+/*!***************************************************!*\
+  !*** multi ./resources/js/restaurant_checkout.js ***!
+  \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/catalinzahariea/Desktop/Boolean/Deliveboo/deliveboo/resources/js/restaurant_show.js */"./resources/js/restaurant_show.js");
+module.exports = __webpack_require__(/*! /Users/catalinzahariea/Desktop/Boolean/Deliveboo/deliveboo/resources/js/restaurant_checkout.js */"./resources/js/restaurant_checkout.js");
 
 
 /***/ })

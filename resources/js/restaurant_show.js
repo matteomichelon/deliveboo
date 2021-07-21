@@ -54,6 +54,10 @@ var app = new Vue(
             },
             refreshStorage() {
                 localStorage.setItem(restaurant_id, JSON.stringify(this.cart));               
+            },
+            getRestaurantPaymentData() {
+                localStorage.setItem('RestaurantPaymentData', JSON.stringify(this.cart));
+                localStorage.setItem('RestaurantPaymentId', restaurant_id);
             }            
         },
         mounted() {
