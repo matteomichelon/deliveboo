@@ -36,4 +36,3 @@ Route::get('/restaurant/{slug}', 'Guest\UserController@show')->name('restaurant.
 Route::get('/cart', 'PaymentController@cart')->name('cart');
 Route::post('/cart-checkout', 'PaymentController@checkout')->name('cart.checkout');
 
-

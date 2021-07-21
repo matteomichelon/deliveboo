@@ -4,7 +4,18 @@ var app = new Vue({
     el: '#root',
     data: {
         cart: [],
-        cartDisplay: []
+        cartSend: {},
+        cartDisplay: [],
+        formData: {
+            name : "",
+            surname : "",
+            address : "",
+            telephone_number : "",
+            email : "",
+            notes : "",
+            _token : document.querySelector('meta[name="csrf-token"]').content
+        },
+        restaurantId: localStorage.getItem('RestaurantPaymentId'),
     },
     methods: {
         cartProductsDisplay() {                
@@ -38,14 +49,25 @@ var app = new Vue({
                 price += this.cart[i].price;
             }
             return price.toFixed(2);
+        },
+        sendPayment() {
+            axios
+            .post('http://127.0.0.1:8000/cart-checkout', { productIds : this.cartSend, restaurantId : this.restaurantId, formData : this.formData })
+            .then(result => {
+                return res = result;
+                console.log(result);
+            });
         }
     },
     mounted() {
         let RestaurantPaymentData = localStorage.getItem('RestaurantPaymentData');
-        let RestaurantPaymentId = localStorage.getItem('RestaurantPaymentId');
 
         this.cart = JSON.parse(RestaurantPaymentData);
         this.cartProductsDisplay();
-        console.log(this.cartDisplay);
+
+        // 
+        this.cart.forEach(element => {
+            this.cartSend[element.id] = this.countProduct(element.id);
+        })
     }
 })

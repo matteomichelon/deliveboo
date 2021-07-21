@@ -38,20 +38,23 @@ class PaymentController extends Controller
             'privateKey' => config('services.braintree.privateKey')
         ]);
 
-        $form_data= $request->all();
+        $form_data= $request->formData;
+        $restaurantId = $request->restaurantId;
+        $productIds = $request->productIds;
 
         /* Create new order */
         $order = new Order;
         $order->fill($form_data);
-
+        
         $order->code = $form_data['_token'];
-        $order->price = $this->calculatePrice($form_data['quantity']);
+        
+        $order->price = $this->calculatePrice($productIds);
         $order->date = Carbon::now()->setTimezone('Europe/Rome')->toDateTimeString();
         $order->save();
 
         // Sync dei prodotti e delle quantità
         $products_array = [];
-        foreach ($form_data['quantity'] as $product_id=>$quantity) {
+        foreach ($productIds as $product_id=>$quantity) {
             $products_array[$product_id] = [
                 'quantity' => $quantity
             ];

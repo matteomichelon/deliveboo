@@ -63,7 +63,6 @@ var app = new Vue(
         mounted() {
 
             this.products = window.restaurant_products;
-            
 
             // +-----------------------------------------------+
             // | Controllo ristorante.id per il local storage. |

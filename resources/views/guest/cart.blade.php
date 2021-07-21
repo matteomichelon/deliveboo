@@ -8,7 +8,7 @@
 @endsection
 
 @section('footer_scripts')
-    
+
     <script src="{{ asset('js/restaurant_checkout.js') }}"></script>
 
 @endsection
@@ -20,22 +20,22 @@
 
             <div class="row mt-5 py-5 align-items-stretch">
                 <div class="col-8 d-flex flex-wrap">
-                    <form id="payment-form" action="{{ route('cart.checkout') }}" method="POST">
+                    <form id="payment-form" v-on:submit.prevent="sendPayment()">      
+                        
                         @csrf
-                        ​@method('POST')                        
             
                         <!-- 2 column grid layout with text inputs for the first and last names -->
                         <div class="row mb-4">
                             <div class="col">
                                 <div class="form-outline">
                                     <label class="form-label" for="name">Nome</label>
-                                    <input type="text" id="name" name="name" class="form-control" />
+                                    <input type="text" v-model="formData.name" id="name" name="name" class="form-control" />
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="form-outline">
                                     <label class="form-label" for="surname">Cognome</label>
-                                    <input type="text" id="surname" name="surname" class="form-control" />
+                                    <input type="text" v-model="formData.surname" id="surname" name="surname" class="form-control" />
                                 </div>
                             </div>
                         </div>
@@ -43,26 +43,27 @@
                         <!-- Address input -->
                         <div class="form-outline mb-4">
                             <label class="form-label" for="address">Indirizzo</label>
-                            <input type="text" id="address" name="address" class="form-control" />
+                            <input type="text" v-model="formData.address" id="address" name="address" class="form-control" />
                         </div>
             
                         <!-- Telephone Number input -->
                         <div class="form-outline mb-4">
                             <label class="form-label" for="telephone_number">Numero di telefono</label>
-                            <input type="text" id="telephone_number" name="telephone_number" class="form-control" />
+                            <input type="text" v-model="formData.telephone_number" id="telephone_number" name="telephone_number" class="form-control" />
                         </div>
             
                         <!-- Email input -->
                         <div class="form-outline mb-4">
                             <label class="form-label" for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control" />
+                            <input type="email" v-model="formData.email" id="email" name="email" class="form-control" />
                         </div>
             
                         <!-- Message input -->
                         <div class="form-outline mb-4">
                             <label class="form-label" for="notes">Note per il Rider</label>
-                            <textarea class="form-control" id="notes" name="notes" rows="4"></textarea>
+                            <textarea class="form-control" v-model="formData.notes" id="notes" name="notes" rows="4"></textarea>
                         </div>
+                        
             
                         <!-- Dropin Container Braintree -->
                         <div class="form-outline mb-4">
