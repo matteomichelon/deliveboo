@@ -13,7 +13,6 @@ var app = new Vue(
                 let result = [];
 
                 if (this.cart.length > 0) {
-
                     this.cart.forEach(element => {
                         let product_id = element.id;
                         if ( !result.includes(this.cart.find(product => product.id === product_id))) {
@@ -54,7 +53,7 @@ var app = new Vue(
                 return price.toFixed(2);
             },
             refreshStorage() {
-                localStorage.setItem('cart', JSON.stringify(this.cart));                
+                localStorage.setItem(restaurant_id, JSON.stringify(this.cart));               
             }            
         },
         mounted() {
@@ -65,20 +64,12 @@ var app = new Vue(
             // +-----------------------------------------------+
             // | Controllo ristorante.id per il local storage. |
             // +-----------------------------------------------+
-            let oldRestaurantId = localStorage.getItem('oldRestaurantId')
-            let newRestaurantId = window.restaurant_id;
 
-            if (newRestaurantId != oldRestaurantId) {
-                localStorage.clear();
-                localStorage.setItem('oldRestaurantId', window.restaurant_id);
-            }
-            // +-----------------------------------------------+
+            let cart = JSON.parse(localStorage.getItem(restaurant_id));
 
-            let cart = localStorage.getItem('cart');            
-
-            if(cart) {
-                this.cart = JSON.parse(cart);                
-                this.cartProductsDisplay();                
+            if (cart.length > 0) {
+                this.cart = cart;
+                this.cartProductsDisplay();
             }
         }
     }

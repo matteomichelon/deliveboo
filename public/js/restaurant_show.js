@@ -2173,7 +2173,7 @@ var app = new Vue({
       return price.toFixed(2);
     },
     refreshStorage: function refreshStorage() {
-      localStorage.setItem('cart', JSON.stringify(this.cart));
+      localStorage.setItem(restaurant_id, JSON.stringify(this.cart));
     }
   },
   mounted: function mounted() {
@@ -2181,19 +2181,10 @@ var app = new Vue({
     // | Controllo ristorante.id per il local storage. |
     // +-----------------------------------------------+
 
-    var oldRestaurantId = localStorage.getItem('oldRestaurantId');
-    var newRestaurantId = window.restaurant_id;
+    var cart = JSON.parse(localStorage.getItem(restaurant_id));
 
-    if (newRestaurantId != oldRestaurantId) {
-      localStorage.clear();
-      localStorage.setItem('oldRestaurantId', window.restaurant_id);
-    } // +-----------------------------------------------+
-
-
-    var cart = localStorage.getItem('cart');
-
-    if (cart) {
-      this.cart = JSON.parse(cart);
+    if (cart.length > 0) {
+      this.cart = cart;
       this.cartProductsDisplay();
     }
   }
@@ -2208,7 +2199,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\usuario\Desktop\deliveboo\resources\js\restaurant_show.js */"./resources/js/restaurant_show.js");
+module.exports = __webpack_require__(/*! /Users/catalinzahariea/Desktop/Boolean/Deliveboo/deliveboo/resources/js/restaurant_show.js */"./resources/js/restaurant_show.js");
 
 
 /***/ })
