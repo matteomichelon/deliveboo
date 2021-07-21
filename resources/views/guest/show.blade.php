@@ -2,6 +2,7 @@
 
 @section('header_scripts')
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    
 @endsection
 
 @section('footer_scripts')
@@ -10,7 +11,6 @@
         window.restaurant_id = @json($restaurant->id);
     </script>
     
-
     <script src="{{ asset('js/restaurant_show.js') }}"></script>
 @endsection
 
