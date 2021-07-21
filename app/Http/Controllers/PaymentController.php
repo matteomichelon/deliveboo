@@ -50,7 +50,9 @@ class PaymentController extends Controller
         
         $order->price = $this->calculatePrice($productIds);
         $order->date = Carbon::now()->setTimezone('Europe/Rome')->toDateTimeString();
+        
         $order->save();
+        dd($order);
 
         // Sync dei prodotti e delle quantità
         $products_array = [];
@@ -92,7 +94,9 @@ class PaymentController extends Controller
             return view('guest.success');
         } else {
             // return redirect()->back()->with('message', 'Il pagamento non è andato a buon fine, per favore riprovare');
-            return $this->getProductsQuantities($request)->with('message', 'Il pagamento non è andato a buon fine, per favore riprovare');
+            //return $this->getProductsQuantities($request)->with('message', 'Il pagamento non è andato a buon fine, per favore riprovare');
+
+            dd('not processed');
         }
     }
 
