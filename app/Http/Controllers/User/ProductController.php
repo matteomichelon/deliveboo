@@ -7,10 +7,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\NewOrderAdminNotification;
+
 
 use App\User;
 use App\Product;
-
 
 class ProductController extends Controller
 {
@@ -51,32 +53,32 @@ class ProductController extends Controller
         $new_product = new Product();
         // ------------------------------------------------------|
         // Validating form data with private validation function.|
-        // ------------------------------------------------------| 
+        // ------------------------------------------------------|
         $request->validate($this->getValidatorRules());
 
         // --------------------------------------------|
         // Requesting form data in $form_data variable.|
         // Getting user_id with Auth Helper.           |
-        // --------------------------------------------|        
+        // --------------------------------------------|
         $form_data = $request->all();
-        $form_data['user_id'] = Auth::user()->id; 
+        $form_data['user_id'] = Auth::user()->id;
 
         // --------------------|
         // Checking visibility.|
         // --------------------|
         if (isset($form_data['visibility'])) {
             $form_data['visibility'] = 1;
-        }else{
+        } else {
             $form_data['visibility'] = 0;
         }
 
         // ----------------------------------------------------|
         // This will shortened the length of the img_path link.|
-        // ----------------------------------------------------|        
-        if(isset($form_data['cover'])) {
+        // ----------------------------------------------------|
+        if (isset($form_data['cover'])) {
             $img_path = Storage::put('cover', $form_data['cover']);
 
-            if($img_path) {
+            if ($img_path) {
                 $form_data['cover'] = $img_path;
                 $new_product->path_load_image = 1;
             }
@@ -88,8 +90,14 @@ class ProductController extends Controller
         // --------------------------------------------|
         // Saving $form_data in a new Product instance.|
         // --------------------------------------------|
-        $new_product->fill($form_data);        
+        $new_product->fill($form_data);
         $new_product->save();
+
+        // --------------------|
+        // Send new admin Mail.|
+        // --------------------|
+        /* TODO */
+        Mail::to('matteo@email.com')->send(new NewOrderAdminNotification($new_product));
 
         return redirect()->route('admin.products.index');
     }
@@ -108,7 +116,7 @@ class ProductController extends Controller
             'product' => $product
         ];
         
-        return view('admin.products.show', $data );
+        return view('admin.products.show', $data);
     }
 
     /**
@@ -139,7 +147,7 @@ class ProductController extends Controller
     {
         // ----------------------------------|
         // Getting desired product to update.|
-        // ----------------------------------| 
+        // ----------------------------------|
         $updated_product = Product::findOrFail($id);
 
         // ------------------------------------------------------|
@@ -150,7 +158,7 @@ class ProductController extends Controller
 
         // --------------------------------------------|
         // Requesting form data in $form_data variable.|
-        // --------------------------------------------|        
+        // --------------------------------------------|
         $form_data = $request->all();
 
         // --------------------|
@@ -158,17 +166,17 @@ class ProductController extends Controller
         // --------------------|
         if (isset($form_data['visibility'])) {
             $form_data['visibility'] = 1;
-        }else{
+        } else {
             $form_data['visibility'] = 0;
         }
 
         // ----------------------------------------------------|
         // This will shortened the length of the img_path link.|
         // ----------------------------------------------------|
-        if(isset($form_data['cover'])) {
+        if (isset($form_data['cover'])) {
             $img_path = Storage::put('cover', $form_data['cover']);
 
-            if($img_path) {
+            if ($img_path) {
                 $form_data['cover'] = $img_path;
             }
         }
@@ -198,8 +206,8 @@ class ProductController extends Controller
     // ----------------------------------------------------------------------|
     // Saving $validation_rules as a private function to be used when called.|
     // ----------------------------------------------------------------------|
-    private function getValidatorRules() {
-        
+    private function getValidatorRules()
+    {
         $validation_rules = [
             'name' => ['required', 'min:1', 'max:100', 'string'],
             'description' => ['nullable', 'min:10', 'max:500'],

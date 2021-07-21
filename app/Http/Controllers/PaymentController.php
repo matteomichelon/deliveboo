@@ -4,16 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Braintree\Gateway;
+use Illuminate\Support\Facades\Mail;
 use App\Order;
 use App\Product;
 use Carbon\Carbon;
+use App\Mail\NewOrderAdminNotification;
 
 class PaymentController extends Controller
 {    
     public function cart()
-      {
-
-          $gateway = new Gateway([
+    {
+        $gateway = new Gateway([
               'environment' => config('services.braintree.environment'),
               'merchantId' => config('services.braintree.merchantId'),
               'publicKey' => config('services.braintree.publicKey'),
@@ -25,7 +26,7 @@ class PaymentController extends Controller
           return view('guest.cart', compact('token'));          
       }
 
-      /* Function Checkout */
+    /* Function Checkout */
     public function checkout(Request $request)
     {
         /* Generating Token */
@@ -44,16 +45,16 @@ class PaymentController extends Controller
 
         $order->code = $form_data['_token'];
         $order->price = $this->calculatePrice($form_data['quantity']);
-        $order->date = Carbon::now()->setTimezone('Europe/Rome')->toDateTimeString();    
-        $order->save();            
+        $order->date = Carbon::now()->setTimezone('Europe/Rome')->toDateTimeString();
+        $order->save();
 
         // Sync dei prodotti e delle quantità
         $products_array = [];
-        foreach($form_data['quantity'] as $product_id=>$quantity) {
+        foreach ($form_data['quantity'] as $product_id=>$quantity) {
             $products_array[$product_id] = [
                 'quantity' => $quantity
             ];
-        }        
+        }
         $order->products()->sync($products_array);
         
 
@@ -69,8 +70,9 @@ class PaymentController extends Controller
               ]);
         /* Message Result */
         if ($result->success) {
-            // Se va a buon fine, salviamo l'ordine con status true            
+            // Se va a buon fine, salviamo l'ordine con status true
             $order->status = 1;
+
             $order->update();
 
             return view('guest.success');
@@ -81,13 +83,14 @@ class PaymentController extends Controller
     }
 
 
-    protected function calculatePrice($product_quantities) {
+    protected function calculatePrice($product_quantities)
+    {
         $total = 0;
-        foreach($product_quantities as $product_id=>$quantity) {
+        foreach ($product_quantities as $product_id=>$quantity) {
             $unit_price = Product::findOrFail($product_id)->price;
             $total_price = $unit_price * $quantity;
             $total += $total_price;
-        } 
+        }
 
         return $total;
     }
