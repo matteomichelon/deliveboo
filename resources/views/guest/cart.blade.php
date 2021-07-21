@@ -2,9 +2,8 @@
 
 @section('header_scripts')
 
-    
     <script src="https://js.braintreegateway.com/web/dropin/1.30.0/js/dropin.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>     
 
 @endsection
 
@@ -95,7 +94,7 @@
 
 @endsection
 
-@section('footer_scripts')
+@section('footer_scripts')    
 
     <!-- Script Start -->
     <script>
@@ -135,6 +134,6 @@
     </script>
     <!-- Script Stop -->
 
-    <script src="{{asset('js/restaurant_checkout.js')}}"></script>
+    <script src="{{ asset('js/restaurant_checkout.js') }}"></script>
     
 @endsection
