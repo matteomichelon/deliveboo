@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Braintree\Gateway;
 use Illuminate\Support\Facades\Mail;
@@ -12,24 +13,10 @@ use App\Mail\NewOrderAdminNotification;
 use App\Mail\NewOrderGuestNotification;
 
 class PaymentController extends Controller
-{
-    public function cart()
-    {
-        $gateway = new Gateway([
-              'environment' => config('services.braintree.environment'),
-              'merchantId' => config('services.braintree.merchantId'),
-              'publicKey' => config('services.braintree.publicKey'),
-              'privateKey' => config('services.braintree.privateKey')
-          ]);
-
-          $token = $gateway->clientToken()->generate();
-          
-          return view('guest.cart', compact('token'));          
-    }
-
+{    
     /* Function Checkout */
     public function checkout(Request $request)
-    {
+    {        
         /* Generating Token */
         $gateway = new Gateway([
             'environment' => config('services.braintree.environment'),

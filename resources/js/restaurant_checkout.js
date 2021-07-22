@@ -65,7 +65,7 @@ var app = new Vue({
             
             // Axios Request
             axios
-            .post('/api/cart-data', data)
+            .post('./api/cart-data', data)
             .then(response => {
                 { data : response.data };
                 this.orderId = response.data;
