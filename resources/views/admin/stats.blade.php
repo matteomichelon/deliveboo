@@ -43,12 +43,13 @@
 
             mounted() {
                 axios
-                    .get('/api/orders', {
+                    .get('/{id}/statistiche', {
                         params: {
-                            id: {{ $user->id }}
+                            id: {{ $id }}
                         }
                     })
                     .then(( result ) => {
+                        
                         this.orders = result.data.orders;
                         // Ciclo per prendere ogni singolo prezzo
                         this.orders.forEach(element => {
@@ -108,9 +109,6 @@
                     });
                     })
             },
-
-            
-
         });
 
 

@@ -59,6 +59,7 @@ Route::post('/cart-data', 'PaymentController@checkout')->name('api.cart.checkout
 
 Route::post('/cart-checkout', 'PaymentController@payment')->name('api.cart.payment');
 
+Route::get('/{id}/stats', 'Api/StatsController@index');
 
 
 
