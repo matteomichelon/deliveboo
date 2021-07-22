@@ -79,7 +79,7 @@ class PaymentController extends Controller
 
         /* Creating a Transaction */
         $result = $gateway->transaction()->sale([
-            'amount' => 2500,
+            'amount' => $order->price,
             'paymentMethodNonce' => $orderNonce,
             'options' => [                                
                 'submitForSettlement' => true
