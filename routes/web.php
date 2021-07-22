@@ -26,7 +26,7 @@ Route::prefix('admin')
     ->group(function () {
         Route::get('/', 'HomeController@index')->name('home');
         Route::resource('products', 'ProductController');
-        Route::get('/{id}/stats', 'StatsController@index')->name('statistics');
+        Route::get('/{id}/stats', 'StatsController@index')->name('stats');
 });
 
 // Route pubblica per lo show dei ristoranti con i piatti

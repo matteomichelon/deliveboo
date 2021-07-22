@@ -28,7 +28,7 @@
     {{-- Start Script --}}
     <script>
 
-        new Vue({
+        var app = new Vue({
 
             el: '#root',
             data: {
@@ -37,29 +37,17 @@
                 dates: [],
             },
 
-            methods: {
-                
-            },
-
             mounted() {
-                axios
-                    .get('/{id}/statistiche', {
-                        params: {
-                            id: {{ $id }}
-                        }
-                    })
-                    .then(( result ) => {
-                        
-                        this.orders = result.data.orders;
-                        // Ciclo per prendere ogni singolo prezzo
-                        this.orders.forEach(element => {
-                            this.prices.push(element.price);
-                        });
+            
+                var data = {!!json_encode($data['orders'])!!};
+                var user = {!!json_encode($data['user'])!!};
+                console.log(data);
+                console.log(user);
 
-                        this.orders.forEach(element => {
-                            this.dates.push(element.date);
-                        });
-
+                data.forEach(element => {
+                    this.prices.push(element['price']);
+                    this.dates.push(element['date']);
+                });  
 
                         var ctx = document.getElementById('canvas');
                         var myChart = new Chart(ctx, {
@@ -77,12 +65,8 @@
                                 data: this.prices,
                                 // Caratteristiche delle barre
                                 backgroundColor: [
-                                    'rgba(255, 99, 132, 0.2)',
-                                ],
-                                borderColor: [
-                                    'rgba(255, 99, 132, 1)',
-                                ],
-                                borderWidth: 2,
+                                    'rgba( 97, 193, 182, 100%)',
+                                ]
                             }]
                         },
                         options: {
@@ -107,9 +91,9 @@
                             
                         }
                     });
-                    })
+                }
             },
-        });
+        );
 
 
     </script>
