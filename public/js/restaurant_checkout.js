@@ -2120,7 +2120,8 @@ var app = new Vue({
       _token: document.querySelector('meta[name="csrf-token"]').content,
       payment_method_nonce: ''
     },
-    restaurantId: localStorage.getItem('RestaurantPaymentId')
+    restaurantId: localStorage.getItem('RestaurantPaymentId'),
+    orderId: ""
   },
   methods: {
     cartProductsDisplay: function cartProductsDisplay() {
@@ -2166,8 +2167,9 @@ var app = new Vue({
 
       return price.toFixed(2);
     },
-    sendPayment: function sendPayment() {
-      this.formData['payment_method_nonce'] = document.getElementById('nonce').value;
+    sendData: function sendData() {
+      var _this2 = this;
+
       var data = {
         productIds: this.cartSend,
         restaurantId: this.restaurantId,
@@ -2178,18 +2180,28 @@ var app = new Vue({
           data: response.data;
         }
         ;
+        _this2.orderId = response.data;
+      });
+    },
+    sendPayment: function sendPayment() {
+      var data = {
+        orderId: this.orderId,
+        nonce: document.getElementById('nonce').value
+      };
+      axios.post('/api/cart-payment', data).then(function (response) {
+        console.log(response.data);
       });
     }
   },
   mounted: function mounted() {
-    var _this2 = this;
+    var _this3 = this;
 
     var RestaurantPaymentData = localStorage.getItem('RestaurantPaymentData');
     this.cart = JSON.parse(RestaurantPaymentData);
     this.cartProductsDisplay(); // 
 
     this.cart.forEach(function (element) {
-      _this2.cartSend[element.id] = _this2.countProduct(element.id);
+      _this3.cartSend[element.id] = _this3.countProduct(element.id);
     });
   }
 });

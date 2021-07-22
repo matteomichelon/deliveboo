@@ -17,6 +17,7 @@ var app = new Vue({
             payment_method_nonce : ''
         },
         restaurantId: localStorage.getItem('RestaurantPaymentId'),
+        orderId : ""
     },
     methods: {
         cartProductsDisplay() {                
@@ -51,8 +52,7 @@ var app = new Vue({
             }
             return price.toFixed(2);
         },
-        sendPayment() {
-            this.formData['payment_method_nonce'] = document.getElementById('nonce').value;
+        sendData() {
 
             let data = {
                 productIds : this.cartSend,
@@ -64,7 +64,21 @@ var app = new Vue({
             .post('/api/cart-checkout', data)
             .then(response => {
                 { data : response.data };
+                this.orderId = response.data;
             });           
+        },
+        sendPayment() {
+
+            let data = {
+                orderId : this.orderId,
+                nonce : document.getElementById('nonce').value,
+            };
+
+            axios
+                .post('/api/cart-payment', data)
+                .then(response => {
+                    console.log(response.data);
+                });
         }
     },
     mounted() {

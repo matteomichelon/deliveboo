@@ -2,8 +2,9 @@
 
 @section('header_scripts')
 
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>    
     <script src="https://js.braintreegateway.com/web/dropin/1.30.0/js/dropin.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>     
+     
 
 @endsection
 
@@ -14,7 +15,7 @@
 
             <div class="row mt-5 py-5 align-items-stretch">
                 <div class="col-8 d-flex flex-wrap">
-                    <form id="payment-form" v-on:submit.prevent="sendPayment()">      
+                    <form method="" v-on:submit.prevent="sendData()">      
                         
                         @csrf
 
@@ -56,9 +57,15 @@
                         <div class="form-outline mb-4">
                             <label class="form-label" for="notes">Note per il Rider</label>
                             <textarea class="form-control" v-model="formData.notes" id="notes" name="notes" rows="4"></textarea>
-                        </div>                      
+                        </div>
+                        
+                        <div class="form-outline mb-4">
+                            <input type="submit" value="Invia dati" class="btn btn-primary" />
+                        </div>
+                        
+                    </form>
 
-                        <!-- Dropin Container Braintree -->
+                    <form action="" id="payment-form">
                         <div class="form-outline mb-4">
                             <div id="dropin-container"></div>
                             <input id="nonce" name="payment_method_nonce" type="hidden" />
@@ -110,22 +117,23 @@
             /* Add Event Listener */
             function(error, dropinInstance) {
                 form.addEventListener('submit',
-
+                    
                     /* Request Payment Method */
                     function(event) {
                         event.preventDefault();
                         dropinInstance.requestPaymentMethod(
-
+                            
                             /* Find Error */
                             function(error, payload) {
+                                console.log(payload);
                                 if (error) {
                                     console.log('Request Payment Method Error', error);
                                     return;
                                 }
 
                                 /* Nonce query */
-                                document.getElementById('nonce').value = payload.nonce;
-                                form.submit();
+                                document.querySelector('#nonce').value = payload.nonce;
+                                return payload.nonce;
 
                             });
                     });

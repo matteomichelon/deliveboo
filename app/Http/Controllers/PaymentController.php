@@ -60,20 +60,30 @@ class PaymentController extends Controller
             ];
         }
         $order->products()->sync($products_array);
-        
-        $nonce = $form_data['payment_method_nonce'];
+
+        return $order->id;
+ 
+    }
+
+    public function payment(Request $request) {
+
+        $id = $request->all();
+
+        $order = Order::findOrFail($id);
+
+        $order->nonce = $request->nonce;
 
         /* Creating a Transaction */
         $result = $gateway->transaction()->sale([
-                            'amount' => $order->price,
-                            'paymentMethodNonce' => $nonce,
-                            'options' => [                                
-                                'submitForSettlement' => true
-                            ]
-              ]);
-        dd($result);
-        /* Message Result */
-        if ($result->success) {
+            'amount' => $order->price,
+            'paymentMethodNonce' => $order->nonce,
+            'options' => [                                
+                'submitForSettlement' => true
+            ]
+            ]);
+
+            /* Message Result */
+            if ($result->success) {
             // Se va a buon fine, salviamo l'ordine con status true
             $order->status = 1;
 
@@ -90,11 +100,11 @@ class PaymentController extends Controller
             $order->update();
 
             return view('guest.success');
-        } else {
+            } else {
             // return redirect()->back()->with('message', 'Il pagamento non è andato a buon fine, per favore riprovare');
             //return $this->getProductsQuantities($request)->with('message', 'Il pagamento non è andato a buon fine, per favore riprovare');
             dd('payment not processed');
-        }
+            }
     }
 
 
