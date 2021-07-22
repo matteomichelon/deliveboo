@@ -27,6 +27,7 @@
 
     {{-- Start Script --}}
     <script>
+        window.restaurant_id = {{ $id }}
 
         new Vue({
 
@@ -41,24 +42,17 @@
                 
             },
 
-            mounted() {
+            mounted() {               
                 axios
-                    .get('/{id}/statistiche', {
-                        params: {
-                            id: {{ $id }}
-                        }
-                    })
+                    .get(`http://127.0.0.1:8000/api/stats/${window.restaurant_id}`)
                     .then(( result ) => {
-                        
+                        console.log(result.data);
                         this.orders = result.data.orders;
                         // Ciclo per prendere ogni singolo prezzo
                         this.orders.forEach(element => {
                             this.prices.push(element.price);
-                        });
-
-                        this.orders.forEach(element => {
                             this.dates.push(element.date);
-                        });
+                        });                        
 
 
                         var ctx = document.getElementById('canvas');

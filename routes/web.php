@@ -26,7 +26,7 @@ Route::prefix('admin')
     ->group(function () {
         Route::get('/', 'HomeController@index')->name('home');
         Route::resource('products', 'ProductController');
-        Route::get('/{id}/stats', 'StatsController@index')->name('statistics');
+        Route::get('/stats', 'StatsController@index')->name('statistics');
 });
 
 // Route pubblica per lo show dei ristoranti con i piatti
@@ -34,7 +34,7 @@ Route::get('/restaurant/{slug}', 'Guest\UserController@show')->name('restaurant.
 
 //Route pubblica per pagamento
 // Route::cart('/cart', 'PaymentController@getProductsQuantities')->name('cart');
-Route::get('/cart', 'PaymentController@cart')->name('cart');
-Route::post('/cart-checkout', 'PaymentController@checkout')->name('cart.checkout');
+Route::get('/cart', 'CartController@cart')->name('cart');
+
 
 

@@ -25,15 +25,21 @@ class StatsController extends Controller
                     ->get();
 
 
-        $array = collect($order_schema)->where('id', $id)->all();
+        $orders_array = collect($order_schema)->where('id', $id)->all();  
 
-        $data = [
-        'user' => $user,
-        'orders' => $array
-        ];
 
+        $orders = [];
+        foreach($orders_array as $order) {
+            $orders[] = [
+                'order_id' => $order->id,
+                'price' => $order->price,
+                'date' => $order->date
+            ];
+        }
+        
         $response = [
-            'data' => $data,
+            'user' => $user,
+            'orders' => $orders,
             'success' => true
         ];
 

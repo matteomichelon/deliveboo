@@ -55,11 +55,23 @@ Route::prefix('orders')
     }
 );
 
-Route::post('/cart-data', 'PaymentController@checkout')->name('api.cart.checkout');
+Route::namespace('Api')
+    ->name('api.cart.')
+    ->group(function () {
+        Route::post('/cart-data', 'PaymentController@checkout')->name('checkout');
+        Route::post('/cart-checkout', 'PaymentController@payment')->name('payment');
+    }
+);
 
-Route::post('/cart-checkout', 'PaymentController@payment')->name('api.cart.payment');
 
-Route::get('/{id}/stats', 'Api/StatsController@index');
+Route::namespace('Api')
+    ->name('api.')
+    ->group(function () {
+        Route::get('/stats/{id}', 'StatsController@index')->name('stats');
+    }
+);
+
+
 
 
 

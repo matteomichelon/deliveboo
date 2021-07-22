@@ -12,9 +12,15 @@ use App\User;
 class StatsController extends Controller
 {
 
-    public function index($id)
+    public function index()
     {   
-        return view('admin.stats', ['id' => $id]);
+        $id = Auth::user()->id;
+
+        $data = [
+            'id' => $id
+        ];
+
+        return view('admin.stats', $data);
     }
 
 }
