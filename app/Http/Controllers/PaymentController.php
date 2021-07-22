@@ -25,7 +25,7 @@ class PaymentController extends Controller
           $token = $gateway->clientToken()->generate();
           
           return view('guest.cart', compact('token'));          
-      }
+    }
 
     /* Function Checkout */
     public function checkout(Request $request)
@@ -62,7 +62,6 @@ class PaymentController extends Controller
         $order->products()->sync($products_array);
 
         return $order->id;
- 
     }
 
     public function payment(Request $request) {
@@ -74,13 +73,13 @@ class PaymentController extends Controller
             'privateKey' => config('services.braintree.privateKey')
         ]);
 
-        $orderId= $request->input('orderId');
+        $orderId = $request->input('orderId');
         $orderNonce = $request->input('nonce');
         $order = Order::findOrFail($orderId);
 
         /* Creating a Transaction */
         $result = $gateway->transaction()->sale([
-            'amount' => "20",
+            'amount' => $order->price,
             'paymentMethodNonce' => $orderNonce,
             'options' => [                                
                 'submitForSettlement' => true
@@ -98,20 +97,20 @@ class PaymentController extends Controller
             // --------------------|
             // Send new admin Mail.|
             // --------------------|
-            Mail::to('matteo@email.com')->send(new NewOrderAdminNotification($order));
+            // Mail::to('matteo@email.com')->send(new NewOrderAdminNotification($order));
 
-            // --------------------|
-            // Send new guest Mail.|
-            // --------------------|
-            Mail::to($order->email)->send(new NewOrderGuestNotification($order));
+            // // --------------------|
+            // // Send new guest Mail.|
+            // // --------------------|
+            // Mail::to($order->email)->send(new NewOrderGuestNotification($order));
  
 
-            return view('guest.success');
+            return true;
 
             } else {
             // return redirect()->back()->with('message', 'Il pagamento non è andato a buon fine, per favore riprovare');
             //return $this->getProductsQuantities($request)->with('message', 'Il pagamento non è andato a buon fine, per favore riprovare');
-                dd('payment non successful');
+               return false;
             }
     }
 

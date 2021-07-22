@@ -13,12 +13,13 @@
     <div id="root">
         <div class="container">
 
-            <div class="row mt-5 py-5 align-items-stretch">
+            <div class="row mt-5 py-5 align-items-stretch" v-if="!paymentSuccess">
                 <div class="col-8 d-flex flex-wrap">
-                    <form method="" v-on:submit="sendData()">      
-                        
-                        @csrf
 
+                    <h2 v-if="paymentFail">Il pagamento non è andato a buon fine, riprova</h2>
+
+                    <form id="data-form" v-on:submit.prevent="sendData()">                             
+                        @csrf
                         <!-- 2 column grid layout with text inputs for the first and last names -->
                         <div class="row mb-4">
                             <div class="col">
@@ -61,11 +62,10 @@
                         
                         <div class="form-outline mb-4">
                             <input type="submit" value="Invia dati" class="btn btn-primary" />
-                        </div>
-                        
+                        </div>                        
                     </form>
 
-                    <form id="payment-form">
+                    <form id="payment-form" class="d-none">
                         <div class="form-outline mb-4">
                             <div id="dropin-container"></div>
                             <input id="nonce" name="payment_method_nonce" type="hidden" />
@@ -95,14 +95,20 @@
                     </div>                       
                 </div>
             </div>
+
+            <div class="row mt-5 py-5 align-items-stretch" v-else>
+                <h2>DAJEEEEEEE</h2>
+            </div>
         </div>
     </div>
 
 @endsection
 
-@section('footer_scripts')    
+@section('footer_scripts')
 
+    <!-- Custom Script Start -->
     <script src="{{ asset('js/restaurant_checkout.js') }}"></script>
+    <!-- Custom Script End -->
 
     <!-- Script Start -->
     <script>
@@ -110,48 +116,7 @@
         const form = document.querySelector('#payment-form');
         const clientToken = "{{ $token }}";
 
-        /* Braintree Create */
-        braintree.dropin.create({
-                authorization: clientToken,
-                container: '#dropin-container'
-            },
-            
-            /* Add Event Listener */
-            function(error, dropinInstance) {
-                form.addEventListener('submit',
-
-                    /* Request Payment Method */
-                    function(event) {
-                        event.preventDefault();
-                        dropinInstance.requestPaymentMethod(
-                            
-                            /* Find Error */
-                            function(error, payload) {
-                                console.log(payload);
-                                if (error) {
-                                    console.log('Request Payment Method Error', error);
-                                    return;
-                                }
-
-                                /* Nonce query */
-                                document.querySelector('#nonce').value = payload.nonce;
-
-                                let data = {
-                                    orderId : this.orderId,
-                                    nonce : payload.nonce
-                                };
-
-                                console.log(data);
-
-                                axios
-                                    .post('/api/cart-checkout', data)
-                                    .then(response => {
-                                        { data : response.data };
-                                });
-                            });
-                    });
-            });
-    // </script>
+    </script>
     <!-- Script Stop -->
 
     
