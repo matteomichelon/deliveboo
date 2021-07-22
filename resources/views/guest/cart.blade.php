@@ -15,7 +15,7 @@
 
             <div class="row mt-5 py-5 align-items-stretch">
                 <div class="col-8 d-flex flex-wrap">
-                    <form method="" v-on:submit.prevent="sendData()">      
+                    <form method="" v-on:submit="sendData()">      
                         
                         @csrf
 
@@ -65,11 +65,11 @@
                         
                     </form>
 
-                    <form action="" id="payment-form">
+                    <form id="payment-form">
                         <div class="form-outline mb-4">
                             <div id="dropin-container"></div>
                             <input id="nonce" name="payment_method_nonce" type="hidden" />
-                            <input type="submit" value="Invia Pagamento" class="btn btn-primary" />
+                            <input prevent type="submit" value="Invia Pagamento" class="btn btn-primary" />
                         </div>
                     </form>
                 </div>
@@ -102,6 +102,8 @@
 
 @section('footer_scripts')    
 
+    <script src="{{ asset('js/restaurant_checkout.js') }}"></script>
+
     <!-- Script Start -->
     <script>
         /* Variables */
@@ -113,11 +115,11 @@
                 authorization: clientToken,
                 container: '#dropin-container'
             },
-
+            
             /* Add Event Listener */
             function(error, dropinInstance) {
                 form.addEventListener('submit',
-                    
+
                     /* Request Payment Method */
                     function(event) {
                         event.preventDefault();
@@ -133,14 +135,25 @@
 
                                 /* Nonce query */
                                 document.querySelector('#nonce').value = payload.nonce;
-                                return payload.nonce;
 
+                                let data = {
+                                    orderId : this.orderId,
+                                    nonce : payload.nonce
+                                };
+
+                                console.log(data);
+
+                                axios
+                                    .post('/api/cart-checkout', data)
+                                    .then(response => {
+                                        { data : response.data };
+                                });
                             });
                     });
             });
     // </script>
     <!-- Script Stop -->
 
-    <script src="{{ asset('js/restaurant_checkout.js') }}"></script>
+    
     
 @endsection

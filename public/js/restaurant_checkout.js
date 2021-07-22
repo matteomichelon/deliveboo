@@ -2175,7 +2175,7 @@ var app = new Vue({
         restaurantId: this.restaurantId,
         formData: this.formData
       };
-      axios.post('/api/cart-checkout', data).then(function (response) {
+      axios.post('/api/cart-data', data).then(function (response) {
         {
           data: response.data;
         }
@@ -2186,10 +2186,13 @@ var app = new Vue({
     sendPayment: function sendPayment() {
       var data = {
         orderId: this.orderId,
-        nonce: document.getElementById('nonce').value
+        nonce: document.querySelector('#nonce').value
       };
-      axios.post('/api/cart-payment', data).then(function (response) {
-        console.log(response.data);
+      axios.post('/api/cart-checkout', data).then(function (response) {
+        {
+          data: response.data;
+        }
+        ;
       });
     }
   },

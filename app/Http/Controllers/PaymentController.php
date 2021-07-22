@@ -67,16 +67,21 @@ class PaymentController extends Controller
 
     public function payment(Request $request) {
 
-        $id = $request->all();
+        $gateway = new Gateway([
+            'environment' => config('services.braintree.environment'),
+            'merchantId' => config('services.braintree.merchantId'),
+            'publicKey' => config('services.braintree.publicKey'),
+            'privateKey' => config('services.braintree.privateKey')
+        ]);
 
-        $order = Order::findOrFail($id);
-
-        $order->nonce = $request->nonce;
+        $orderId= $request->input('orderId');
+        $orderNonce = $request->input('nonce');
+        $order = Order::findOrFail($orderId);
 
         /* Creating a Transaction */
         $result = $gateway->transaction()->sale([
-            'amount' => $order->price,
-            'paymentMethodNonce' => $order->nonce,
+            'amount' => "20",
+            'paymentMethodNonce' => $orderNonce,
             'options' => [                                
                 'submitForSettlement' => true
             ]
@@ -85,7 +90,10 @@ class PaymentController extends Controller
             /* Message Result */
             if ($result->success) {
             // Se va a buon fine, salviamo l'ordine con status true
+            
             $order->status = 1;
+
+            $order->update();
 
             // --------------------|
             // Send new admin Mail.|
@@ -95,18 +103,17 @@ class PaymentController extends Controller
             // --------------------|
             // Send new guest Mail.|
             // --------------------|
-            Mail::to($form_data['email'])->send(new NewOrderGuestNotification($order));
-
-            $order->update();
+            Mail::to($order->email)->send(new NewOrderGuestNotification($order));
+ 
 
             return view('guest.success');
+
             } else {
             // return redirect()->back()->with('message', 'Il pagamento non è andato a buon fine, per favore riprovare');
             //return $this->getProductsQuantities($request)->with('message', 'Il pagamento non è andato a buon fine, per favore riprovare');
-            dd('payment not processed');
+                dd('payment non successful');
             }
     }
-
 
     protected function calculatePrice($product_quantities)
     {

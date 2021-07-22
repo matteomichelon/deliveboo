@@ -45,9 +45,9 @@ Route::prefix('restaurants')
     }
 );
 
-Route::post('/cart-checkout', 'PaymentController@checkout')->name('api.cart.checkout');
+Route::post('/cart-data', 'PaymentController@checkout')->name('api.cart.checkout');
 
-Route::post('/cart-payment', 'PaymentController@payment')->name('api.cart.payment');
+Route::post('/cart-checkout', 'PaymentController@payment')->name('api.cart.payment');
 
 
 

@@ -61,7 +61,7 @@ var app = new Vue({
             };
             
             axios
-            .post('/api/cart-checkout', data)
+            .post('/api/cart-data', data)
             .then(response => {
                 { data : response.data };
                 this.orderId = response.data;
@@ -71,14 +71,14 @@ var app = new Vue({
 
             let data = {
                 orderId : this.orderId,
-                nonce : document.getElementById('nonce').value,
+                nonce : document.querySelector('#nonce').value,
             };
 
             axios
-                .post('/api/cart-payment', data)
-                .then(response => {
-                    console.log(response.data);
-                });
+            .post('/api/cart-checkout', data)
+            .then(response => {
+                { data : response.data };
+            });
         }
     },
     mounted() {
