@@ -2121,7 +2121,9 @@ var app = new Vue({
       payment_method_nonce: ''
     },
     restaurantId: localStorage.getItem('RestaurantPaymentId'),
-    orderId: ""
+    orderId: "",
+    paymentSuccess: false,
+    paymentFail: false
   },
   methods: {
     cartProductsDisplay: function cartProductsDisplay() {
@@ -2168,6 +2170,8 @@ var app = new Vue({
       return price.toFixed(2);
     },
     sendData: function sendData() {
+      var _this2 = this;
+
       // Form Data
       var data = {
         productIds: this.cartSend,
@@ -2180,37 +2184,73 @@ var app = new Vue({
           data: response.data;
         }
         ;
-        window.orderId = response.data;
+        _this2.orderId = response.data;
       }); // Form display classes
 
       var dataForm = document.getElementById("data-form");
       dataForm.classList.add("d-none");
       var paymentForm = document.getElementById('payment-form');
       paymentForm.classList.remove('d-none');
+      this.createBraintree();
     },
-    sendPayment: function sendPayment() {
-      var data = {
-        orderId: this.orderId,
-        nonce: document.querySelector('#nonce').value
-      };
-      alert('ciao');
-      axios.post('/api/cart-checkout', data).then(function (response) {
-        {
-          data: response.data;
-        }
-        ;
+    createBraintree: function createBraintree() {
+      var _this3 = this;
+
+      /* Braintree Create */
+      braintree.dropin.create({
+        authorization: clientToken,
+        container: '#dropin-container'
+      },
+      /* Add Event Listener */
+      function (error, dropinInstance) {
+        form.addEventListener('submit',
+        /* Request Payment Method */
+        function (event) {
+          event.preventDefault();
+          dropinInstance.requestPaymentMethod(
+          /* Find Error */
+          function (error, payload) {
+            console.log(payload);
+
+            if (error) {
+              console.log('Request Payment Method Error', error);
+              return;
+            }
+            /* Nonce query */
+
+
+            document.querySelector('#nonce').value = payload.nonce;
+            var data = {
+              orderId: _this3.orderId,
+              nonce: document.querySelector('#nonce').value
+            };
+            axios.post('/api/cart-checkout', data).then(function (response) {
+              {
+                data: response.data;
+              }
+              ;
+
+              if (response.data == true) {
+                _this3.paymentSuccess = true;
+                console.log(_this3.paymentSuccess);
+              } else {
+                _this3.paymentFail = true;
+              }
+            });
+          });
+        });
       });
     }
   },
   mounted: function mounted() {
-    var _this2 = this;
+    var _this4 = this;
 
     var RestaurantPaymentData = localStorage.getItem('RestaurantPaymentData');
     this.cart = JSON.parse(RestaurantPaymentData);
     this.cartProductsDisplay(); // 
 
     this.cart.forEach(function (element) {
-      _this2.cartSend[element.id] = _this2.countProduct(element.id);
+      _this4.cartSend[element.id] = _this4.countProduct(element.id);
     });
   }
 });

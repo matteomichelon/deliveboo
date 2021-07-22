@@ -79,7 +79,7 @@ class PaymentController extends Controller
 
         /* Creating a Transaction */
         $result = $gateway->transaction()->sale([
-            'amount' => "20",
+            'amount' => 2500,
             'paymentMethodNonce' => $orderNonce,
             'options' => [                                
                 'submitForSettlement' => true
@@ -97,20 +97,20 @@ class PaymentController extends Controller
             // --------------------|
             // Send new admin Mail.|
             // --------------------|
-            Mail::to('matteo@email.com')->send(new NewOrderAdminNotification($order));
+            // Mail::to('matteo@email.com')->send(new NewOrderAdminNotification($order));
 
-            // --------------------|
-            // Send new guest Mail.|
-            // --------------------|
-            Mail::to($order->email)->send(new NewOrderGuestNotification($order));
+            // // --------------------|
+            // // Send new guest Mail.|
+            // // --------------------|
+            // Mail::to($order->email)->send(new NewOrderGuestNotification($order));
  
 
-            return view('guest.success');
+            return true;
 
             } else {
             // return redirect()->back()->with('message', 'Il pagamento non è andato a buon fine, per favore riprovare');
             //return $this->getProductsQuantities($request)->with('message', 'Il pagamento non è andato a buon fine, per favore riprovare');
-                dd('payment non successful');
+               return false;
             }
     }
 

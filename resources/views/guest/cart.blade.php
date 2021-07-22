@@ -13,8 +13,11 @@
     <div id="root">
         <div class="container">
 
-            <div class="row mt-5 py-5 align-items-stretch">
+            <div class="row mt-5 py-5 align-items-stretch" v-if="!paymentSuccess">
                 <div class="col-8 d-flex flex-wrap">
+
+                    <h2 v-if="paymentFail">Il pagamento non è andato a buon fine, riprova</h2>
+
                     <form id="data-form" v-on:submit.prevent="sendData()">                             
                         @csrf
                         <!-- 2 column grid layout with text inputs for the first and last names -->
@@ -92,6 +95,10 @@
                     </div>                       
                 </div>
             </div>
+
+            <div class="row mt-5 py-5 align-items-stretch" v-else>
+                <h2>DAJEEEEEEE</h2>
+            </div>
         </div>
     </div>
 
@@ -109,49 +116,7 @@
         const form = document.querySelector('#payment-form');
         const clientToken = "{{ $token }}";
 
-        /* Braintree Create */
-        braintree.dropin.create({
-                authorization: clientToken,
-                container: '#dropin-container'
-            },
-            
-            /* Add Event Listener */
-            function(error, dropinInstance) {
-                form.addEventListener('submit',
-
-                    /* Request Payment Method */
-                    function(event) {
-                        event.preventDefault();
-                        dropinInstance.requestPaymentMethod(
-                            
-                            /* Find Error */
-                            function(error, payload) {
-                                console.log(payload);
-                                if (error) {
-                                    console.log('Request Payment Method Error', error);
-                                    return;
-                                }
-
-                                /* Nonce query */
-                                document.querySelector('#nonce').value = payload.nonce;
-
-                                let data = {
-                                    orderId : window.orderId,
-                                    nonce : document.querySelector('#nonce').value
-                                };
-
-                                console.log(data);
-
-                                axios
-                                .post('/api/cart-checkout', data)
-                                .then(response => {
-                                    { data : response.data };
-                                    
-                                });
-                            });
-                    });
-            });
-    // </script>
+    </script>
     <!-- Script Stop -->
 
     
