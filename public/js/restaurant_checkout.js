@@ -2168,26 +2168,32 @@ var app = new Vue({
       return price.toFixed(2);
     },
     sendData: function sendData() {
-      var _this2 = this;
-
+      // Form Data
       var data = {
         productIds: this.cartSend,
         restaurantId: this.restaurantId,
         formData: this.formData
-      };
+      }; // Axios Request
+
       axios.post('/api/cart-data', data).then(function (response) {
         {
           data: response.data;
         }
         ;
-        _this2.orderId = response.data;
-      });
+        window.orderId = response.data;
+      }); // Form display classes
+
+      var dataForm = document.getElementById("data-form");
+      dataForm.classList.add("d-none");
+      var paymentForm = document.getElementById('payment-form');
+      paymentForm.classList.remove('d-none');
     },
     sendPayment: function sendPayment() {
       var data = {
         orderId: this.orderId,
         nonce: document.querySelector('#nonce').value
       };
+      alert('ciao');
       axios.post('/api/cart-checkout', data).then(function (response) {
         {
           data: response.data;
@@ -2197,14 +2203,14 @@ var app = new Vue({
     }
   },
   mounted: function mounted() {
-    var _this3 = this;
+    var _this2 = this;
 
     var RestaurantPaymentData = localStorage.getItem('RestaurantPaymentData');
     this.cart = JSON.parse(RestaurantPaymentData);
     this.cartProductsDisplay(); // 
 
     this.cart.forEach(function (element) {
-      _this3.cartSend[element.id] = _this3.countProduct(element.id);
+      _this2.cartSend[element.id] = _this2.countProduct(element.id);
     });
   }
 });

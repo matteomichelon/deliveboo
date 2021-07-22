@@ -25,7 +25,7 @@ class PaymentController extends Controller
           $token = $gateway->clientToken()->generate();
           
           return view('guest.cart', compact('token'));          
-      }
+    }
 
     /* Function Checkout */
     public function checkout(Request $request)
@@ -62,7 +62,6 @@ class PaymentController extends Controller
         $order->products()->sync($products_array);
 
         return $order->id;
- 
     }
 
     public function payment(Request $request) {
@@ -74,7 +73,7 @@ class PaymentController extends Controller
             'privateKey' => config('services.braintree.privateKey')
         ]);
 
-        $orderId= $request->input('orderId');
+        $orderId = $request->input('orderId');
         $orderNonce = $request->input('nonce');
         $order = Order::findOrFail($orderId);
 

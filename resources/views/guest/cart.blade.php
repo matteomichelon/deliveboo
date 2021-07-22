@@ -15,10 +15,8 @@
 
             <div class="row mt-5 py-5 align-items-stretch">
                 <div class="col-8 d-flex flex-wrap">
-                    <form method="" v-on:submit="sendData()">      
-                        
+                    <form id="data-form" v-on:submit.prevent="sendData()">                             
                         @csrf
-
                         <!-- 2 column grid layout with text inputs for the first and last names -->
                         <div class="row mb-4">
                             <div class="col">
@@ -61,11 +59,10 @@
                         
                         <div class="form-outline mb-4">
                             <input type="submit" value="Invia dati" class="btn btn-primary" />
-                        </div>
-                        
+                        </div>                        
                     </form>
 
-                    <form id="payment-form">
+                    <form id="payment-form" class="d-none">
                         <div class="form-outline mb-4">
                             <div id="dropin-container"></div>
                             <input id="nonce" name="payment_method_nonce" type="hidden" />
@@ -100,9 +97,11 @@
 
 @endsection
 
-@section('footer_scripts')    
+@section('footer_scripts')
 
+    <!-- Custom Script Start -->
     <script src="{{ asset('js/restaurant_checkout.js') }}"></script>
+    <!-- Custom Script End -->
 
     <!-- Script Start -->
     <script>
@@ -137,16 +136,17 @@
                                 document.querySelector('#nonce').value = payload.nonce;
 
                                 let data = {
-                                    orderId : this.orderId,
-                                    nonce : payload.nonce
+                                    orderId : window.orderId,
+                                    nonce : document.querySelector('#nonce').value
                                 };
 
                                 console.log(data);
 
                                 axios
-                                    .post('/api/cart-checkout', data)
-                                    .then(response => {
-                                        { data : response.data };
+                                .post('/api/cart-checkout', data)
+                                .then(response => {
+                                    { data : response.data };
+                                    
                                 });
                             });
                     });

@@ -54,30 +54,42 @@ var app = new Vue({
         },
         sendData() {
 
+            // Form Data
             let data = {
                 productIds : this.cartSend,
                 restaurantId : this.restaurantId,
                 formData : this.formData
             };
             
+            // Axios Request
             axios
             .post('/api/cart-data', data)
             .then(response => {
                 { data : response.data };
-                this.orderId = response.data;
-            });           
+                window.orderId = response.data;
+            });
+            
+            // Form display classes
+            let dataForm = document.getElementById("data-form");
+            dataForm.classList.add("d-none");
+
+            let paymentForm = document.getElementById('payment-form');
+            paymentForm.classList.remove('d-none');
         },
         sendPayment() {
 
             let data = {
                 orderId : this.orderId,
-                nonce : document.querySelector('#nonce').value,
+                nonce : document.querySelector('#nonce').value
             };
+
+            alert('ciao');
 
             axios
             .post('/api/cart-checkout', data)
             .then(response => {
                 { data : response.data };
+                
             });
         }
     },
