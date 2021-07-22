@@ -27,7 +27,6 @@
 
     {{-- Start Script --}}
     <script>
-        window.restaurant_id = {{ $id }}
 
         var app = new Vue({
 

@@ -2179,7 +2179,7 @@ var app = new Vue({
         formData: this.formData
       }; // Axios Request
 
-      axios.post('/api/cart-data', data).then(function (response) {
+      axios.post('./api/cart-data', data).then(function (response) {
         {
           data: response.data;
         }

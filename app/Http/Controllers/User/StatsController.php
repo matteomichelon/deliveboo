@@ -12,7 +12,7 @@ use App\User;
 class StatsController extends Controller
 {
 
-    public function index()
+    public function index($id)
     {   
         $user = User::findOrFail($id);
 

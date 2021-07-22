@@ -64,18 +64,6 @@ Route::namespace('Api')
 );
 
 
-Route::namespace('Api')
-    ->name('api.')
-    ->group(function () {
-        Route::get('/stats/{id}', 'StatsController@index')->name('stats');
-    }
-);
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 4c3d1eaa8bec7b4545776d7b9127f0894011446b
 
 
 
