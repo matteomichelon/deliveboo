@@ -18,6 +18,11 @@
 
                     <h2 v-if="paymentFail">Il pagamento non è andato a buon fine, riprova</h2>
 
+                    <div class="alert alert-danger" role="alert" v-if="errorArrayValidation.length > 0">
+                        <ul>
+                            <li v-for="error in errorArrayValidation">@{{error}}</li>
+                        </ul>
+                    </div>
                     <form id="data-form" v-on:submit.prevent="sendData()">                             
                         @csrf
                         <!-- 2 column grid layout with text inputs for the first and last names -->
