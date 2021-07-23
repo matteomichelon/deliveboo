@@ -1,6 +1,5 @@
 .restaurant-show {
 
-   
     &-jumbo {
         background-image: -webkit-linear-gradient(-80deg, $primary_color 0%, $primary_color 60%, $primary_accent 60%, $primary_accent 100%);
         height: 25em;
@@ -18,113 +17,140 @@
         font-size: 1em;
     }
 
-    .row.row-direction{
-        @media sceen and (max-width: 576px){
-            flex-direction: column !important;
+ }
+
+.cart-product-wrapper{
+
+    display: flex;
+    align-items: stretch;
+    padding: 30px 0;
+
+    .restaurant-show-products{
+
+        width: 67%;
+        padding: 0 10px;
+
+        .product-card {  
+            width: 25em;
+            padding: 1em;
+        
+            img {
+                height: 10em;
+                object-fit: cover;
+                border-radius: 0.2em;
+            }
+        
+            &-title {
+                font-size: 1em;
+                font-weight: 700;
+                color: $black;
+            }
+        
+            &-price {
+                text-align: right;
+                font-size: 1.8em;
+                font-weight: 700;
+                color: $primary_color;
+            }
+        
+            &-body {
+                font-size: 0.9em;
+                font-weight: 300;
+                color: $black;
+            }
+
+            .product-control {
+                color: $primary_color;
+                width: 30%;
+                margin: auto;
+            
+                i {
+                    font-size: 1em;
+                    transition: all 0.2s;
+            
+                    &:hover {
+                        cursor: pointer;
+                    }
+            
+                    &:active {
+                        transform: scale(0.9);
+                    }
+                }
+            
+                span {
+                    font-size: 2em;
+                }
+            }
+            
         }
     }
 
-}
+    .restaurant-show-cart {
 
-.product-card {  
-    width: 25em;
-    padding: 1em;
-
-    img {
-        height: 10em;
-        object-fit: cover;
-        border-radius: 0.2em;
-    }
-
-    &-title {
-        font-size: 1em;
-        font-weight: 700;
-        color: $black;
-    }
-
-    &-price {
-        text-align: right;
-        font-size: 1.8em;
-        font-weight: 700;
-        color: $primary_color;
-    }
-
-    &-body {
-        font-size: 0.9em;
-        font-weight: 300;
-        color: $black;
-    }
-}
-
-.product-control {
-    color: $primary_color;
-    width: 30%;
-    margin: auto;
-
-    i {
-        font-size: 1em;
-        transition: all 0.2s;
-
-        &:hover {
-            cursor: pointer;
+        width: 33%;
+        box-shadow: 0px 0px 10px 1px rgba($color: #000000, $alpha: 0.1);
+        overflow: auto;
+        padding: 3em;
+        border-radius: 0.5em;
+        margin: 0 10px;
+    
+        .cart-item {
+            border-bottom: 1px solid $primary_color;
+            background-color: $white;
+            padding: 0.7em;
+            margin-bottom: 1em;
         }
-
-        &:active {
-            transform: scale(0.9);
+    
+        &-title {
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: 700;
+            color: $primary-color;
         }
-    }
-
-    span {
-        font-size: 2em;
-    }
-}
-
-.restaurant-show-cart {
-
-    box-shadow: 0px 0px 10px 1px rgba($color: #000000, $alpha: 0.1);
-    overflow: auto;
-    padding: 3em;
-    border-radius: 0.5em;
-
-    .cart-item {
-        border-bottom: 1px solid $primary_color;
-        background-color: $white;
-        padding: 0.7em;
-        margin-bottom: 1em;
-    }
-
-    &-title {
-        text-align: center;
-        font-size: 1.5em;
-        font-weight: 700;
-        color: $primary-color;
-    }
-
-    &-product-name {
-        font-size: 1em;
-        font-weight: 500;
-        color: $black;
-    }
-
-    &-product-price {
-        font-size: 0.9em;
-        font-weight: 500;
-        color: $primary_color;
-
-        span {
-            font-size: 1.2em;
+    
+        &-product-name {
+            font-size: 1em;
+            font-weight: 500;
+            color: $black;
+        }
+    
+        &-product-price {
+            font-size: 0.9em;
+            font-weight: 500;
+            color: $primary_color;
+    
+            span {
+                font-size: 1.2em;
+            }
+        }
+    
+        .cart-total-price {
+            font-size: 1em;
+            font-weight: 500;
+            color: $black;
+            padding-bottom: 1em;
+    
+            span {
+                font-size: 1.2em;
+            }
         }
     }
 
-    .cart-total-price {
-        font-size: 1em;
-        font-weight: 500;
-        color: $black;
-        padding-bottom: 1em;
+    @media screen and (max-width: 991px) {
+        flex-direction: column;
 
-        span {
-            font-size: 1.2em;
+        .restaurant-show-products{
+            width: 100%;
         }
-    }
-}
+
+        .restaurant-show-cart{
+            width: 100%;
+        }
+
+    }    
+    
+} 
+
+
+
 

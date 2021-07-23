@@ -33,12 +33,12 @@
             </div>
     
             <div class="container_large">
-                <div class="row row-direction mt-5 py-5 align-items-stretch">
+                <div class="cart-product-wrapper">
                     
                     {{-- PRODUCTS LIST DISPLAY --}}
-                    <div class="col-8 restaurant-show-products d-flex flex-wrap">
+                    <div class="restaurant-show-products d-flex flex-wrap">
                         <div
-                        class="product-card col-sm-12 col-md-6"
+                        class="product-card col-sm-6 col-md-6 col-lg-6 "
                         v-for="(product, index) in products"
                         :key="product.id"  
                         >
@@ -71,7 +71,7 @@
                     {{-- END PRODUCTS LIST DISPLAY --}}
 
                     {{-- CART DISPLAY --}}
-                    <div class="col-4 restaurant-show-cart" v-if="cartDisplay.length > 0">
+                    <div class="restaurant-show-cart" v-if="cartDisplay.length > 0">
                         <div class="restaurant-show-cart-title">
                             Il tuo carrello:
                         </div>
@@ -95,7 +95,7 @@
                         </div>                       
                     </div>
 
-                    <div class="col-4 restaurant-show-cart" v-if="cartDisplay.length == 0">
+                    <div class="restaurant-show-cart" v-if="cartDisplay.length == 0">
                         <div class="restaurant-show-cart-title">
                             Il tuo carrello è vuoto
                         </div>

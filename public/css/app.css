@@ -10325,97 +10325,112 @@ section.research .research-details-address {
   font-weight: 300;
   font-size: 1em;
 }
-@media sceen and (max-width: 576px) {
-  .restaurant-show .row.row-direction {
-    flex-direction: column !important;
-  }
-}
 
-.product-card {
+.cart-product-wrapper {
+  display: flex;
+  align-items: stretch;
+  padding: 30px 0;
+}
+.cart-product-wrapper .restaurant-show-products {
+  width: 67%;
+  padding: 0 10px;
+}
+.cart-product-wrapper .restaurant-show-products .product-card {
   width: 25em;
   padding: 1em;
 }
-.product-card img {
+.cart-product-wrapper .restaurant-show-products .product-card img {
   height: 10em;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 0.2em;
 }
-.product-card-title {
+.cart-product-wrapper .restaurant-show-products .product-card-title {
   font-size: 1em;
   font-weight: 700;
   color: #000;
 }
-.product-card-price {
+.cart-product-wrapper .restaurant-show-products .product-card-price {
   text-align: right;
   font-size: 1.8em;
   font-weight: 700;
   color: #2EC4B6;
 }
-.product-card-body {
+.cart-product-wrapper .restaurant-show-products .product-card-body {
   font-size: 0.9em;
   font-weight: 300;
   color: #000;
 }
-
-.product-control {
+.cart-product-wrapper .restaurant-show-products .product-card .product-control {
   color: #2EC4B6;
   width: 30%;
   margin: auto;
 }
-.product-control i {
+.cart-product-wrapper .restaurant-show-products .product-card .product-control i {
   font-size: 1em;
   transition: all 0.2s;
 }
-.product-control i:hover {
+.cart-product-wrapper .restaurant-show-products .product-card .product-control i:hover {
   cursor: pointer;
 }
-.product-control i:active {
+.cart-product-wrapper .restaurant-show-products .product-card .product-control i:active {
   transform: scale(0.9);
 }
-.product-control span {
+.cart-product-wrapper .restaurant-show-products .product-card .product-control span {
   font-size: 2em;
 }
-
-.restaurant-show-cart {
+.cart-product-wrapper .restaurant-show-cart {
+  width: 33%;
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
   overflow: auto;
   padding: 3em;
   border-radius: 0.5em;
+  margin: 0 10px;
 }
-.restaurant-show-cart .cart-item {
+.cart-product-wrapper .restaurant-show-cart .cart-item {
   border-bottom: 1px solid #2EC4B6;
   background-color: #fff;
   padding: 0.7em;
   margin-bottom: 1em;
 }
-.restaurant-show-cart-title {
+.cart-product-wrapper .restaurant-show-cart-title {
   text-align: center;
   font-size: 1.5em;
   font-weight: 700;
   color: #2EC4B6;
 }
-.restaurant-show-cart-product-name {
+.cart-product-wrapper .restaurant-show-cart-product-name {
   font-size: 1em;
   font-weight: 500;
   color: #000;
 }
-.restaurant-show-cart-product-price {
+.cart-product-wrapper .restaurant-show-cart-product-price {
   font-size: 0.9em;
   font-weight: 500;
   color: #2EC4B6;
 }
-.restaurant-show-cart-product-price span {
+.cart-product-wrapper .restaurant-show-cart-product-price span {
   font-size: 1.2em;
 }
-.restaurant-show-cart .cart-total-price {
+.cart-product-wrapper .restaurant-show-cart .cart-total-price {
   font-size: 1em;
   font-weight: 500;
   color: #000;
   padding-bottom: 1em;
 }
-.restaurant-show-cart .cart-total-price span {
+.cart-product-wrapper .restaurant-show-cart .cart-total-price span {
   font-size: 1.2em;
+}
+@media screen and (max-width: 991px) {
+  .cart-product-wrapper {
+    flex-direction: column;
+  }
+  .cart-product-wrapper .restaurant-show-products {
+    width: 100%;
+  }
+  .cart-product-wrapper .restaurant-show-cart {
+    width: 100%;
+  }
 }
 
 .app {
