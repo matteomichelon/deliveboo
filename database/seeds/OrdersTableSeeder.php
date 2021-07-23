@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Order;
+use App\Product;
 use Faker\Generator as Faker;
 
 class OrdersTableSeeder extends Seeder
@@ -15,6 +16,9 @@ class OrdersTableSeeder extends Seeder
     public function run(Faker $faker)
     {
         for ($i = 0; $i < 200; $i++) {
+            $order_rand = rand(0, 15);
+            $product=Product::all();
+
             $new_order = new Order;
             $new_order->code = $faker->regexify('[A-Z]{5}[0-4]{5}');
             $new_order->price = $faker->randomFloat(2, 3, 100);
@@ -27,6 +31,12 @@ class OrdersTableSeeder extends Seeder
             $new_order->notes = $faker->text(50);
             $new_order->telephone_number = $faker->phoneNumber();
             $new_order->save();
+
+            for ($j = 0; $j < $order_rand; $j++) {
+                $new_order->products()->attach($product[rand(0, 199)]);
+            }
+
+            
         }
     }
 }
