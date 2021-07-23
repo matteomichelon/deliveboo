@@ -13,6 +13,7 @@ class StatsController extends Controller
 {
     public function index()
     {
+        date_default_timezone_set('UTC');
         $id = Auth::user()->id;
 
         /* Join Sql per gli ricavare Utenti/Ordini */
@@ -23,35 +24,36 @@ class StatsController extends Controller
                     ->get();
 
 
-        $array = collect($order_schema)->where('id', $id)->all();  
-        
+        $array = collect($order_schema)->where('id', $id)->all();
+
+        /* foreach ($array as $value) {
+            dump($value->date);
+        } */
+                
         /* Array suddiviso per anni e mesi */
         $data_array = [];
 
         foreach ($array as $value) {
-
             $date = $value->date;
             $year_date = '';
-            $month_date = ''; 
-            $id_order =  $value->order_id;      
+            $month_date = '';
+            $id_order =  $value->order_id;
             
             
-            if ($date) {                
-                
-                $year_date = date('Y',strtotime($date));
-                $month_date = date('F',strtotime($date));
+            if ($date) {
+                $year_date = date('Y', strtotime($date));
+                $month_date = date('F', strtotime($date));
 
-                $data_array[] = [
-                    $year_date,
-                    $month_date
-                ];
-
-            } 
+                array_push($data_array,$year_date,$month_date);
+            }
         }
 
+        $order_array = array_count_values($data_array);
+       /*  dd($order_array);*/
+       
         /* Data */
         $data = [
-            'orders' => $array,
+            'orders' => $order_array,
         ];
 
         return view('admin.stats', compact('data'));

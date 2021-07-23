@@ -23,7 +23,7 @@ class OrdersTableSeeder extends Seeder
             $new_order->code = $faker->regexify('[A-Z]{5}[0-4]{5}');
             $new_order->price = $faker->randomFloat(2, 3, 100);
             $new_order->status = '1';
-            $new_order->date = $faker->dateTimeBetween($startDate = '-6 years', $endDate = 'now', $timezome = 'Europe/Rome');
+            $new_order->date = $faker->dateTimeBetween($startDate = '2021-01-01', $endDate = 'now', $timezome = 'Europe/Rome');
             $new_order->address = $faker->address();
             $new_order->name = $faker->firstName();
             $new_order->surname = $faker->lastName();
