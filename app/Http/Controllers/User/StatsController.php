@@ -13,7 +13,6 @@ class StatsController extends Controller
 {
     public function index()
     {
-        date_default_timezone_set('UTC');
         $id = Auth::user()->id;
 
         /* Join Sql per gli ricavare Utenti/Ordini */
@@ -34,6 +33,7 @@ class StatsController extends Controller
 
         $month_order_array = [];
 
+        /* Array Mesi */
         foreach ($array as $value) {
             $date = $value->date;
             $year_date = '';
@@ -45,7 +45,7 @@ class StatsController extends Controller
             }
         }
                 
-        /* Array suddiviso per anni */
+        /* Array Anni */
         foreach ($array as $value) {
             $date = $value->date;
             $year_date = '';
@@ -56,7 +56,10 @@ class StatsController extends Controller
             }
         }
 
+        /* Funzione per ordinare in ordine crescente anni e mesi */
         usort($year_array, fn ($a, $b) => strtotime($a) - strtotime($b));
+
+        usort($month_array, fn ($a, $b) => strtotime($a) - strtotime($b));
 
         /* Funzioni riferite ad anno */
         $year_unique = array_count_values($year_array);
