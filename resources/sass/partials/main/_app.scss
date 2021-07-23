@@ -1,4 +1,4 @@
-section.app {
+.app {
 
     background-color: $primary_accent;
 
@@ -16,8 +16,12 @@ section.app {
         img {
             width: 10em;
             height: auto;
-            padding-right: 20px;
+           padding: 5px 10px;
             cursor: pointer;
-        }       
+        }   
+        
     }
+
+   
+
 }

@@ -256,7 +256,7 @@ section.research .research-text-back, section.research .research-text-more {
   margin: auto;
   padding: 0.5em 1em;
   border: 1px solid #2EC4B6;
-  border-radius: 1em;
+  border-radius: 0.5em;
   background-color: #fff;
 }
 section.research .research-text-back:hover, section.research .research-text-more:hover {
@@ -408,21 +408,21 @@ section.research .research-details-address {
   font-size: 1.2em;
 }
 
-section.app {
+.app {
   background-color: #CBF3F0;
 }
-section.app h2 {
+.app h2 {
   text-align: left;
 }
-section.app .container_small {
+.app .container_small {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-section.app .container_small img {
+.app .container_small img {
   width: 10em;
   height: auto;
-  padding-right: 20px;
+  padding: 5px 10px;
   cursor: pointer;
 }
 
@@ -432,7 +432,12 @@ footer {
 }
 footer .container-box {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+}
+footer .container-box .footer-menu {
+  width: 25%;
+  display: flex;
+  justify-content: center;
 }
 footer .container-box .footer-menu .footer-title {
   font-weight: 700;
@@ -446,6 +451,13 @@ footer .container-box .footer-menu a {
 }
 footer .container-box .footer-menu a:hover {
   color: #CBF3F0;
+}
+@media screen and (max-width: 768px) {
+  footer .container-box .footer-menu {
+    width: 50%;
+    justify-content: flex-start;
+    padding-left: 60px;
+  }
 }
 footer .copyright {
   text-align: center;

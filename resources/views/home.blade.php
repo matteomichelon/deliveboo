@@ -73,7 +73,7 @@
         <!-- Research section -->
         <section class="research">
 
-            <div class="container_large">
+            <div class="container_large container">
 
                 <div class="research-text" v-if="activeCategory">
                     <h2>Risultati della tua ricerca per: @{{ activeCategory }} </h2>
@@ -82,11 +82,11 @@
                 </div>
 
                 <!-- Container box -->
-                <div class="container-box d-flex justify-content-between flex-wrap">
+                <div class="container-box row d-flex justify-content-around flex-wrap">
 
                     <!-- Single card Restaurant -->
 
-                    <div class="card-restaurant" v-for="restaurant in restaurantsComputed">
+                    <div class="card-restaurant col-md-4 col-sm-12" v-for="restaurant in restaurantsComputed">
 
                         <a :href="`restaurant/${restaurant.slug}`">
 
