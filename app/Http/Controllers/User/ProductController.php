@@ -23,7 +23,10 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
+
+        $user = Auth::user();
+        
+        $products = $user->products;
 
         $data = [
             'products' => $products
@@ -104,7 +107,11 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        $product = Product::findOrFail($id);
+        $product = Auth::user()->products->firstWhere('id', $id);
+
+        if(!$product) {
+            abort('404');
+        }
 
         $data = [
             'product' => $product
@@ -121,7 +128,11 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        $product = Product::findOrFail($id);
+        $product = Auth::user()->products->firstWhere('id', $id);
+
+        if(!$product) {
+            abort('404');
+        }
 
         $data = [
             'product' => $product
@@ -142,7 +153,12 @@ class ProductController extends Controller
         // ----------------------------------|
         // Getting desired product to update.|
         // ----------------------------------|
-        $updated_product = Product::findOrFail($id);
+
+        $updated_product = Auth::user()->products->firstWhere('id', $id);
+
+        if(!$updated_product) {
+            abort('404');
+        }
 
         // ------------------------------------------------------|
         // Validating form data with private validation function.|
@@ -190,8 +206,14 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {
-        $product = Product::findOrFail($id);
+    {      
+        
+        $product = Auth::user()->products->firstWhere('id', $id);
+
+        if(!$product) {
+            abort('404');
+        }
+
         $product->delete();
 
         return redirect()->route('admin.products.index');
