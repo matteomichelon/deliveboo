@@ -44,7 +44,6 @@
 
     {{-- START Script --}}
     <script>
-
         var year = @php echo $year; @endphp;
         var year_order = @php echo $year_order; @endphp;
         var month = @php echo $month @endphp;
@@ -74,7 +73,6 @@
             }]
         };
 
-        
         window.onload = function() {
             /* Onload Year */
             let ctx_year = document.getElementById("canvas").getContext("2d");
@@ -82,31 +80,40 @@
                 type: 'bar',
                 data: barChartData,
                 options: {
+                    responsive: true,
                     scales: {
-                        y: {
-                            beginAtZero: true
-                        }
+                        yAxes: [{
+                            display: true,
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
                     },
-                    responsive: true
+
                 }
             });
 
             /* Onload Month */
             let ctx_month = document.getElementById("month").getContext("2d");
             let monthChart = new Chart(ctx_month, {
+                // Type sta per il tipo di visualizzazione del grafico. Può essere 'bar' per dei rettangoli, 'line' per una linea ecc.
                 type: 'bar',
+                // data conterrà le statistiche da rappresentare nel grafico
                 data: barChartMonth,
                 options: {
+                    responsive: true,
                     scales: {
-                        y: {
-                            beginAtZero: true
-                        }
+                        yAxes: [{
+                            display: true,
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
                     },
-                    responsive: true
+
                 }
             });
         };
-
     </script>
     {{-- END Script --}}
 

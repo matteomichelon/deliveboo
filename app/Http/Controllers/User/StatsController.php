@@ -30,21 +30,6 @@ class StatsController extends Controller
 
         $year_order_array = [];
 
-        /* $month_array = [
-            'gennaio',
-            'febbraio',
-            'marzo',
-            'aprile',
-            'maggio',
-            'giugno',
-            'luglio',
-            'agosto',
-            'settembre',
-            'ottobre',
-            'novembre',
-            'dicembre'
-        ]; */
-
         $month_array = [];
 
         $month_order_array = [];
