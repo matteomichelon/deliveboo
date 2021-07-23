@@ -32,13 +32,13 @@
     
             </div>
     
-            <div class="container_small">
-                <div class="row mt-5 py-5 align-items-stretch">
+            <div class="container_large">
+                <div class="row row-direction mt-5 py-5 align-items-stretch">
                     
                     {{-- PRODUCTS LIST DISPLAY --}}
                     <div class="col-8 restaurant-show-products d-flex flex-wrap">
                         <div
-                        class="product-card"
+                        class="product-card col-sm-12 col-md-6"
                         v-for="(product, index) in products"
                         :key="product.id"  
                         >
@@ -85,11 +85,11 @@
                             <div class="restaurant-show-cart-product-name">Quantità: @{{countProduct(product.id)}}</div>
                             <div class="restaurant-show-cart-product-price">Prezzo: <span>€@{{calculateProduct(product.id, product.price)}}</span></div>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center">
                             <div class="cart-total-price">
                                 Totale da pagare: <span>€@{{calculateCart()}}</span>
                             </div>
-                            <div class="cart-checkout text-right p-3">
+                            <div class="cart-checkout">
                                 <a class="btn-deliveboo-primary" v-on:click="getRestaurantPaymentData()" href="{{ route('cart') }}">Vai al pagamento</a>
                             </div>
                         </div>                       
