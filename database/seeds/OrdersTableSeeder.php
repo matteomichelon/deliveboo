@@ -16,7 +16,7 @@ class OrdersTableSeeder extends Seeder
     public function run(Faker $faker)
     {
         for ($i = 0; $i < 200; $i++) {
-            $order_rand = rand(0, 15);
+            $order_rand = rand(10, 30);
             $product=Product::all();
 
             $new_order = new Order;
