@@ -8,6 +8,7 @@
                 <div class="card-header">{{ __('Dashboard') }}</div>
                 <a href="{{route('admin.products.index')}}">Lista prodotti</a>
                 <a href="{{route('admin.products.create')}}">Crea nuovo prodotto</a>
+                <a href="{{route('admin.stats')}}">Statistiche</a>
             </div>
         </div>
     </div>

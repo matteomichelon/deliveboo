@@ -12,9 +12,9 @@ use App\User;
 class StatsController extends Controller
 {
 
-    public function index($id)
+    public function index()
     {   
-        $user = User::findOrFail($id);
+        $id = Auth::user()->id;
 
         /* Join Sql per gli ricavare Utenti/Ordini */
         $order_schema = DB::table('order_product')
@@ -27,8 +27,7 @@ class StatsController extends Controller
         $array = collect($order_schema)->where('id', $id)->all();
 
         $data = [
-        'user' => $user,
-        'orders' => $array
+            'orders' => $array,
         ];
 
        return view('admin.stats', compact('data'));
