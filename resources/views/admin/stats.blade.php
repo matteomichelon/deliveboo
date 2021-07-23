@@ -6,32 +6,33 @@
 @endsection
 
 @section('content')
-    <div class="container">
+
+    <section class="container padding-section">
         <div class="row">
             <div class="col-md-10 offset-md-1">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3>Totale ordini per Anno</h3>
+                        <h2 class="mt-5 mb-1">Totale ordini per Anno</h2>
                     </div>
                     <div class="panel-body">
 
-                        {{-- Canvas Node --}}
-                        <canvas id="canvas" height="280" width="600"></canvas>
+                        {{-- Year Node --}}
+                        <canvas id="year" height="280" width="600"></canvas>
 
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="container">
+    <section class="container padding-section">
         <div class="row">
             <div class="col-md-10 offset-md-1">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3>Totale ordini per mese anno: 2021</h3>
+                        <h2 class="mt-5 mb-1">Totale ordini per Mese Anno corrente</h2>
                     </div>
-                    <div class="panel-body">
+                    <div class="panel-body mb-5">
 
                         {{-- Month Node --}}
                         <canvas id="month" height="280" width="600"></canvas>
@@ -40,7 +41,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+
 
     {{-- START Script --}}
     <script>
@@ -54,28 +57,30 @@
             labels: year,
             datasets: [{
                 label: 'Numero Ordini',
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgba(255, 99, 132, 1)',
-                borderWidth: 1,
+                backgroundColor: 'rgba(255, 159, 28, 0.2)',
+                borderColor: 'rgba(46, 196, 182, 0.4)',
+                borderWidth: 2,
                 data: year_order
             }]
         };
 
         /* Month */
         var barChartMonth = {
-            labels: month,
+            labels: ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre',
+                'Ottobre', 'Novembre', 'Dicembre'
+            ],
             datasets: [{
                 label: 'Numero Ordini',
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgba(255, 99, 132, 1)',
-                borderWidth: 1,
+                backgroundColor: 'rgba(255, 159, 28, 0.2)',
+                borderColor: 'rgba(46, 196, 182, 0.4)',
+                borderWidth: 2,
                 data: month_order
             }]
         };
 
         window.onload = function() {
             /* Onload Year */
-            let ctx_year = document.getElementById("canvas").getContext("2d");
+            let ctx_year = document.getElementById("year").getContext("2d");
             let yearChart = new Chart(ctx_year, {
                 type: 'bar',
                 data: barChartData,
