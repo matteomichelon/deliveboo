@@ -13,8 +13,8 @@
     <div id="root">
         <div class="container">
 
-            <div class="row mt-5 py-5 align-items-stretch" v-if="!paymentSuccess">
-                <div class="col-8 d-flex flex-wrap">
+            <div class="cart-product-wrapper" v-if="!paymentSuccess">
+                <div class="restaurant-show-products d-flex flex-wrap justify-content-center">
 
                     <h2 v-if="paymentFail">Il pagamento non è andato a buon fine, riprova</h2>
 
@@ -61,7 +61,7 @@
                         </div>
                         
                         <div class="form-outline mb-4">
-                            <input type="submit" value="Invia dati" class="btn btn-primary" />
+                            <input type="submit" value="Invia dati per la consegna" class="btn btn-primary" />
                         </div>                        
                     </form>
 
@@ -74,7 +74,7 @@
                     </form>
                 </div>
     
-                <div class="col-4 restaurant-show-cart">
+                <div class="restaurant-show-cart">
                     <div class="restaurant-show-cart-title">
                         Il tuo carrello:
                     </div>
@@ -96,8 +96,8 @@
                 </div>
             </div>
 
-            <div class="row mt-5 py-5 align-items-stretch" v-else>
-                <h2>DAJEEEEEEE</h2>
+            <div class="restaurant-show-product" v-else>
+                <h2 class="message-payment-success">Il pagamento è andato a buon fine. Grazie per aver ordinato da noi!</h2>
             </div>
         </div>
     </div>
