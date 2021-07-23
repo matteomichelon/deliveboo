@@ -77,7 +77,7 @@
 
                             var a = new Object();
                             a.x = key;
-                            a.y = this.totalEarnings;
+                            a.y = myCount;
                             
                             this.ordersToPrint.push(a);
                             }
@@ -100,17 +100,18 @@
                 var data = {!!json_encode($data['orders'])!!};
                 var dataArray = [];
                 Object.keys(data).forEach(function (key){
-                    dataArray.push(data[key]);
+                    dataArray.push(data[key]);                    
                 });
+                
                 dataArray.forEach(element => {
-
-                    this.totalEarnings += element['price'];
 
                     let month = new Date(element['date']);
                     month.getMonth();
+                    
                     let options = { month: 'long'};
+                    
                     this.ordersByMonth.push(new Intl.DateTimeFormat('it-IT', options).format(month));
-
+                    /* console.log(this.ordersByMonth); */
                     let year = (new Date(element['date']));
                     year = year.getFullYear();
                     this.ordersByYear.push(year);
@@ -128,7 +129,7 @@
                     // Datasets invece contiene le caratteristiche di ogni dato
                     datasets: [{
                         // Nome grafico
-                        label: 'Guadagni per ordine €',
+                        label: 'Numeri di ordine',
                         // Questo data contiene le percentuali di un elemento su scala Y
                         data: this.ordersToPrint,
                         // Caratteristiche delle barre
