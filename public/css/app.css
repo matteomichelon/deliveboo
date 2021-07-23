@@ -10126,6 +10126,29 @@ h2 {
   transform: scale(0.95);
 }
 
+.margin-form-register,
+.margin-form-dashboard {
+  margin: 20px 0;
+}
+
+.card-header {
+  background-color: #CBF3F0;
+}
+
+.btn-deliveboo-secondary {
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1em;
+  transition: all 0.2s;
+  width: 10em;
+  margin: auto;
+  padding: 0.5em 1em;
+  border: 1px solid #2EC4B6;
+  border-radius: 0.2em;
+  background-color: #2EC4B6;
+}
+
 header {
   background-color: #2EC4B6;
   color: #fff;

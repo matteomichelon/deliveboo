@@ -136,3 +136,30 @@ h2 {
         transform: scale(0.95);
     }
 }
+
+//margine top-bottom form di registrazione
+.margin-form-register,
+.margin-form-dashboard{
+    margin: 20px 0;
+}
+
+//intestazione form registrazione/login
+.card-header{
+    background-color: $primary_accent;
+  
+}
+
+.btn-deliveboo-secondary {
+    text-align: center;
+    color: $white;
+    font-weight: 500;         
+    font-size: 1em;
+    transition: all 0.2s;
+    width: 10em;
+    margin: auto;
+    padding: 0.5em 1em;
+    border: 1px solid $primary-color;
+    border-radius: 0.2em;
+    background-color: $primary_color;
+}
+
