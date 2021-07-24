@@ -13,10 +13,10 @@ use App\Mail\NewOrderAdminNotification;
 use App\Mail\NewOrderGuestNotification;
 
 class PaymentController extends Controller
-{    
+{
     /* Function Checkout */
     public function checkout(Request $request)
-    {        
+    {
         /* Generating Token */
         $gateway = new Gateway([
             'environment' => config('services.braintree.environment'),
@@ -51,8 +51,8 @@ class PaymentController extends Controller
         return $order->id;
     }
 
-    public function payment(Request $request) {
-
+    public function payment(Request $request)
+    {
         $gateway = new Gateway([
             'environment' => config('services.braintree.environment'),
             'merchantId' => config('services.braintree.merchantId'),
@@ -68,15 +68,13 @@ class PaymentController extends Controller
         $result = $gateway->transaction()->sale([
             'amount' => $order->price,
             'paymentMethodNonce' => $orderNonce,
-            'options' => [                                
+            'options' => [
                 'submitForSettlement' => true
             ]
             ]);
 
-            /* Message Result */
-            if ($result->success) {
-            // Se va a buon fine, salviamo l'ordine con status true
-            
+        /* Message Result */
+        if ($result->success) {
             $order->status = 1;
 
             $order->update();
@@ -84,21 +82,18 @@ class PaymentController extends Controller
             // --------------------|
             // Send new admin Mail.|
             // --------------------|
-            // Mail::to('matteo@email.com')->send(new NewOrderAdminNotification($order));
+            Mail::to('matteo@email.com')->send(new NewOrderAdminNotification($order));
 
             // // --------------------|
             // // Send new guest Mail.|
             // // --------------------|
-            // Mail::to($order->email)->send(new NewOrderGuestNotification($order));
+            Mail::to($order->email)->send(new NewOrderGuestNotification($order));
  
-
+            // Se va a buon fine, salviamo l'ordine con status true
             return true;
-
-            } else {
-            // return redirect()->back()->with('message', 'Il pagamento non è andato a buon fine, per favore riprovare');
-            //return $this->getProductsQuantities($request)->with('message', 'Il pagamento non è andato a buon fine, per favore riprovare');
-               return false;
-            }
+        } else {
+            return false;
+        }
     }
 
     protected function calculatePrice($product_quantities)
