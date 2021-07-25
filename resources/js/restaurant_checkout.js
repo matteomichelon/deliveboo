@@ -1,5 +1,4 @@
 const { default: axios } = require( "axios" );
-const { TimeScale } = require( "chart.js" );
 
 var app = new Vue( {
     el: '#root',
@@ -148,11 +147,9 @@ var app = new Vue( {
 
                                     axios
                                         .post( '/api/cart-checkout', data )
-                                        .then( response => {
-                                            { data: response.data };
+                                        .then( response => {                                            
                                             if ( response.data == true ) {
-                                                this.paymentSuccess = true;
-                                                console.log( this.paymentSuccess );
+                                                this.paymentSuccess = true;                                                
                                             } else {
                                                 this.paymentFail = true;
                                             }

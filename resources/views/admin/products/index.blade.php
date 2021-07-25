@@ -4,7 +4,7 @@
 <div class="container_large">
 
     <div class="col-sm-12">
-        <h1 class="mt-5 mb-0">Tutti i tuoi prodotti</h1>
+        <h1 class="page-title mt-5 mb-0">Tutti i tuoi prodotti</h1>
     </div>
 
     <div class="cart-product-wrapper">
