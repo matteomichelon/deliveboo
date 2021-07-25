@@ -86,7 +86,7 @@ class ProductController extends Controller
                 $new_product->path_load_image = 1;
             }
         } else {
-            $form_data['cover'] = 'img/defaultproduct.jpg';
+            $form_data['cover'] = asset('img/defaultproduct.jpg');
             $new_product->path_load_image = 0;
         }
 
@@ -190,7 +190,7 @@ class ProductController extends Controller
                 $form_data['cover'] = $img_path;
                 $updated_product->path_load_image = 1;
             } else {
-                $form_data['cover'] = 'img/defaultproduct.jpg';
+                $form_data['cover'] = asset('img/defaultproduct.jpg');
                 $updated_product->path_load_image = 0;
             }
         }
