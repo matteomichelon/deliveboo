@@ -92,7 +92,7 @@
 
                             <div class="background-hover">
 
-                                <img v-if='restaurant.path_load_image' :src="'storage/' + restaurant.cover"
+                                <img v-if='restaurant.path_load_image' :src="'../storage/' + restaurant.cover"
                                     :alt="'Foto Piatto ' + restaurant.name">
 
                                 <img v-else :src="restaurant.cover" :alt="'Foto Piatto ' + restaurant.name">

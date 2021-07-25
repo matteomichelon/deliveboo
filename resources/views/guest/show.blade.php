@@ -44,7 +44,12 @@
                         >
                             <div style="height: 20em" class="d-flex flex-column justify-content-between">
                                 <div>
-                                    <img :src="product.cover" alt="product.name">
+
+                                    <img v-if='product.path_load_image' :src="'storage/' + product.cover"
+                                    :alt="'Foto Piatto ' + product.name">
+
+                                    <img v-else :src="product.cover" :alt="'Foto Piatto ' + product.name">
+
                                     <div>
                                         <div class="d-flex justify-content-between mt-2">
                                             <div style="padding-right: 2em">   

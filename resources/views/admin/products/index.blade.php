@@ -15,7 +15,7 @@
                 <div class="product-card col-sm-12 col-md-6 col-lg-4 {{ $product->visibility == 0 ? 'not-visible' : '' }}">
                         
                     <div class="container-image">                    
-                        @if ($product->path_load_image) )
+                        @if ($product->path_load_image) 
                             <img src="{{ asset('storage/' . $product->cover) }}" class="card-img-top" alt="{{$product->name}}">
                         @else
                             <img src="{{ $product->cover }}" class="card-img-top" alt="{{$product->name}}">
