@@ -19,11 +19,14 @@ class CreateProductsTable extends Migration
             $table->text('description')->nullable();
             $table->float('price', 7, 2);
             $table->tinyInteger('visibility');
-            $table->string('cover', 255)->nullable();
+            $table->string('cover', 255)->nullable();           
 
             // Foreign Key --> One(user) To Many(products)
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
+
+            // SoftDeletes
+            $table->softDeletes();
 
             $table->timestamps();
         });
@@ -37,8 +40,10 @@ class CreateProductsTable extends Migration
     public function down()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->dropForeign('products_user_id_foreign');
+            $table->dropForeign('products_user_id_foreign');            
             $table->dropColumn('user_id');
+
+            $table->dropSoftDeletes();
         });
 
         Schema::dropIfExists('products');
