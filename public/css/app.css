@@ -10362,6 +10362,9 @@ section.research .research-details-address {
   width: 25em;
   padding: 1em;
 }
+.cart-product-wrapper .restaurant-show-products .product-card.not-visible {
+  opacity: 0.5;
+}
 .cart-product-wrapper .restaurant-show-products .product-card img {
   height: 10em;
   -o-object-fit: cover;

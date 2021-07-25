@@ -33,6 +33,11 @@
         .product-card {  
             width: 25em;
             padding: 1em;
+
+            // When products are not visibles
+            &.not-visible {
+                opacity: .5;
+            }
         
             img {
                 height: 10em;

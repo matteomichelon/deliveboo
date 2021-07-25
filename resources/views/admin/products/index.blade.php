@@ -12,7 +12,7 @@
         <div class="restaurant-show-products d-flex flex-wrap w-100 px-0">
             @foreach ($products as $product)
                 {{-- Product Card --}}
-                <div class="product-card col-sm-12 col-md-6 col-lg-4">
+                <div class="product-card col-sm-12 col-md-6 col-lg-4 {{ $product->visibility == 0 ? 'not-visible' : '' }}">
                         
                     <div class="container-image">                    
                         @if ($product->path_load_image) )
