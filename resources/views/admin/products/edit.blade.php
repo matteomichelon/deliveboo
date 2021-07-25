@@ -3,7 +3,7 @@
 @section('content')
 <div class="container_large">
 
-    <h2 class="mt-5 mb-3">Modifica il prodotto</h2>
+    <h2 class="mt-5 mb-3">Modifica prodotto: {{ $product->name }}</h2>
 
     {{-- ERRORS DISPLAY --}}
     @if ($errors->any())

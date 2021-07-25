@@ -14,10 +14,7 @@
                 {{-- Product Card --}}
                 <div class="product-card col-sm-12 col-md-6 col-lg-4">
                         
-                    <div class="container-image">
-                        {{--  If the product has a cover image set it will display it, otherwise
-                        it will display a standard image.    --}}
-                        
+                    <div class="container-image">                    
                         @if ($product->path_load_image) )
                             <img src="{{ asset('storage/' . $product->cover) }}" class="card-img-top" alt="{{$product->name}}">
                         @else

@@ -188,6 +188,10 @@ class ProductController extends Controller
 
             if ($img_path) {
                 $form_data['cover'] = $img_path;
+                $updated_product->path_load_image = 1;
+            } else {
+                $form_data['cover'] = 'img/defaultproduct.jpg';
+                $updated_product->path_load_image = 0;
             }
         }
 
