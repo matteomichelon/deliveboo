@@ -10475,6 +10475,21 @@ section.research .research-details-address {
   border-radius: 0.2em;
 }
 
+.preview-image {
+  margin-bottom: 20px;
+}
+.preview-image .container-image {
+  width: 35%;
+}
+.preview-image .container-image img {
+  border-radius: 0.2em;
+}
+@media all and (max-width: 768px) {
+  .preview-image .container-image {
+    width: 35%;
+  }
+}
+
 .app {
   background-color: #CBF3F0;
 }

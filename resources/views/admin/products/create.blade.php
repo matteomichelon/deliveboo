@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container_large">
 
-    <h2>Aggiungi un nuovo prodotto</h2>
+    <h2 class="mt-5 mb-3">Aggiungi un nuovo prodotto</h2>
 
     {{-- ERRORS DISPLAY --}}
     @if ($errors->any())
@@ -18,7 +18,7 @@
     {{-- END ERRORS DISPLAY --}}
 
     {{-- CREATE FORM DISPLAY --}}
-    <form action="{{route('admin.products.store')}}" method="POST" enctype="multipart/form-data">
+    <form class="mb-5" action="{{route('admin.products.store')}}" method="POST" enctype="multipart/form-data">
 
         @csrf
         @method('POST')
@@ -38,20 +38,20 @@
             <input type="number" step="0.01" class="form-control" name="price" id="price" value="{{ old('price') }}">
         </div>
         
-        <div class="form-group">
-            <label for="visibility">Visibile</label>
-            <input type="checkbox" class="form-control" name="visibility" id="visibility" {{ old('visibility') ? 'checked=' : '' }}/>
-        </div>
+        <div class="form-check">            
+            <input type="checkbox" class="form-check-input" name="visibility" id="visibility" {{ old('visibility') ? 'checked=' : '' }}/>
+            <label for="visibility" class="form-check-label">Visibile</label>
+        </div>      
 
-        <div class="form-group">
-            <label for="cover">Foto</label>
-            <input type="file" name="cover" id="cover">
+        <div class="form-group my-3">            
+            <label for="cover" class="d-block">Foto</label>
+            <input type="file" class="" name="cover" id="cover">            
         </div>
 
         <input type="submit" class="btn btn-success" value="Aggiungi">
 
-      </form>
-      {{-- END CREATE FORM DISPLAY --}}
+    </form>
+    {{-- END CREATE FORM DISPLAY --}}
 
 </div>
 @endsection

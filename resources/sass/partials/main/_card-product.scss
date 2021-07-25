@@ -173,6 +173,23 @@
     }
 }
 
+// Preview image on form
+.preview-image {
+    margin-bottom: 20px;
+   
+    .container-image {
+        width: 35%;
+
+        img {
+            border-radius: 0.2em;
+        }
+
+        @media all and (max-width: 768px) {
+            width: 35%;
+        }
+    }
+}
+
 
 
 

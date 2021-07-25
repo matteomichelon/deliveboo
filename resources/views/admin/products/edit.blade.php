@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container_large">
 
-    <h2>Modifica il prodotto</h2>
+    <h2 class="mt-5 mb-3">Modifica il prodotto</h2>
 
     {{-- ERRORS DISPLAY --}}
     @if ($errors->any())
@@ -18,7 +18,7 @@
     {{-- END ERRORS DISPLAY --}}
 
     {{-- CREATE FORM DISPLAY --}}
-    <form action="{{route('admin.products.update', ['product' => $product->id])}}" method="POST" enctype="multipart/form-data">
+    <form class="mb-5" action="{{route('admin.products.update', ['product' => $product->id])}}" method="POST" enctype="multipart/form-data">
 
         @csrf
         @method('PUT')
@@ -38,32 +38,37 @@
             <input type="number" step="0.01" class="form-control" name="price" id="price" value="{{ old('price', $product->price) }}">
         </div>
         
-        <div class="form-group">
-            <label for="visibility">Visibilità</label>
+        <div class="form-check">            
             @if ($errors->any())
-                <input type="checkbox" class="form-control" name="visibility" id="visibility" {{ old('visibility') ? 'checked=' : '' }}/>
+                <input type="checkbox" class="form-check-input" name="visibility" id="visibility" {{ old('visibility') ? 'checked=' : '' }}/>
             @else
-                <input type="checkbox" class="form-control" name="visibility" id="visibility" {{ $product->visibility == 1 ? 'checked=' : '' }}/>
+                <input type="checkbox" class="form-check-input" name="visibility" id="visibility" {{ $product->visibility == 1 ? 'checked=' : '' }}/>
             @endif 
+            <label for="visibility" class="form-check-label">Visibile</label>
+        </div>        
+
+        <div class="form-group my-3">            
+            <label for="cover" class="d-block">Foto</label>
+            <input type="file" class="" name="cover" id="cover">            
         </div>
 
-        <div class="form-group">
-            <label for="cover">Foto</label>
-            <input type="file" name="cover" id="cover">
-        </div>
+        <div class="preview-image">
+            {{-- Anteprima immagine presente --}}
+            @if ($product->cover)
+                <div>
+                    <h3>Anteprima immagine corrente</h3>
 
-        {{-- Anteprima immagine presente --}}
-        @if ($product->cover)
-            <div>
-                <h3>Anteprima immagine corrente</h3>
+                    <div class="container-image">
+                        @if ($product->path_load_image)
+                            <img src="{{ asset('storage/' . $product->cover) }}" alt="{{ $product->name }}">
+                        @else
+                            <img src="{{ $product->cover }}" alt="{{ $product->name }}">
+                        @endif
+                    </div>
 
-                @if ($product->path_load_image)
-                    <img src="{{ asset('storage/' . $product->cover) }}" alt="{{ $product->name }}">
-                @else
-                    <img src="{{ $product->cover }}" alt="{{ $product->name }}">
-                @endif
-            </div>
-        @endif
+                </div>
+            @endif
+        </div>        
 
         <input type="submit" class="btn btn-success" value="Modifica">
 
