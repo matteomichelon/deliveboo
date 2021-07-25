@@ -15,7 +15,8 @@ class UserController extends Controller
             abort('404');
         }
 
-        $restaurant_products = $user->products;
+        // Only display products that are visible
+        $restaurant_products = $user->products->where('visibility', '=', 1);       
 
         $data = [
             'restaurant_products' => $restaurant_products,
