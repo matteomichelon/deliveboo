@@ -26,16 +26,23 @@ header {
                     color: $white;
                 }
 
+                a.icon {
+                    margin-left: 10px;
+
+                    &:hover {
+                        color: $secondary_accent;
+                    }
+                }
+
                 /* Overwrite */
-                .dropdown-item{
+                .dropdown-item {
                     color: $primary_color;
                 }
-                
+
             }
 
             .btn-nav {
                 color: $white;
-                
                 padding: 7px 10px;
                 margin-left: 20px;
                 border: 1px solid $white;
