@@ -48,7 +48,7 @@
             <input type="file" class="" name="cover" id="cover">            
         </div>
 
-        <input type="submit" class="btn btn-success" value="Aggiungi">
+        <input type="submit" class="btn btn-deliveboo-secondary" value="Aggiungi">
 
     </form>
     {{-- END CREATE FORM DISPLAY --}}
