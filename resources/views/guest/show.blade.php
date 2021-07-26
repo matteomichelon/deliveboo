@@ -95,7 +95,7 @@
                                 Totale da pagare: <span>€@{{calculateCart()}}</span>
                             </div>
                             <div class="cart-checkout">
-                                <a class="btn-deliveboo-primary" v-on:click="getRestaurantPaymentData()" href="{{ route('cart') }}">Vai al pagamento</a>
+                                <a class="btn-deliveboo-primary text-decoration-none" v-on:click="getRestaurantPaymentData()" href="{{ route('cart') }}">Vai al pagamento</a>
                             </div>
                         </div>                       
                     </div>

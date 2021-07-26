@@ -70,7 +70,7 @@
             @endif
         </div>        
 
-        <input type="submit" class="btn btn-success" value="Modifica">
+        <input type="submit" class="btn btn-deliveboo-secondary" value="Modifica">
 
       </form>
       {{-- END CREATE FORM DISPLAY --}}

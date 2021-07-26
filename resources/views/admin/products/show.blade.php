@@ -21,8 +21,8 @@
         @endif  
                 
         <div class="user-tools">
-            <a class="btn btn-primary btn-md" href="{{route('admin.products.index')}}" role="button">Torna indietro</a>
-            <a class="btn btn-secondary btn-md" href="{{route('admin.products.edit', ['product' => $product->id])}}" role="button">Modifica prodotto</a>
+            <a class="btn btn-deliveboo-primary btn-md" href="{{route('admin.products.index')}}" role="button">Torna indietro</a>
+            <a class="btn btn-deliveboo-secondary btn-md" href="{{route('admin.products.edit', ['product' => $product->id])}}" role="button">Modifica prodotto</a>
         </div>
    </div>
    
