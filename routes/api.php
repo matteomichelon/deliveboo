@@ -45,16 +45,6 @@ Route::prefix('restaurants')
     }
 );
 
-Route::prefix('orders')
-    ->namespace('Api')
-    ->name('api.orders.')
-    ->group(function () {
-
-        // Route per accedere a tutti i ristoranti.
-        Route::get('/', 'OrderController@index')->name('index');
-    }
-);
-
 Route::namespace('Api')
     ->name('api.cart.')
     ->group(function () {

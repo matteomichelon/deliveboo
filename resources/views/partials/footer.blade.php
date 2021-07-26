@@ -144,7 +144,7 @@
     </div>
 
     <!--copyright-->
-    <div class="copyright">
+    <div class="copyright pb-5">
         © 2021 Deliveboo
     </div>
     <!--end copyright-->

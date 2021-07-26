@@ -101,7 +101,7 @@
 
                                     <div class="research-details-title"> @{{ restaurant.name }} </div>
 
-                                    <div class="research-details-address"> @{{ restaurant.address }} </div>
+                                    <div class="research-details-address"><i class="fas fa-map-marker-alt"></i> @{{ restaurant.address }} </div>
 
                                 </div>
 

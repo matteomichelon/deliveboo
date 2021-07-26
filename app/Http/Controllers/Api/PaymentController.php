@@ -89,7 +89,7 @@ class PaymentController extends Controller
             // // --------------------|
             // // Send new guest Mail.|
             // // --------------------|
-            Mail::to($order->email)->send(new NewOrderGuestNotification($order));
+            Mail::to($order->email)->send(new NewOrderGuestNotification($order, $restaurantName));
  
             // Se va a buon fine, salviamo l'ordine con status true
             return true;

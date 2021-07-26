@@ -26,6 +26,7 @@ Route::prefix('admin')
     ->group(function () {
         Route::get('/dashboard', 'HomeController@index')->name('home');
         Route::resource('/products', 'ProductController');
+        Route::get('/orders', 'OrderController@index')->name('orders');
         Route::get('/stats', 'StatsController@index')->name('stats');
 });
 

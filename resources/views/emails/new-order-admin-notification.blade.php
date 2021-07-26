@@ -352,7 +352,7 @@
                                             style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;padding:25px 0 25px 0;">
                                             <h2
                                                 style="color:#4A4A4A;font-size:24px;letter-spacing:-.7px;line-height:29px;margin:0;padding:0;">
-                                                <span class="highlighted-text" style="color: #000">Dati Consegna</span>
+                                                <span class="highlighted-text" style="color: #000">Spedizione</span>
                                             </h2>
                                         </td>
                                     </tr>
@@ -372,6 +372,12 @@
                                         <td align="left" valign="top"
                                             style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;">
                                             <div><strong>Mail: </strong> {{ $order['email'] }}</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" valign="top"
+                                            style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                                            <div><strong>Telefono: </strong> {{ $order['telephone_number'] }}</div>
                                         </td>
                                     </tr>
                                     <tr>
