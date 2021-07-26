@@ -297,7 +297,9 @@
                                             style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;">
                                             <h1 class="header-heading mobile-centered-item"
                                                 style="color:#fff;font-size:24px;letter-spacing:-.43px;line-height:30px;margin:0;padding:0 0 20px;">
-                                                Hai ricevuto un nuovo Ordine <span style="font-size:20px">&#128512;</span></h1>
+                                                <strong>{{ $restaurantName }}</strong>, hai ricevuto un nuovo ordine!
+                                                <span style="font-size:20px">&#128512;</span>
+                                            </h1>
                                             <div>
                                                 <p class="header-text mobile-centered-item"
                                                     style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#fff;font-size:11px;line-height:14px;margin:0;padding-bottom:0;">
@@ -325,7 +327,7 @@
                             style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;padding-bottom:25px;">
                             <h1
                                 style="color:#4A4A4A;font-size:24px;letter-spacing:-.7px;line-height:29px;margin:0;padding:0;">
-                                <span class="highlighted-text" style="color: #000">Ecco i dati del riepilogo</span>
+                                <span class="highlighted-text" style="color: #000">Riepilogo</span>
                             </h1>
                         </td>
                     </tr>
@@ -339,43 +341,62 @@
                                     <tr>
                                         <td align="left" valign="top"
                                             style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;">
-                                            <h4>Mail</h4>
-                                            <span>{{ $order['email'] }}</span>
+                                            @foreach ($order->products as $product)
+                                                <div> <span> <strong>{{ $product->pivot->quantity }}</strong></span> -
+                                                    {{ $product->name }}</div>
+                                            @endforeach
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" valign="top" class="content-item"
+                                            style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;padding:25px 0 25px 0;">
+                                            <h2
+                                                style="color:#4A4A4A;font-size:24px;letter-spacing:-.7px;line-height:29px;margin:0;padding:0;">
+                                                <span class="highlighted-text" style="color: #000">Dati Consegna</span>
+                                            </h2>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td align="left" valign="top"
                                             style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;">
-                                            <h4>Nome</h4>
-                                            <span>{{ $order['name'] }}</span>
+                                            <div><strong>Nome: </strong> {{ $order['name'] }}</div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td align="left" valign="top"
                                             style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;">
-                                            <h4>Cognome</h4>
-                                            <span>{{ $order['surname'] }}</span>
+                                            <div><strong>Cognome: </strong> {{ $order['surname'] }}</div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td align="left" valign="top"
                                             style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;">
-                                            <h4>Data Ordine</h4>
-                                            <span>{{ $order['date'] }}</span>
+                                            <div><strong>Mail: </strong> {{ $order['email'] }}</div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td align="left" valign="top"
                                             style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;">
-                                            <h4>Prezzo Totale</h4>
-                                            <span>{{ $order['price'] }} <strong> €</strong></span>
+                                            <div><strong>Data Ordine: </strong> {{ $order['date'] }}</div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td align="left" valign="top"
                                             style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;">
-                                            <h4>Note per il rider</h4>
-                                            <span>{{ $order['notes'] }}</span>
+                                            <div><strong>Totale: </strong> {{ $order['price'] }} <span> €</span></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" valign="top"
+                                            style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                                            <div><strong>Indirizzo: </strong> {{ $order['address'] }}</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" valign="top"
+                                            style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                                            <div><strong>Note per il rider</strong></div>
+                                            <div>{{ $order['notes'] }}</div>
                                         </td>
                                     </tr>
                                 </tbody>

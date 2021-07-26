@@ -73,6 +73,8 @@ class PaymentController extends Controller
             ]
             ]);
 
+            $restaurantName = $order->products->first()->user->restaurant_name;
+
         /* Message Result */
         if ($result->success) {
             $order->status = 1;
@@ -82,7 +84,7 @@ class PaymentController extends Controller
             // --------------------|
             // Send new admin Mail.|
             // --------------------|
-            Mail::to('test@email.com')->send(new NewOrderAdminNotification($order));
+            Mail::to('test@email.com')->send(new NewOrderAdminNotification($order, $restaurantName));
 
             // // --------------------|
             // // Send new guest Mail.|
