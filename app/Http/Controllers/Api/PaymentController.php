@@ -23,7 +23,7 @@ class PaymentController extends Controller
             'merchantId' => config('services.braintree.merchantId'),
             'publicKey' => config('services.braintree.publicKey'),
             'privateKey' => config('services.braintree.privateKey')
-        ]);
+        ]);        
 
         $form_data = $request->input('formData');
         $restaurantId = $request->input('restaurantId');
@@ -32,6 +32,7 @@ class PaymentController extends Controller
         /* Create new order */
         $order = new Order;
         $order->fill($form_data);
+        $order->user_id = $restaurantId;
         $order->code = $form_data['_token'];
         
         $order->price = $this->calculatePrice($productIds);
