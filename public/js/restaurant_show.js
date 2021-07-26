@@ -2105,7 +2105,7 @@ var _require = __webpack_require__(/*! axios */ "./node_modules/axios/index.js")
     axios = _require["default"];
 
 var app = new Vue({
-  el: '#root',
+  el: "#root",
   data: {
     products: [],
     cart: [],
@@ -2176,14 +2176,23 @@ var app = new Vue({
       localStorage.setItem(restaurant_id, JSON.stringify(this.cart));
     },
     getRestaurantPaymentData: function getRestaurantPaymentData() {
-      localStorage.setItem('RestaurantPaymentData', JSON.stringify(this.cart));
-      localStorage.setItem('RestaurantPaymentId', restaurant_id);
+      localStorage.setItem("RestaurantPaymentData", JSON.stringify(this.cart));
+      localStorage.setItem("RestaurantPaymentId", restaurant_id);
     }
   },
   mounted: function mounted() {
     this.products = window.restaurant_products; // +-----------------------------------------------+
     // | Controllo ristorante.id per il local storage. |
     // +-----------------------------------------------+
+
+    var oldRestaurantId = localStorage.getItem("oldRestaurantId");
+    var newRestaurantId = window.restaurant_id;
+
+    if (newRestaurantId != oldRestaurantId) {
+      localStorage.clear();
+      localStorage.setItem("oldRestaurantId", window.restaurant_id);
+    } // +-----------------------------------------------+
+
 
     var cart = JSON.parse(localStorage.getItem(restaurant_id));
 
@@ -2203,7 +2212,11 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
+module.exports = __webpack_require__(/*! /Users/catalinzahariea/Desktop/Boolean/Deliveboo/deliveboo/resources/js/restaurant_show.js */"./resources/js/restaurant_show.js");
+=======
 module.exports = __webpack_require__(/*! C:\Laravel-projects\deliveboo\resources\js\restaurant_show.js */"./resources/js/restaurant_show.js");
+>>>>>>> f213a2a4b9d4b6f0b1f7b7610723092940c28c85
 
 
 /***/ })

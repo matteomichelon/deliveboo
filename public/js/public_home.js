@@ -2105,7 +2105,7 @@ var _require = __webpack_require__(/*! axios */ "./node_modules/axios/index.js")
     axios = _require["default"];
 
 var app = new Vue({
-  el: '#root',
+  el: "#root",
 
   /* DATA */
   data: {
@@ -2142,7 +2142,7 @@ var app = new Vue({
     getAllRestaurants: function getAllRestaurants() {
       var _this2 = this;
 
-      axios.get('api/restaurants').then(function (response) {
+      axios.get("api/restaurants").then(function (response) {
         var result = response.data.restaurants;
         _this2.restaurants = result;
       });
@@ -2151,15 +2151,15 @@ var app = new Vue({
       this.activeCategory = categoryName;
     },
     scrollRight: function scrollRight() {
-      document.querySelector('.container-box').scrollBy({
+      document.querySelector(".container-box").scrollBy({
         left: 1000,
-        behavior: 'smooth'
+        behavior: "smooth"
       });
     },
     scrollLeft: function scrollLeft() {
-      document.querySelector('.container-box').scrollBy({
+      document.querySelector(".container-box").scrollBy({
         left: -1000,
-        behavior: 'smooth'
+        behavior: "smooth"
       });
     }
   },
@@ -2168,11 +2168,11 @@ var app = new Vue({
   mounted: function mounted() {
     var _this3 = this;
 
-    axios.get('api/categories').then(function (response) {
+    axios.get("api/categories").then(function (response) {
       var result = response.data.categories;
       _this3.categories = result;
     });
-    axios.get('api/restaurants').then(function (response) {
+    axios.get("api/restaurants").then(function (response) {
       var result = response.data.restaurants;
       _this3.restaurants = result;
     });
@@ -2188,7 +2188,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Laravel-projects\deliveboo\resources\js\public_home.js */"./resources/js/public_home.js");
+module.exports = __webpack_require__(/*! /Users/catalinzahariea/Desktop/Boolean/Deliveboo/deliveboo/resources/js/public_home.js */"./resources/js/public_home.js");
 
 
 /***/ })
