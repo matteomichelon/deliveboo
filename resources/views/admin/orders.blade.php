@@ -12,6 +12,7 @@
                     <th scope="col">Cognome</th>
                     <th scope="col">Data</th>
                     <th scope="col">Prezzo</th>
+                    <th scope="col">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -22,6 +23,11 @@
                         <td>{{ $order->surname }}</td>
                         <td>{{ $order->date }}</td>
                         <td>€{{ $order->price }}</td>
+                        @if($order->status == 1)
+                            <td style="color: green">Accepted</td>
+                        @else
+                            <td style="color: red">Pending</td>
+                        @endif
                     </tr>
                 @endforeach
             </tbody>
