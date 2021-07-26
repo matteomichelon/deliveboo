@@ -263,7 +263,7 @@
                         <tbody>
                           <tr>
                             <td align="center" valign="middle" class="mobile-centered-container" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;">
-                              <h1 class="header-heading mobile-centered-item" style="color:#fff;font-size:24px;letter-spacing:-.43px;line-height:30px;margin:0;padding:0 0 20px;">Il tuo ordine è in preparazione!</h1>
+                              <h1 class="header-heading mobile-centered-item" style="color:#fff;font-size:24px;letter-spacing:-.43px;line-height:30px;margin:0;padding:0 0 20px;">Il tuo ordine è in preparazione! <span style="font-size:20px">&#127881;</span></h1>
                               <div>
                                 <p class="header-text mobile-centered-item" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#fff;font-size:11px;line-height:14px;margin:0;padding-bottom:0;">
                                   </p>
@@ -307,7 +307,7 @@
                             </tr>
                             <tr>
                               <td align="left" valign="top" class="content-item" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;padding-bottom:25px;">
-                                <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin:0;">Ti ringraziamo per l'ordine effettuato, spero il nostro servizio sia stato di tuo gradimento. A Presto</p>
+                                <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin:0;">Ti ringraziamo per l'ordine effettuato, spero il nostro servizio sia stato di tuo gradimento. A Presto <span style="font-size:20px">&#128513;</span></p>
                               </td>
                             </tr>
                           </tbody>
