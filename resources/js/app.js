@@ -1,1 +1,5 @@
-require('./bootstrap');
+require("./bootstrap");
+
+window.addEventListener("hashchange", () => {
+    alert("HasChange");
+});
