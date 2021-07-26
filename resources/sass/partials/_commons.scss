@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif !important;
+    font-family: "Roboto", sans-serif !important;
 }
 
 main {
@@ -31,7 +31,6 @@ img {
     width: 60%;
     height: 100%;
     margin: auto;
-
 }
 
 ul {
@@ -39,7 +38,6 @@ ul {
     margin: 0;
     list-style-type: none;
     display: block;
-
 }
 
 .padding-section {
@@ -62,7 +60,6 @@ h2 {
     text-decoration: none;
 
     li {
-
         text-align: left;
 
         &:first-child {
@@ -77,7 +74,7 @@ h2 {
 }
 
 //da rivedere
-.login-padding{
+.login-padding {
     padding: 20px;
 }
 
@@ -88,7 +85,7 @@ h2 {
 .btn-deliveboo-primary {
     text-align: center;
     color: $primary-color;
-    font-weight: 500;         
+    font-weight: 500;
     font-size: 1em;
     transition: all 0.2s;
     width: 10em;
@@ -99,6 +96,7 @@ h2 {
     background-color: $white;
 
     &:hover {
+        color: $primary-color;
         cursor: pointer;
         box-shadow: 0px 0px 5px 1px rgba($color: #000000, $alpha: 0.1);
     }
@@ -113,7 +111,7 @@ h2 {
 .btn-deliveboo-white {
     text-align: center;
     color: $white;
-    font-weight: 500;         
+    font-weight: 500;
     font-size: 1em;
     transition: all 0.2s;
     width: 10em;
@@ -139,20 +137,19 @@ h2 {
 
 //margine top-bottom form di registrazione
 .margin-form-register,
-.margin-form-dashboard{
+.margin-form-dashboard {
     margin: 20px 0;
 }
 
 //intestazione form registrazione/login
-.card-header{
+.card-header {
     background-color: $primary_accent;
-  
 }
 
 .btn-deliveboo-secondary {
     text-align: center;
     color: $white;
-    font-weight: 500;         
+    font-weight: 500;
     font-size: 1em;
     transition: all 0.2s;
     //width: 11em;
@@ -161,8 +158,4 @@ h2 {
     border: 1px solid $primary-color;
     border-radius: 0.2em;
     background-color: $primary_color;
-    
-
 }
-
-
