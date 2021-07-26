@@ -82,7 +82,7 @@ class PaymentController extends Controller
             // --------------------|
             // Send new admin Mail.|
             // --------------------|
-            Mail::to('matteo@email.com')->send(new NewOrderAdminNotification($order));
+            Mail::to('test@email.com')->send(new NewOrderAdminNotification($order));
 
             // // --------------------|
             // // Send new guest Mail.|
