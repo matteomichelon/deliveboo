@@ -10141,7 +10141,7 @@ h2 {
   font-weight: 500;
   font-size: 1em;
   transition: all 0.2s;
-  width: 10em;
+  width: 11em;
   margin: auto;
   padding: 0.5em 1em;
   border: 1px solid #2EC4B6;
@@ -10171,6 +10171,12 @@ header .container_large .nav-right .login_register ul {
 }
 header .container_large .nav-right .login_register ul a {
   color: #fff;
+}
+header .container_large .nav-right .login_register ul a.icon {
+  margin-left: 10px;
+}
+header .container_large .nav-right .login_register ul a.icon:hover {
+  color: #FFBF69;
 }
 header .container_large .nav-right .login_register ul .dropdown-item {
   color: #2EC4B6;
