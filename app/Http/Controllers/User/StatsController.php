@@ -16,14 +16,14 @@ class StatsController extends Controller
         $id = Auth::user()->id;
 
         /* Join Sql per gli ricavare Utenti/Ordini */
-        $order_schema = DB::table('order_product')
+        $order_schema = DB::table('order_product')                    
                     ->join('products', 'product_id', '=', 'products.id')
                     ->join('orders', 'order_id', '=', 'orders.id')
-                    ->join('users', 'user_id', '=', 'users.id')
+                    ->join('users', 'user_id', '=', 'users.id')                    
                     ->get();
 
 
-        $array = collect($order_schema)->where('id', $id)->all();
+        $array = collect($order_schema)->where('user_id', $id)->all();
 
         $year_array = [];
 

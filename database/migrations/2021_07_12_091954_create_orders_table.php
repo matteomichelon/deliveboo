@@ -15,6 +15,7 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
             $table->string('code', 45);
             $table->float('price', 7, 2);
             $table->tinyInteger('status')->default(0);
@@ -25,7 +26,9 @@ class CreateOrdersTable extends Migration
             $table->string('email', 100);
             $table->text('notes')->nullable();
             $table->string('telephone_number', 45);         
-            $table->timestamps();
+            $table->timestamps();  
+            
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
@@ -36,6 +39,10 @@ class CreateOrdersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('orders');
+        Schema::table('orders', function (Blueprint $table) {
+            $table->dropForeign('orders_user_id_foreign');            
+        });
+
+        Schema::dropIfExists('orders');        
     }
 }

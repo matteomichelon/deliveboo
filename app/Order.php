@@ -12,12 +12,17 @@ class Order extends Model
         'surname',
         'email',
         'notes',
-        'telephone_number'
+        'telephone_number',        
     ];
 
     // Tabella ponte con la aggiunta di una terza colonna pivot 
     // che rappresenta la quantità di prodotti per ogni ordine.
     public function products() {
         return $this->belongsToMany('App\Product')->withPivot('quantity');
+    }
+
+
+    public function user() {
+        return $this->belongsTo('App\User');
     }
 }
