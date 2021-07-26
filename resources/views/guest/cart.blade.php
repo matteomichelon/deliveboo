@@ -68,7 +68,7 @@
                         </div>
                         
                         <div class="form-outline mb-4">
-                            <input type="submit" value="Invia dati per la consegna" class="btn btn-primary" />
+                            <input type="submit" value="Invia dati per la consegna" class="btn btn-deliveboo-secondary" />
                         </div>                        
                     </form>
 
@@ -76,7 +76,7 @@
                         <div class="form-outline mb-4">
                             <div id="dropin-container"></div>
                             <input id="nonce" name="payment_method_nonce" type="hidden" />
-                            <input prevent type="submit" value="Invia Pagamento" class="btn btn-primary" />
+                            <input prevent type="submit" value="Invia Pagamento" class="btn btn-deliveboo-secondary" />
                         </div>
                     </form>
                 </div>
