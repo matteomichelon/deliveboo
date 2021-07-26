@@ -40,13 +40,19 @@
                                 </li>
                             @endif
                         @else
-                        <!-- end Guest -->
+                            <!-- end Guest -->
 
-                        <!-- Admin -->
+                            <!-- Admin -->
                             <li>
-                                <a href="{{ route('admin.products.create') }}" data-toggle="tooltip"
+                                <a class="icon" href="{{ route('admin.products.create') }}" data-toggle="tooltip"
                                     title="Aggiungi un nuovo prodotto">
                                     <i class="fas fa-plus"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="icon" href="{{ route('admin.stats') }}" data-toggle="tooltip" title="Vedi le statistiche">
+                                    <i class="fas fa-signal"></i>
                                 </a>
                             </li>
 
@@ -57,13 +63,17 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('admin.home') }}">                                        
+                                    <a class="dropdown-item" href="{{ route('admin.home') }}">
                                         Il tuo profilo
-                                    </a> 
+                                    </a>
 
-                                    <a class="dropdown-item" href="{{ route('admin.products.index') }}">                                        
+                                    <a class="dropdown-item" href="{{ route('admin.products.index') }}">
                                         I tuoi prodotti
-                                    </a>                                    
+                                    </a>
+
+                                    <a class="dropdown-item" href="{{ route('admin.stats') }}">
+                                        Le tue statistiche
+                                    </a>
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
