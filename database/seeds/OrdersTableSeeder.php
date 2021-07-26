@@ -21,7 +21,7 @@ class OrdersTableSeeder extends Seeder
 
         foreach($users as $user) {
 
-            for ($i = 0; $i < 20; $i++) {                            
+            for ($i = 0; $i < 400; $i++) {                            
                 $new_order = new Order;
                 $new_order->code = $faker->regexify('[A-Z]{5}[0-4]{5}');            
                 $new_order->price = $faker->randomFloat(2, 3, 100);
