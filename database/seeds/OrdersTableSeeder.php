@@ -34,25 +34,7 @@ class OrdersTableSeeder extends Seeder
                 $new_order->notes = $faker->text(50);
                 $new_order->telephone_number = $faker->phoneNumber();  
                 $new_order->user_id = $user->id;  
-                $new_order->save();        
-                
-    
-                // for ($j = 0; $j < $order_rand; $j++) {
-                //     $rand_user = $users[rand(0, count($users))];
-    
-                //     $products = $rand_user->products;
-    
-                //     $new_order->products()->attach($product[$rand_product]);
-    
-                //     $rand_product_user_id = $rand_product->user->id;                
-                // }
-    
-                
-                // Random User and his products
-                // $rand_user = $users[rand(0, count($users))];
-    
-                // Saving user_id of rand user
-                // $new_order->user_id =  $rand_user->id;
+                $new_order->save();                                       
     
                 // Preparing Products for sync
                 $user_products = $user->products;
