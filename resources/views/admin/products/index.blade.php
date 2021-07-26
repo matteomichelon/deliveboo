@@ -31,12 +31,12 @@
                         @endif
 
                         {{-- USER TOOLS --}}
-                        <a href="{{route('admin.products.show', ['product' => $product->id])}}" class="btn btn-deliveboo-secondary mt-1">Visualizza</a>
-                        <a href="{{route('admin.products.edit', ['product' => $product->id])}}" class="btn btn-deliveboo-secondary mt-1">Modifica</a>
+                        <a href="{{route('admin.products.show', ['product' => $product->id])}}" class="btn btn-deliveboo-secondary mt-1 w-100">Visualizza</a>
+                        <a href="{{route('admin.products.edit', ['product' => $product->id])}}" class="btn btn-deliveboo-secondary mt-1 w-100">Modifica</a>
                         <form action="{{ route('admin.products.destroy', ['product' => $product->id]) }}" method="post" class="mt-1">
                             @csrf
                             @method('DELETE')
-                            <input type="submit" onclick="return confirm('Sicuro che vuoi eliminare il post?')" class="btn btn-deliveboo-secondary" value="Cancella prodotto">
+                            <input type="submit" onclick="return confirm('Sicuro che vuoi eliminare il post?')" class="btn btn-deliveboo-secondary w-100" value="Cancella prodotto">
                         </form>
                         {{-- END USER TOOLS --}}
 

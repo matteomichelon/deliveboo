@@ -2285,11 +2285,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 module.exports = __webpack_require__(/*! /Users/catalinzahariea/Desktop/Boolean/Deliveboo/deliveboo/resources/js/restaurant_checkout.js */"./resources/js/restaurant_checkout.js");
-=======
-module.exports = __webpack_require__(/*! C:\Laravel-projects\deliveboo\resources\js\restaurant_checkout.js */"./resources/js/restaurant_checkout.js");
->>>>>>> f213a2a4b9d4b6f0b1f7b7610723092940c28c85
 
 
 /***/ })
