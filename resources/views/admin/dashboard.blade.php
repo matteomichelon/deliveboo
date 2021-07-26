@@ -27,6 +27,15 @@
 
                 <div class="d-flex flex-column mt-3">
                     <div class="d-flex flex-column align-items-center p-2">
+                      {{-- <h5 class="card-title">Nuovo Prodotto</h5> --}}
+                      <img src="{{ asset('img/adding.png') }}" alt="list-icon" class="mb-2 auto" style="width: 55px">
+                      <p class="card-text text-center">Possibilità di visualizzare tutti gli ordini ricevuti.</p>
+                      <a href="{{route('admin.orders')}}" class="btn-deliveboo-secondary text-decoration-none text-white">Vedi gli ordini</a>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column mt-3">
+                    <div class="d-flex flex-column align-items-center p-2">
                       {{-- <h5 class="card-title">Statistiche</h5> --}}
                       <img src="{{ asset('img/stats.png') }}" alt="list-icon" class="mb-2 auto" style="width: 55px">
                       <p class="card-text text-center">Visualizzazione delle Statistiche annuali e mensili degli ordini ricevuti.</p>

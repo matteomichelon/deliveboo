@@ -51,6 +51,13 @@
                             </li>
 
                             <li>
+                                <a class="icon" href="{{ route('admin.orders') }}" data-toggle="tooltip"
+                                    title="Aggiungi un nuovo prodotto">
+                                    <i class="far fa-folder"></i>
+                                </a>
+                            </li>
+
+                            <li>
                                 <a class="icon" href="{{ route('admin.stats') }}" data-toggle="tooltip" title="Vedi le statistiche">
                                     <i class="fas fa-signal"></i>
                                 </a>
@@ -69,6 +76,10 @@
 
                                     <a class="dropdown-item" href="{{ route('admin.products.index') }}">
                                         I tuoi prodotti
+                                    </a>
+
+                                    <a class="dropdown-item" href="{{ route('admin.orders') }}">
+                                        I tuoi ordini
                                     </a>
 
                                     <a class="dropdown-item" href="{{ route('admin.stats') }}">
