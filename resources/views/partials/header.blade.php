@@ -52,7 +52,7 @@
 
                             <li>
                                 <a class="icon" href="{{ route('admin.orders') }}" data-toggle="tooltip"
-                                    title="Aggiungi un nuovo prodotto">
+                                    title="Ordini">
                                     <i class="far fa-folder"></i>
                                 </a>
                             </li>
