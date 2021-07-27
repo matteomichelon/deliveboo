@@ -33,7 +33,7 @@ class PaymentController extends Controller
         $order = new Order;
         $order->fill($form_data);
         $order->user_id = $restaurantId;
-        $order->code = $form_data['_token'];
+        $order->code = strtoupper(substr($form_data['_token'],0,10));
         
         $order->price = $this->calculatePrice($productIds);
         $order->date = Carbon::now()->setTimezone('Europe/Rome')->toDateTimeString();
