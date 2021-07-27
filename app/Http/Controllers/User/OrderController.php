@@ -16,7 +16,7 @@ class OrderController extends Controller
         
         $user = Auth::user();
         
-        $orders = $user->orders;
+        $orders = $user->orders->sortByDesc('date');
  
         $data =  [
             'orders' => $orders
