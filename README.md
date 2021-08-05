@@ -95,4 +95,4 @@ Dalla parte del ristoratore si ha la possibilità di registrarsi direttamente al
 
 # Preview
 
-
+https://user-images.githubusercontent.com/75729360/128342095-622b18c4-12bf-410f-a86c-3aa6e1f38433.mp4
